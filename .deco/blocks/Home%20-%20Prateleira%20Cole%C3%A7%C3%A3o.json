@@ -35,7 +35,21 @@
           }
         },
         "title": "Lançamentos",
-        "products": null
+        "products": {
+          "__resolveType": "shopify/loaders/ProductList.ts",
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          },
+          "metafields": [],
+          "props": {
+            "sort": "",
+            "count": 1,
+            "query": " "
+          }
+        }
       },
       "shadow": "none",
       "verticalSpacing": "both",

@@ -3,5 +3,8 @@
   "adminAccessToken": {
     "__resolveType": "website/loaders/secret.ts"
   },
-  "platform": "shopify"
+  "platform": "shopify",
+  "storeName": "Renzi&Co",
+  "publicUrl": "u10pfz-mz.myshopify.com",
+  "storefrontAccessToken": "iolerenzi@gmail.com"
 }
