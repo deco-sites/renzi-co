@@ -1,0 +1,16 @@
+{
+  "__resolveType": "site/sections/Container.tsx",
+  "sections": [
+    {
+      "section": {
+        "__resolveType": "site/sections/Category/CategoryBreadcrumb.tsx",
+        "page": null
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "label": "categoryBreadcrumb",
+      "withContainer": true
+    }
+  ]
+}

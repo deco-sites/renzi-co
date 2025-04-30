@@ -1,15 +1,84 @@
 {
-  "name": "Home",
-  "path": "/",
   "sections": [
     {
-      "__resolveType": "site/sections/ItWorks.tsx",
-      "name": "<p>It Works!</p>",
-      "count": 1
+      "section": {
+        "__resolveType": "Header Global"
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "__resolveType": "website/sections/Rendering/Lazy.tsx"
     },
     {
-      "__resolveType": "Footer"
+      "section": {
+        "__resolveType": "site/sections/HeroVideoCarroussel.tsx",
+        "slider": {
+          "interval": 10000
+        },
+        "banner": [
+          {
+            "media": {
+              "videoDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/3447/0775a6d7-d537-471f-b1c5-b7c513492320",
+              "videoMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/3447/984e76e6-7896-4e39-9a9a-03dbc7fa8e28"
+            },
+            "cta": {
+              "title": {},
+              "buttons": [],
+              "position": {
+                "vertical": "inferior",
+                "horizontal": "esquerda"
+              }
+            }
+          }
+        ],
+        "isHeaderTransparent": true
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "__resolveType": "website/sections/Rendering/Lazy.tsx"
+    },
+    {
+      "section": {
+        "__resolveType": "Banner Secundário - Categorias"
+      },
+      "__resolveType": "website/sections/Rendering/Lazy.tsx"
+    },
+    {
+      "section": {
+        "__resolveType": "Home - Prateleira Coleção"
+      },
+      "__resolveType": "website/sections/Rendering/Lazy.tsx"
+    },
+    {
+      "section": {
+        "__resolveType": "Banners Terciário - Grid"
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "__resolveType": "website/sections/Rendering/Lazy.tsx"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Redes sociais"
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer Global"
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0
     }
   ],
-  "__resolveType": "website/pages/Page.tsx"
+  "__resolveType": "website/pages/Page.tsx",
+  "name": "Home",
+  "path": "/"
 }

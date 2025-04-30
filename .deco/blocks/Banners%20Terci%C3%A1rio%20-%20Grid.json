@@ -1,0 +1,79 @@
+{
+  "__resolveType": "site/sections/Container.tsx",
+  "sections": [
+    {
+      "section": {
+        "__resolveType": "site/sections/Images/BannerGrid.tsx",
+        "itemsPerLine": {
+          "mobile": 1,
+          "desktop": 2
+        },
+        "itemsPerColumn": {
+          "mobile": 1,
+          "desktop": 2
+        },
+        "borderRadius": {
+          "mobile": "xl",
+          "desktop": "md"
+        },
+        "columnGap": {
+          "mobile": 1,
+          "desktop": 4
+        },
+        "banners": [
+          {
+            "textColor": "primary",
+            "text": {
+              "verticalAlignment": "Bottom",
+              "horizontalAlignment": "Center",
+              "badges": [],
+              "buttonColor": "primary"
+            },
+            "srcMobile": "https://assets.decocache.com/renzi-co/fc4b5662-a6e2-4eef-b866-205f0932c9bb/93957d93-c662-4786-bc2d-135277bb6bf7.jpg",
+            "alt": "Headset USB ",
+            "href": "/c3210-80s01a6/p",
+            "srcDesktop": "https://assets.decocache.com/renzi-co/fc4b5662-a6e2-4eef-b866-205f0932c9bb/93957d93-c662-4786-bc2d-135277bb6bf7.jpg",
+            "columnStart": 1,
+            "rowStart": 1,
+            "rowSpan": 2
+          },
+          {
+            "textColor": "primary",
+            "text": {
+              "verticalAlignment": "Bottom",
+              "horizontalAlignment": "Right",
+              "badges": [],
+              "buttonColor": "neutral",
+              "reverse": true
+            },
+            "srcMobile": "https://assets.decocache.com/renzi-co/e13c1519-1d38-4c12-ac71-2eb049c26e2a/c68b19b6-5ae2-4b13-a004-29d5c10148d7.png",
+            "alt": "Mini",
+            "href": "/mini",
+            "srcDesktop": "https://assets.decocache.com/renzi-co/e13c1519-1d38-4c12-ac71-2eb049c26e2a/c68b19b6-5ae2-4b13-a004-29d5c10148d7.png"
+          },
+          {
+            "textColor": "primary",
+            "text": {
+              "verticalAlignment": "Bottom",
+              "horizontalAlignment": "Right",
+              "badges": [],
+              "buttonColor": "secondary"
+            },
+            "srcMobile": "https://assets.decocache.com/renzi-co/e13c1519-1d38-4c12-ac71-2eb049c26e2a/c68b19b6-5ae2-4b13-a004-29d5c10148d7.png",
+            "alt": "HD SSD Sata 3 Kingston",
+            "href": "/hd_ssd_240_gb_sata_3_kingston_sa400s37-240g/p",
+            "srcDesktop": "https://assets.decocache.com/renzi-co/e13c1519-1d38-4c12-ac71-2eb049c26e2a/c68b19b6-5ae2-4b13-a004-29d5c10148d7.png"
+          }
+        ]
+      },
+      "shadow": "none",
+      "verticalSpacing": "none",
+      "spacing": 0,
+      "label": "BannerGrid",
+      "backgroundColor": "#F7F7F7",
+      "withContainer": true,
+      "overFlow": "overflow-none"
+    }
+  ],
+  "label": "\"Container\""
+}

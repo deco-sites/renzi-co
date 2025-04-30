@@ -1,0 +1,18 @@
+{
+  "__resolveType": "site/sections/Container.tsx",
+  "sections": [
+    {
+      "section": {
+        "__resolveType": "site/sections/Product/SearchResult.tsx",
+        "page": null,
+        "highlights": [],
+        "variant": "aside",
+        "notFoundSection": {}
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "label": "Search Results"
+    }
+  ]
+}

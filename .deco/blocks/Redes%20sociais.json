@@ -1,0 +1,64 @@
+{
+  "__resolveType": "site/sections/Container.tsx",
+  "sections": [
+    {
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "textAlign": "Center",
+        "links": [
+          {
+            "icon": "InstagramOutline",
+            "label": "Instagram",
+            "href": "/"
+          },
+          {
+            "icon": "FacebookOutline",
+            "label": "Facebook",
+            "href": "/"
+          },
+          {
+            "icon": "YouTubeOutline",
+            "label": "Youtube",
+            "href": "/"
+          }
+        ],
+        "title": "Nossas redes sociais"
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "label": "InfoCard"
+    },
+    {
+      "section": {
+        "__resolveType": "site/sections/Images/ImageGallery.tsx",
+        "images": [
+          {
+            "image": "https://assets.decocache.com/renzi-co/17a2b4fd-9603-4f37-97b6-9a5b2dc8ef25/a625a3ef-27f5-4549-844e-24ee939271c8.png",
+            "alt": " ",
+            "href": "/",
+            "title": " "
+          },
+          {
+            "image": "https://assets.decocache.com/renzi-co/17a2b4fd-9603-4f37-97b6-9a5b2dc8ef25/a625a3ef-27f5-4549-844e-24ee939271c8.png",
+            "alt": "imagem social",
+            "href": "/",
+            "title": " "
+          },
+          {
+            "image": "https://assets.decocache.com/renzi-co/17a2b4fd-9603-4f37-97b6-9a5b2dc8ef25/a625a3ef-27f5-4549-844e-24ee939271c8.png",
+            "alt": "imagem social",
+            "href": "/",
+            "title": " "
+          }
+        ],
+        "itemPerPageDesktop": 3,
+        "itemPerPageMobile": 1
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "label": "ImageGallery"
+    }
+  ]
+}

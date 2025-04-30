@@ -1,0 +1,69 @@
+{
+  "__resolveType": "site/sections/Container.tsx",
+  "sections": [
+    {
+      "section": {
+        "__resolveType": "site/sections/Images/ImageGallery.tsx",
+        "images": [
+          {
+            "backgroundColorHover": "primary",
+            "borderRadius": {
+              "mobile": "xl",
+              "desktop": "xl"
+            },
+            "borderSize": {
+              "mobile": "none",
+              "desktop": "none"
+            },
+            "image": "https://assets.decocache.com/renzi-co/3d410794-ab67-4c6b-80e5-4510717c3227/cca2c82d-fc1d-4329-876c-49ac52f4b031.png",
+            "alt": "Telefone Videoconferencia IP 6 Linhas",
+            "imageMobile": "https://assets.decocache.com/scarcom/120d915e-7d73-4652-95c8-f23db832982b/1742476402335-1ccf20cd-b697-47eb-9de2-4b6b75a18621",
+            "href": "/grandstream-gxv3275/p",
+            "title": "Tenis"
+          },
+          {
+            "backgroundColorHover": "primary",
+            "borderRadius": {
+              "mobile": "xl",
+              "desktop": "xl"
+            },
+            "borderSize": {
+              "mobile": "none",
+              "desktop": "none"
+            },
+            "image": "https://assets.decocache.com/renzi-co/35da1e0c-7933-4413-9ac3-95b1df920d2e/d27b769f-3367-4f96-80bf-7a9fae47b69e.png",
+            "alt": "KVM Trendnet TK-803R com 8 portas ",
+            "imageMobile": "https://assets.decocache.com/scarcom/4e4e16bc-1eb7-4313-b8a2-c0b7c1ba9b32/1742476405287-14d22cff-d43a-40ab-99dd-377f65b6e204",
+            "href": "/trendnet-tk-803r/p",
+            "title": "T-shirts"
+          },
+          {
+            "backgroundColorHover": "primary",
+            "borderRadius": {
+              "mobile": "xl",
+              "desktop": "xl"
+            },
+            "borderSize": {
+              "mobile": "none",
+              "desktop": "none"
+            },
+            "image": "https://assets.decocache.com/renzi-co/247cdbed-2963-4510-a8d4-d74d434ee951/25c3c0db-a98d-49c7-b4a4-88d0edf70d90.png",
+            "alt": "NAS 2 Bais Sem HD Gigabit e USB 3.0",
+            "imageMobile": "https://assets.decocache.com/scarcom/a3a11131-cd33-438e-bc5d-9502847a26ed/1742476408058-3b1783f5-2fc8-4bf3-85e5-482fcd3a4673",
+            "href": "/asustor-as1102tl/p",
+            "title": "Jeans"
+          }
+        ],
+        "itemPerPageDesktop": 3,
+        "itemPerPageMobile": 1
+      },
+      "shadow": "none",
+      "verticalSpacing": "top",
+      "spacing": 0,
+      "label": "ImageGallery",
+      "withContainer": true,
+      "overFlow": "overflow-none"
+    }
+  ],
+  "label": "\"Container\""
+}

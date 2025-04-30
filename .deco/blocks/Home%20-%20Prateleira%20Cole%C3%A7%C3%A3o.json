@@ -1,0 +1,47 @@
+{
+  "__resolveType": "site/sections/Container.tsx",
+  "sections": [
+    {
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "seeMore": {
+          "url": "/lancamentos",
+          "label": "+ ver mais"
+        },
+        "layout": {
+          "headerAlignment": "center",
+          "headerfontSize": "Normal",
+          "itemsPerPage": []
+        },
+        "showPaginationArrows": "Always",
+        "cardLayout": {
+          "basics": {
+            "contentAlignment": "Left",
+            "oldPriceSize": "Small",
+            "ctaVariation": "primary",
+            "ctaMode": "Go to Product Page"
+          },
+          "discount": {
+            "variant": "primary",
+            "label": " "
+          },
+          "elementsPositions": {
+            "skuSelector": "Top",
+            "favoriteIcon": "Top right"
+          },
+          "hide": {},
+          "onMouseOver": {
+            "image": "Change image"
+          }
+        },
+        "title": "Lançamentos",
+        "products": null
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "label": "Prateleira",
+      "withContainer": true
+    }
+  ]
+}

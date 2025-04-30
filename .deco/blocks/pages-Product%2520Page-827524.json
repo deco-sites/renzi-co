@@ -1,0 +1,50 @@
+{
+  "name": "Product Page",
+  "path": "/:slug/p",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header Global"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Container.tsx",
+        "sections": [
+          {
+            "section": {
+              "__resolveType": "site/sections/Product/ProductDetails.tsx",
+              "variant": "front-back",
+              "shipmentPolitics": {},
+              "shareableNetworks": [],
+              "highlights": [],
+              "page": null
+            },
+            "shadow": "none",
+            "verticalSpacing": "both",
+            "spacing": 0,
+            "label": "ProductDetails"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Produtos relacionados"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer Global"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

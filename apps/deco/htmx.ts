@@ -1,2 +1,2 @@
-export { default } from "@deco/htmx";
-export * from "@deco/htmx";
+export { default } from "apps/htmx/mod.ts";
+export * from "apps/htmx/mod.ts";

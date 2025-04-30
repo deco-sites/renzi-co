@@ -1,0 +1,7 @@
+{
+  "__resolveType": "site/apps/deco/shopify.ts",
+  "adminAccessToken": {
+    "__resolveType": "website/loaders/secret.ts"
+  },
+  "platform": "shopify"
+}

@@ -1,0 +1,108 @@
+{
+  "__resolveType": "site/sections/Container.tsx",
+  "sections": [
+    {
+      "section": {
+        "__resolveType": "site/sections/Header/TopNavBar.tsx",
+        "alerts": [
+          {
+            "idIcon": "",
+            "textAlert": "PRIMEIRA TROCA GRÁTIS",
+            "image": "https://assets.decocache.com/renzi-co/ef79bb22-ddb9-4aa0-924d-af548c6db5b9/bba57518-47fc-4f56-9380-86b0152df373.svg",
+            "textColor": "#ffffff"
+          },
+          {
+            "idIcon": "",
+            "textAlert": "FRETE GRÁTIS NAS COMPRAS ACIMA DE R$500",
+            "image": "https://assets.decocache.com/renzi-co/eef8f98c-5510-4d95-8b72-f4b775eda596/10c40a1d-1c13-4bbd-990a-1d7a81ba9f1e.svg",
+            "textColor": "#ffffff"
+          },
+          {
+            "idIcon": "",
+            "textAlert": "PARCELE EM ATÉ 6X SEM JUROS",
+            "image": "https://assets.decocache.com/renzi-co/2e7c985b-4b1e-40fe-9949-8b93c76a6eea/8407d8ed-5ff1-43ab-958a-d4698cb997d3.png",
+            "textColor": "#ffffff"
+          }
+        ]
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "label": "Topbar",
+      "backgroundColor": "#56373C"
+    },
+    {
+      "section": {
+        "__resolveType": "site/sections/Header/HeaderLayout.tsx",
+        "navItems": [
+          {
+            "children": [],
+            "label": "Lançamentos",
+            "href": "/"
+          },
+          {
+            "children": [],
+            "label": "Tênis",
+            "href": "/"
+          },
+          {
+            "children": [],
+            "label": "T-shirts",
+            "href": "/"
+          },
+          {
+            "children": [],
+            "label": "Inverno",
+            "href": "/"
+          },
+          {
+            "children": [],
+            "label": "Off",
+            "href": "/",
+            "highlighted": true
+          }
+        ],
+        "minicart": {
+          "showClearButton": false,
+          "desktop": {
+            "buttonMode": "primary"
+          },
+          "mobile": {
+            "buttonMode": "primary"
+          },
+          "goToCartLabel": "Finalzar Compra"
+        },
+        "searchbar": {
+          "placeholder": "What are you looking for?",
+          "action": "/s",
+          "name": "q",
+          "cardLayout": {
+            "basics": {
+              "contentAlignment": "Left",
+              "oldPriceSize": "Small",
+              "ctaVariation": "primary",
+              "ctaMode": "Go to Product Page"
+            },
+            "discount": {
+              "variant": "primary",
+              "label": " "
+            },
+            "elementsPositions": {
+              "skuSelector": "Top",
+              "favoriteIcon": "Top right"
+            },
+            "hide": {},
+            "onMouseOver": {
+              "image": "Change image"
+            }
+          }
+        }
+      },
+      "shadow": "none",
+      "verticalSpacing": "both",
+      "spacing": 0,
+      "label": "Header",
+      "withContainer": true
+    }
+  ]
+}
