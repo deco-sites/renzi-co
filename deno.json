@@ -41,7 +41,6 @@
     "@deco/dev": "jsr:@deco/dev@1.113.0"
   },
   "tasks": {
-    "local": "appKey=vtexappkey-lojabagaggio-ULLGYX appToken=DDBJRCQRBOIKMYNSZGENSOHARJKWVQYVDIYPMQHWIAGIOEDCCNZZXGXDSTQZOTEPWMVROFNHDXVIALHOEGXGJBNTSHABVCPOKAUXKMVCOQGXRQGKWANUADXKUXHVHRQL DECO_SITE_NAME=lojabagaggio DECO_ENV_NAME=thiago-pereira deno task start",
     "start": "deno run -A --unstable-http --env https://deco.cx/run -- deno task dev",
     "gen": "deno run -A dev.ts --gen-only",
     "play": "USE_LOCAL_STORAGE_ONLY=true deno task start",
