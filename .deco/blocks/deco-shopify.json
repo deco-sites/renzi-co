@@ -1,10 +1,12 @@
 {
   "__resolveType": "site/apps/deco/shopify.ts",
   "adminAccessToken": {
-    "__resolveType": "website/loaders/secret.ts"
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "ee3d8d9a3cef45b6d57c33e3a0b8c60903d9ef3a414c995d77d2d19827427e04e4470369ce159fa2247f2be05567e2df",
+    "name": "SHOPIFY_ACCESS_TOKEN"
   },
   "platform": "shopify",
-  "storeName": "Renzi&Co",
-  "publicUrl": "u10pfz-mz.myshopify.com",
-  "storefrontAccessToken": "iolerenzi@gmail.com"
+  "storeName": "9nbkp6-es",
+  "storefrontAccessToken": "f596da0803a1bd4b200f0bcec1c02be3",
+  "publicUrl": "9nbkp6-es.myshopify.com"
 }
