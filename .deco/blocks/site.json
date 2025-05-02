@@ -30,5 +30,17 @@
   "firstByteThresholdMS": true,
   "theme": {
     "__resolveType": "Renzi CO"
+  },
+  "abTesting": {
+    "replaces": [],
+    "includeScriptsToHead": {
+      "includes": []
+    },
+    "includeScriptsToBody": {
+      "includes": []
+    }
+  },
+  "flavor": {
+    "framework": "fresh"
   }
 }
