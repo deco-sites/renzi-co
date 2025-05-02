@@ -37,14 +37,17 @@
   },
   "mainColors": {
     "base-100": "#ffffff",
-    "secondary": "#c68e39",
+    "secondary": "#56373C",
     "tertiary": "#CEBAB4",
     "neutral": "#E6D1D88",
-    "primary": "#56373C"
+    "primary": "#CDC6C3"
   },
   "complementaryColors": {
-    "base-200": "#000000",
-    "secondary-content": "#d21414"
+    "base-200": "#56373C",
+    "secondary-content": "#ffffff",
+    "primary-content": "#ffffff",
+    "base-content": "#ededed",
+    "base-300": "#ffffff"
   },
   "mode": "light",
   "colorScheme": "any"

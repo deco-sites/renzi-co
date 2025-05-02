@@ -42,5 +42,12 @@
   },
   "flavor": {
     "framework": "fresh"
+  },
+  "platform": "vtex",
+  "commerce": {
+    "account": "deco",
+    "publicUrl": "www.mystore.com.br",
+    "authToken": {},
+    "platform": "vnda"
   }
 }
