@@ -1,6 +1,5 @@
 {
   "__resolveType": "site/sections/Theme/Theme.tsx",
-  "colorScheme": "light",
   "buttonStyle": {
     "--border-btn": "1px",
     "--rounded-btn": "0.2rem",
@@ -47,5 +46,6 @@
     "base-200": "#000000",
     "secondary-content": "#d21414"
   },
-  "mode": "light"
+  "mode": "light",
+  "colorScheme": "any"
 }
