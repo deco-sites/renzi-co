@@ -43,7 +43,7 @@
   "flavor": {
     "framework": "fresh"
   },
-  "platform": "vtex",
+  "platform": "shopify",
   "commerce": {
     "account": "deco",
     "publicUrl": "www.mystore.com.br",
