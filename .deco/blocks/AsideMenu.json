@@ -1,0 +1,35 @@
+{
+  "__resolveType": "site/sections/Institutional/AsideMenu.tsx",
+  "menuItems": [
+    {
+      "target": "_self",
+      "href": "/institucional/quem-somos",
+      "label": "Sobre"
+    },
+    {
+      "target": "_self",
+      "label": "Política de Devolução",
+      "href": "/institucional/trocas-devolucoes"
+    },
+    {
+      "target": "_self",
+      "label": "Formas de Envio",
+      "href": "/institucional/formas-envio"
+    },
+    {
+      "target": "_self",
+      "label": "Como Comprar",
+      "href": "/institucional/formas-pagamento"
+    },
+    {
+      "target": "_self",
+      "label": "Política de Privacidade",
+      "href": "/institucional/politica-privacidade"
+    },
+    {
+      "target": "_self",
+      "label": "Fale Conosco",
+      "href": "/institucional/contato"
+    }
+  ]
+}

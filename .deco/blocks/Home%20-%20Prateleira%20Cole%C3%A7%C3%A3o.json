@@ -37,18 +37,18 @@
         "title": "Lançamentos",
         "products": {
           "__resolveType": "shopify/loaders/ProductList.ts",
+          "props": {
+            "sort": "price-descending",
+            "count": 12,
+            "collection": "1"
+          },
           "filters": {
             "tags": [],
             "productTypes": [],
             "productVendors": [],
             "variantOptions": []
           },
-          "metafields": [],
-          "props": {
-            "sort": "",
-            "count": 1,
-            "query": " "
-          }
+          "metafields": []
         }
       },
       "shadow": "none",

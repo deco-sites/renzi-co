@@ -21,9 +21,9 @@ function AsideMenu({ menuItems, pathname: currentUrl }: SectionProps<typeof load
         {menuItems.map((item, index) => (<li key={index}>
               <a class={`
                   ${currentUrl === item.href
-                ? "bg-secondary-focus text-base-100 border-none"
+                ? "bg-primary text-white border-none btn btn-ghost btn-block rounded-full border-2 border-neutral-100 hover:bg-primary hover:text-white"
                 : ""}
-                  btn btn-ghost btn-block border-2 border-neutral-100 hover:bg-secondary-focus hover:text-base-100
+                  btn btn-ghost btn-block rounded-full border-2 border-neutral-100 hover:bg-primary hover:text-white
                 `} href={item.href}>
                 {item.label}
               </a>

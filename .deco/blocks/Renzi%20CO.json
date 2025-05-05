@@ -39,15 +39,19 @@
     "base-100": "#ffffff",
     "secondary": "#56373C",
     "tertiary": "#CEBAB4",
-    "neutral": "#E6D1D88",
-    "primary": "#CDC6C3"
+    "neutral": "#000000",
+    "primary": "#56373C"
   },
   "complementaryColors": {
     "base-200": "#56373C",
     "secondary-content": "#ffffff",
-    "primary-content": "#ffffff",
-    "base-content": "#ededed",
-    "base-300": "#ffffff"
+    "primary-content": "#fffafa",
+    "base-content": "#050505",
+    "base-300": "#000000",
+    "tertiary-content": "#050505",
+    "neutral-content": "#56373C",
+    "success-content": "#501616",
+    "info-content": "#301818"
   },
   "mode": "light",
   "colorScheme": "any"

@@ -1,0 +1,48 @@
+{
+  "name": "Formas de Pagamento",
+  "path": "/institucional/formas-pagamento",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header Global"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Container.tsx",
+        "sections": [
+          {
+            "section": {
+              "__resolveType": "site/sections/Institutional/InstitutionalPage.tsx",
+              "title": "Como Comprar",
+              "asideMenu": {
+                "__resolveType": "AsideMenu"
+              },
+              "content": {
+                "__resolveType": "site/sections/Institutional/TextContent.tsx",
+                "content": "<p>Incluir Texto</p>"
+              }
+            },
+            "shadow": "none",
+            "verticalSpacing": "both",
+            "spacing": 0,
+            "label": "Institutional Page",
+            "withContainer": true
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer Global"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

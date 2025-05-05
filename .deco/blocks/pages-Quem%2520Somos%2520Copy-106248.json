@@ -1,0 +1,48 @@
+{
+  "__resolveType": "website/pages/Page.tsx",
+  "name": "Formas de Envio",
+  "path": "/institucional/formas-envio",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header Global"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Container.tsx",
+        "sections": [
+          {
+            "section": {
+              "__resolveType": "site/sections/Institutional/InstitutionalPage.tsx",
+              "title": "Termos e condições",
+              "asideMenu": {
+                "__resolveType": "AsideMenu"
+              },
+              "content": {
+                "__resolveType": "site/sections/Institutional/TextContent.tsx",
+                "content": "<p>Incluir Texto</p>"
+              }
+            },
+            "shadow": "none",
+            "verticalSpacing": "both",
+            "spacing": 0,
+            "label": "Institutional Page",
+            "withContainer": true
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer Global"
+      }
+    }
+  ]
+}
