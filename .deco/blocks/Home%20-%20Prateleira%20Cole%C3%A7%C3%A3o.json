@@ -4,10 +4,7 @@
     {
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "seeMore": {
-          "url": "/lancamentos",
-          "label": "+ ver mais"
-        },
+        "seeMore": {},
         "layout": {
           "headerAlignment": "center",
           "headerfontSize": "Normal",
@@ -22,8 +19,7 @@
             "ctaMode": "Go to Product Page"
           },
           "discount": {
-            "variant": "primary",
-            "label": " "
+            "variant": "primary"
           },
           "elementsPositions": {
             "skuSelector": "Top",
@@ -34,13 +30,12 @@
             "image": "Change image"
           }
         },
-        "title": "Lançamentos",
         "products": {
           "__resolveType": "shopify/loaders/ProductList.ts",
           "props": {
-            "sort": "price-descending",
-            "count": 12,
-            "collection": "1"
+            "sort": "",
+            "collection": "Os mais vendidos",
+            "count": 5
           },
           "filters": {
             "tags": [],
@@ -54,8 +49,8 @@
       "shadow": "none",
       "verticalSpacing": "both",
       "spacing": 0,
-      "label": "Prateleira",
-      "withContainer": true
+      "withContainer": true,
+      "label": "Prateleira"
     }
   ]
 }

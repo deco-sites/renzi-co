@@ -20,7 +20,14 @@
               "shipmentPolitics": {},
               "shareableNetworks": [],
               "highlights": [],
-              "page": null
+              "page": {
+                "__resolveType": "shopify/loaders/ProductDetailsPage.ts",
+                "metafields": [],
+                "slug": {
+                  "__resolveType": "website/functions/requestToParam.ts",
+                  "param": "slug"
+                }
+              }
             },
             "shadow": "none",
             "verticalSpacing": "both",
