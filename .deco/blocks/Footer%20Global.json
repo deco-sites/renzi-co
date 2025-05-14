@@ -175,18 +175,6 @@
       "label": "Copyright",
       "overFlow": "overflow-none",
       "backgroundColor": "#F7F7F7"
-    },
-    {
-      "section": {
-        "__resolveType": "site/sections/Social/WhatsApp.tsx",
-        "phone": 551132795555,
-        "target": "_blank"
-      },
-      "shadow": "none",
-      "overFlow": "overflow-none",
-      "verticalSpacing": "top",
-      "label": "WhatsApp",
-      "spacing": 0
     }
   ],
   "label": "\"Container\""
