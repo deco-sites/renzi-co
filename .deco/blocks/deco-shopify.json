@@ -1,11 +1,9 @@
 {
   "__resolveType": "site/apps/deco/shopify.ts",
   "adminAccessToken": {
-    "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "40c83aa6164da75f3f6900623fa6b2a27d1ad88c571477399da548196f9f963ee55e2dfe8d61d337f3fd0c7f308e1938",
-    "name": "SHOPIFY_ACCESS_TOKEN"
+    "name": "SHOPIFY_ACCESS_TOKEN",
+    "encrypted": "40c83aa6164da75f3f6900623fa6b2a27d1ad88c571477399da548196f9f963ee55e2dfe8d61d337f3fd0c7f308e1938"
   },
   "platform": "shopify",
-  "storeName": "9nbkp6-es",
-  "publicUrl": "9nbkp6-es.myshopify.com"
+  "storeName": "u10pfz-mz"
 }
