@@ -4,10 +4,20 @@
     {
       "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
-        "page": null,
+        "page": {
+          "__resolveType": "shopify/loaders/ProductListingPage.ts",
+          "metafields": [],
+          "count": 15
+        },
         "highlights": [],
         "variant": "aside",
-        "notFoundSection": {}
+        "notFoundSection": {
+          "__resolveType": "site/sections/Miscellaneous/NotFound.tsx",
+          "hints": {
+            "hints": [],
+            "title": " "
+          }
+        }
       },
       "shadow": "none",
       "verticalSpacing": "both",

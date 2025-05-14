@@ -54,10 +54,10 @@
       "section": {
         "__resolveType": "Banners Terciário - Grid"
       },
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "shadow": "none",
       "verticalSpacing": "both",
-      "spacing": 0,
-      "__resolveType": "website/sections/Rendering/Lazy.tsx"
+      "spacing": 0
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

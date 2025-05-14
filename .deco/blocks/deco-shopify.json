@@ -1,9 +1,8 @@
 {
   "__resolveType": "site/apps/deco/shopify.ts",
-  "adminAccessToken": {
-    "name": "SHOPIFY_ACCESS_TOKEN",
-    "encrypted": "40c83aa6164da75f3f6900623fa6b2a27d1ad88c571477399da548196f9f963ee55e2dfe8d61d337f3fd0c7f308e1938"
-  },
+  "adminAccessToken": {},
   "platform": "shopify",
-  "storeName": "u10pfz-mz"
+  "storeName": "u10pfz-mz",
+  "storefrontAccessToken": "ce38293b9619410ddf33cf90c24e8694",
+  "publicUrl": "u10pfz-mz.myshopify.com"
 }

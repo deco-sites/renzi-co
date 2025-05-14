@@ -31,6 +31,8 @@ export interface Props {
 }
 function ProductShelf({ products, title, layout, cardLayout, seeMore, showPaginationArrows, }: Props) {
     const id = useId();
+    console.log(products);
+    
     if (!products || products.length === 0) {
         return null;
     }

@@ -4,7 +4,10 @@
     {
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "seeMore": {},
+        "seeMore": {
+          "url": " ",
+          "label": " "
+        },
         "layout": {
           "headerAlignment": "center",
           "headerfontSize": "Normal",
@@ -19,7 +22,8 @@
             "ctaMode": "Go to Product Page"
           },
           "discount": {
-            "variant": "primary"
+            "variant": "primary",
+            "label": " "
           },
           "elementsPositions": {
             "skuSelector": "Top",
@@ -33,9 +37,9 @@
         "products": {
           "__resolveType": "shopify/loaders/ProductList.ts",
           "props": {
-            "sort": "",
-            "collection": "Os mais vendidos",
-            "count": 5
+            "sort": "price-descending",
+            "count": 5,
+            "collection": "Os mais vendidos"
           },
           "filters": {
             "tags": [],
