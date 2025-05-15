@@ -62,6 +62,7 @@ function ProductInfo({ page, shipmentPolitics, shareableNetworks }: {
     const { breadcrumbList, product, } = page;
     const { description, productID, offers, name, gtin, isVariantOf, url, } = product;
     const { price, listPrice, seller, installments } = useOffer(offers);
+
     let stock;
     if (offers) {
         stock = offers.offers[0].inventoryLevel.value;
@@ -74,9 +75,9 @@ function ProductInfo({ page, shipmentPolitics, shareableNetworks }: {
             <span class="text-white">
               Por: {formatPrice(price, offers!.priceCurrency!)}
             </span>
-            <span class="text-white text-xs">
+            {installments && (<span class="text-white text-xs">
               ou {installments}
-            </span>
+            </span>)}
           </div>
           <div class="floating__button mt-0 flex flex-col gap-4 col-[8/10]">
             {stock > 0
@@ -114,9 +115,9 @@ function ProductInfo({ page, shipmentPolitics, shareableNetworks }: {
             {formatPrice(price, offers!.priceCurrency!)}
           </span>
         </div>
-        <span>
+        {installments && (<span>
           {installments}
-        </span>
+        </span>)}
       </div>
       {/* Sku Selector */}
       <div class="mt-4 sm:mt-5">
