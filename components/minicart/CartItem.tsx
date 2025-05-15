@@ -5,7 +5,9 @@ import { sendEvent } from "$store/sdk/analytics.tsx";
 import { formatPrice } from "$store/sdk/format.ts";
 import { useSignal } from "@preact/signals";
 import Image from "apps/website/components/Image.tsx";
-import { useCart } from "apps/vtex/hooks/useCart.ts";
+// import { useCart } from "apps/vtex/hooks/useCart.ts";
+import { useCart, itemToAnalyticsItem } from "apps/shopify/hooks/useCart.ts";
+
 
 interface Props {
   index: number;
@@ -13,16 +15,19 @@ interface Props {
 }
 
 function CartItem({ index, currency }: Props) {
-  const {
-    cart,
-    updateItems,
-    mapItemsToAnalyticsItems,
-  } = useCart();
+    const { cart, updateItems, addCouponsToCart } = useCart();
+
   const loading = useSignal(false);
-  const item = cart.value!.items[index];
-  const locale = cart.value?.clientPreferencesData.locale;
-  const currencyCode = cart.value?.storePreferencesData.currencyCode;
-  const { imageUrl, skuName, sellingPrice, listPrice, name, quantity } = item;
+  const item = cart.value?.lines?.nodes[index];
+  const locale = "pt-BR";
+  const currencyCode = cart.value?.cost?.totalAmount.currencyCode ?? "BRL";
+  const { quantity, merchandise, cost } = item;
+
+  const sellingPrice = cost.compareAtAmountPerQuantity?.amount;
+  const listPrice = cost.compareAtAmountPerQuantity?.amount;
+  const name = merchandise.product.title;
+
+  console.log(merchandise)
 
   const isGift = sellingPrice < 0.01;
 
@@ -42,8 +47,8 @@ function CartItem({ index, currency }: Props) {
     <div class="pb-3 flex flex-row justify-between items-start gap-4 border-solid border-b-[1px] border-[#F7F7F7]">
       <div class="bg-[#f6f6f6] rounded-md">
         <Image
-          src={imageUrl}
-          alt={skuName}
+          src={merchandise.image?.url ?? ""}
+          alt={merchandise.image?.altText ?? ""}
           width={60}
           height={60}
           class="object-cover object-center lg:w-[107px] lg:h-[107px] mix-blend-multiply"
@@ -55,12 +60,12 @@ function CartItem({ index, currency }: Props) {
         </span>
         <div class="flex items-center gap-2">
           <span class="line-through text-base-300 text-xs lg:text-xs">
-            {formatPrice(listPrice / 100, currencyCode!, locale)}
+            {formatPrice(listPrice, currencyCode!, locale)}
           </span>
           <span class="text-xs text-emphasis font-bold lg:text-sm">
             {isGift
               ? "Grátis"
-              : formatPrice(sellingPrice / 100, currency, locale)}
+              : formatPrice(sellingPrice, currency, locale)}
           </span>
         </div>
         {installmentOptions?.installments.length
@@ -92,7 +97,7 @@ function CartItem({ index, currency }: Props) {
               sendEvent({
                 name: quantityDiff < 0 ? "remove_from_cart" : "add_to_cart",
                 params: {
-                  items: mapItemsToAnalyticsItems({
+                  items: itemToAnalyticsItem({
                     items: [
                       {
                         ...item,
@@ -114,7 +119,7 @@ function CartItem({ index, currency }: Props) {
               sendEvent({
                 name: "remove_from_cart",
                 params: {
-                  items: mapItemsToAnalyticsItems({
+                  items: itemToAnalyticsItem({
                     items: [item],
                     marketingData: cart.value.marketingData,
                   }),

@@ -1,28 +1,17 @@
 import { useSignal } from "@preact/signals";
 import { useCallback } from "preact/hooks";
-import { useCart } from "apps/vtex/hooks/useCart.ts";
+import { useCart } from "apps/shopify/hooks/useCart.ts";
 import { useUI } from "$store/sdk/useUI.ts";
-import { sendEvent } from "$store/sdk/analytics.tsx";
 
-export interface Options {
+interface Options {
   skuId: string;
   sellerId?: string;
-  price: number;
-  discount: number;
-  quantity: number;
-  /**
-   * sku name
-   */
-  name: string;
-  productGroupId: string;
 }
 
-export const useAddToCart = (
-  { skuId, sellerId, price, discount, name, productGroupId, quantity }: Options,
-) => {
+export const useAddToCart = ({ skuId, sellerId }: Options) => {
   const isAddingToCart = useSignal(false);
   const { displayCart } = useUI();
-  const { addItems } = useCart();
+  const { addItems, loading } = useCart();
 
   const onClick = useCallback(async (e: MouseEvent) => {
     e.preventDefault();
@@ -34,21 +23,10 @@ export const useAddToCart = (
 
     try {
       isAddingToCart.value = true;
-      await addItems({
-        orderItems: [{ id: skuId, seller: sellerId, quantity }],
-      });
 
-      sendEvent({
-        name: "add_to_cart",
-        params: {
-          items: [{
-            item_id: productGroupId,
-            quantity,
-            price,
-            discount,
-            item_name: name,
-            item_variant: skuId,
-          }],
+      await addItems({
+        lines: {
+          merchandiseId: skuId,
         },
       });
 
@@ -56,7 +34,7 @@ export const useAddToCart = (
     } finally {
       isAddingToCart.value = false;
     }
-  }, [skuId, sellerId, quantity]);
+  }, [skuId, sellerId]);
 
-  return { onClick, loading: isAddingToCart.value };
+  return { onClick, disabled: loading.value, loading: isAddingToCart.value };
 };

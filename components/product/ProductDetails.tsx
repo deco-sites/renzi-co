@@ -61,7 +61,7 @@ function ProductInfo({ page, shipmentPolitics, shareableNetworks }: {
 }) {
     const { breadcrumbList, product, } = page;
     const { description, productID, offers, name, gtin, isVariantOf, url, } = product;
-    const { price, listPrice, seller, installments, availability } = useOffer(offers);
+    const { price, listPrice, seller, installments } = useOffer(offers);
     let stock;
     if (offers) {
         stock = offers.offers[0].inventoryLevel.value;
@@ -79,9 +79,9 @@ function ProductInfo({ page, shipmentPolitics, shareableNetworks }: {
             </span>
           </div>
           <div class="floating__button mt-0 flex flex-col gap-4 col-[8/10]">
-            {availability === "https://schema.org/InStock"
+            {stock > 0
             ? (<>
-                  {seller && (<AddToCartButton skuId={productID} sellerId={seller} price={price ?? 0} discount={price && listPrice ? listPrice - price : 0} name={name ?? ""} productGroupId={product.isVariantOf?.productGroupID ?? ""} quantity={1} classes="btn-primary btn-block transition-all max-w-sm hover:text-neutral-100 font-medium text-secondary-focus h-10"/>)}
+                  {seller && (<AddToCartButton sellerId={seller} skuId={productID} classes="btn-primary btn-block transition-all max-w-sm hover:text-neutral-100 font-medium text-secondary-focus h-10"/>)}
                 </>)
             : <OutOfStock productID={productID}/>}
           </div>
@@ -124,7 +124,7 @@ function ProductInfo({ page, shipmentPolitics, shareableNetworks }: {
       </div>
       {/* Add to Cart and Favorites button */}
       <div class="mt-4 lg:mt-10 flex gap-[30px]">
-        {availability === "https://schema.org/InStock"
+        {stock > 0
             ? (<>
               {seller && (<AddToCartActions productID={productID} seller={seller} price={price} listPrice={listPrice} productName={name ?? ""} productGroupID={product.isVariantOf?.productGroupID ?? ""}/>)}
             </>)

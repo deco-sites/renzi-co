@@ -32,7 +32,7 @@ function QuantitySelector({ onChange, quantity, disabled, loading }: Props) {
 
   return (
     <div class="form-control">
-      <div class="input-group items-center">
+      <div class="input-group items-center flex">
         <Button
           class="bg-transparent border-0 p-0 border-none"
           onClick={decrement}
@@ -40,7 +40,7 @@ function QuantitySelector({ onChange, quantity, disabled, loading }: Props) {
           loading={loading}
         >
           <Icon
-            class="btn-primary text-secondary-focus hover:text-neutral-100 transition-all w-6 h-6 rounded-full"
+            class="btn-primary text-base-content hover:text-neutral-100 transition-all w-6 h-6 rounded-full"
             id="Minus"
             width={16}
             height={16}
@@ -64,7 +64,7 @@ function QuantitySelector({ onChange, quantity, disabled, loading }: Props) {
           loading={loading}
         >
           <Icon
-            class="btn-primary text-secondary-focus hover:text-neutral-100 transition-all w-6 h-6 rounded-full"
+            class="btn-primary text-base-content hover:text-neutral-100 transition-all w-6 h-6 rounded-full"
             id="Plus"
             width={16}
             height={16}

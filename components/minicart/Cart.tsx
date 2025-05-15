@@ -2,7 +2,8 @@ import Button from "$store/components/ui/Button.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import { sendEvent } from "$store/sdk/analytics.tsx";
 import { formatPrice } from "$store/sdk/format.ts";
-import { useCart } from "apps/vtex/hooks/useCart.ts";
+// import { useCart } from "apps/vtex/hooks/useCart.ts";
+import { useCart, itemToAnalyticsItem } from "apps/shopify/hooks/useCart.ts";
 import CartItem from "./CartItem.tsx";
 import Coupon from "./Coupon.tsx";
 
@@ -46,10 +47,10 @@ interface TotalizerProps {
 }
 
 export const BUTTON_VARIANTS: Record<string, string> = {
-  "primary": "primary hover:text-base-100",
-  "secondary": "secondary hover:text-base-100",
-  "accent": "accent text-base-content hover:text-base-100",
-  "outline": "outline border border-base-content hover:bg-base-content",
+  "primary": "btn primary hover:text-base-100",
+  "secondary": "btn secondary hover:text-base-100",
+  "accent": "btn accent text-base-content hover:text-base-100",
+  "outline": "btn outline border border-base-content hover:bg-base-content",
 };
 
 function Totalizer(
@@ -61,7 +62,7 @@ function Totalizer(
     <div class="flex justify-between items-center w-full text-gray-500">
       <span class="text-sm max-md:text-xs text-base-content">{label}</span>
       <span class="text-sm max-md:text-xs text-base-content">
-        {formatPrice(value / 100, currencyCode!, locale)}
+        {formatPrice(value, currencyCode!, locale)}
       </span>
     </div>
   );
@@ -78,15 +79,12 @@ function Cart(props: ICartProps) {
     showClearButton = true,
     goToCartLabel = "Finalizar compra",
   } = props;
-  const { loading, mapItemsToAnalyticsItems, removeAllItems, cart } = useCart();
-  const isCartEmpty = cart.value?.items.length === 0;
-
-  const locale = cart.value?.clientPreferencesData.locale;
-  const currencyCode = cart.value?.storePreferencesData.currencyCode;
-  const total =
-    cart.value?.totalizers?.find((item) => item.id === "Items")?.value || 0;
-  const discounts =
-    cart.value?.totalizers?.find((item) => item.id === "Discounts")?.value || 0;
+  const { loading, cart, removeAllItems} = useCart();
+  const isCartEmpty = cart.value?.lines?.nodes?.length === 0;
+  const locale = "pt-BR";
+  const currencyCode = cart.value?.cost?.totalAmount.currencyCode ?? "BRL";
+  const discounts = cart.value?.cost?.subtotalAmount.amount ?? 0
+  const items = cart.value?.lines?.nodes ?? [];
 
   if (cart.value === null) {
     return null;
@@ -104,18 +102,18 @@ function Cart(props: ICartProps) {
     );
   }
 
-  const subTotal = cart.value.items.reduce(
-    (acc, current) => current.price + acc,
-    0,
-  );
-
+  const subTotal =  cart.value?.cost?.subtotalAmount.amount ?? 0;
+  const totalTaxAmount =  cart.value?.cost?.totalTaxAmount.amount ?? 0;
+  const discountsTotal  =  0;
+  const total = cart.value?.cost?.totalAmount.amount ?? 0;
+  
   return (
     <>
       <ul
         role="list"
         class="mx-5 my-3 flex-grow overflow-y-auto flex flex-col gap-6 lg:mx-10"
       >
-        {cart.value.items.map((_, index) => (
+        {items?.map((_, index) => (
           <li key={index}>
             <CartItem index={index} currency={currencyCode!} />
           </li>
@@ -134,9 +132,14 @@ function Cart(props: ICartProps) {
           currencyCode={currencyCode as string}
           label="Descontos"
           locale={locale as string}
-          value={discounts as number}
+          value={discountsTotal as number}
         />
-
+        <Totalizer
+          currencyCode={currencyCode as string}
+          label="Taxa"
+          locale={locale as string}
+          value={totalTaxAmount}
+        />
         {total && (
           <div class="flex flex-col justify-end items-end gap-2 py-3 mx-5 border-solid border-b-[1px] border-base-200 lg:mx-10 w-full">
             <div class="flex justify-between items-center w-full font-bold text-xs text-base-content lg:text-sm">
@@ -144,7 +147,7 @@ function Cart(props: ICartProps) {
                 Total
               </span>
               <span class="lg:text-base-content text-emphasis max-md:text-xs">
-                {formatPrice(total / 100, currencyCode!, locale)}
+                {formatPrice(total, currencyCode!, locale)}
               </span>
             </div>
           </div>
@@ -156,7 +159,7 @@ function Cart(props: ICartProps) {
               class={`h-9 font-medium text-xs border-none w-full btn-${
                 BUTTON_VARIANTS[buttonModeMobile ?? "primary"]
               }`}
-              disabled={loading.value || cart.value.items.length === 0}
+              disabled={loading.value || items?.length === 0}
               onClick={() => {
                 sendEvent({
                   name: "begin_checkout",
@@ -166,7 +169,7 @@ function Cart(props: ICartProps) {
                     coupon: cart.value?.marketingData?.coupon ?? undefined,
 
                     items: cart.value
-                      ? mapItemsToAnalyticsItems(cart.value)
+                      ? itemToAnalyticsItem(cart.value)
                       : [],
                   },
                 });
@@ -180,8 +183,8 @@ function Cart(props: ICartProps) {
           {!showClearButton && (
             <Button
               data-deco="buy-button"
-              class="h-9 btn-outline lg:h-10 whitespace-nowrap px-6"
-              disabled={loading.value || cart.value.items.length === 0}
+              class="h-9  btn btn-outline lg:h-10 whitespace-nowrap px-6"
+              disabled={loading?.value || items?.length === 0}
               onClick={() => {
                 removeAllItems(undefined);
               }}
@@ -195,7 +198,7 @@ function Cart(props: ICartProps) {
               class={`h-9 btn-${
                 BUTTON_VARIANTS[buttonMode as string]
               } font-medium text-xs w-[40%] text-base-100 lg:w-full lg:text-sm lg:h-10`}
-              disabled={loading.value || cart.value.items.length === 0}
+              disabled={loading.value || items?.length === 0}
               onClick={() => {
                 sendEvent({
                   name: "begin_checkout",
@@ -205,7 +208,7 @@ function Cart(props: ICartProps) {
                     coupon: cart.value?.marketingData?.coupon ?? undefined,
 
                     items: cart.value
-                      ? mapItemsToAnalyticsItems(cart.value)
+                      ? itemToAnalyticsItem(cart.value)
                       : [],
                   },
                 });

@@ -1,6 +1,12 @@
-import type {AggregateOffer,UnitPriceSpecification} from "apps/commerce/types.ts";
+import type {
+  AggregateOffer,
+  UnitPriceSpecification,
+} from "$store/commerce/types.ts";
 
-const bestInstallment = (acc: UnitPriceSpecification | null,curr: UnitPriceSpecification) => {
+const bestInstallment = (
+  acc: UnitPriceSpecification | null,
+  curr: UnitPriceSpecification,
+) => {
   if (curr.priceComponentType !== "https://schema.org/Installment") {
     return acc;
   }
@@ -27,32 +33,38 @@ const bestInstallment = (acc: UnitPriceSpecification | null,curr: UnitPriceSpeci
   return acc;
 };
 
-const installmentToString = (installment: UnitPriceSpecification) => {
-  const { billingDuration, billingIncrement } = installment;
+const installmentToString = (
+  installment: UnitPriceSpecification,
+  sellingPrice: number,
+) => {
+  const { billingDuration, billingIncrement, price } = installment;
 
   if (!billingDuration || !billingIncrement) {
     return "";
   }
 
-  return `${billingDuration}x de R$ ${billingIncrement}`;
+  const withTaxes = sellingPrice < price;
+
+  return `${billingDuration}x de R$ ${billingIncrement} ${
+    withTaxes ? "com juros" : "sem juros"
+  }`;
 };
 
 export const useOffer = (aggregateOffer?: AggregateOffer) => {
   const offer = aggregateOffer?.offers[0];
-  const listPrice = offer?.priceSpecification.find((spec) =>
+  const listPrice = offer?.priceSpecification.find((spec:any) =>
     spec.priceType === "https://schema.org/ListPrice"
   );
   const installment = offer?.priceSpecification.reduce(bestInstallment, null);
-  const seller = offer?.seller;
+  const seller = offer?.seller ?? "default-seller"; // TODO: Find out the seller equivalent in shopify
   const price = offer?.price;
-  const availability = offer?.availability;
 
   return {
     price,
     listPrice: listPrice?.price,
-    availability,
     seller,
-    installments: installment && price ? installmentToString(installment) : null,
-    installment,
+    installments: installment && price
+      ? installmentToString(installment, price)
+      : null,
   };
 };
