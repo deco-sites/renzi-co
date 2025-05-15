@@ -39,7 +39,7 @@
           "props": {
             "sort": "price-descending",
             "count": 5,
-            "collection": " "
+            "collection": "Colares"
           },
           "filters": {
             "tags": [],
