@@ -39,13 +39,15 @@
           "props": {
             "sort": "price-descending",
             "count": 5,
-            "collection": "Os mais vendidos"
+            "collection": " "
           },
           "filters": {
             "tags": [],
             "productTypes": [],
             "productVendors": [],
-            "variantOptions": []
+            "variantOptions": [],
+            "priceMin": 0,
+            "priceMax": 100000
           },
           "metafields": []
         }

@@ -83,7 +83,10 @@ function Result({ page, variant, highlights, }: Omit<Omit<Props, "page">, "notFo
     </>);
 }
 function SearchResult({ page, notFoundSection: { Component: NotFoundSection, props: notFoundProps }, ...props }: Props) {
-    if (!page || !page.products || page.products.length === 0) {
+    
+    console.log(page)
+
+  if (!page || !page.products || page.products.length === 0) {
         return <NotFoundSection {...notFoundProps}/>;
     }
     return <Result {...props} page={page}/>;

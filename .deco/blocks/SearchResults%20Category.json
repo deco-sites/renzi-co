@@ -7,7 +7,8 @@
         "page": {
           "__resolveType": "shopify/loaders/ProductListingPage.ts",
           "metafields": [],
-          "count": 15
+          "count": 15,
+          "pageOffset": 1
         },
         "highlights": [],
         "variant": "aside",
@@ -22,7 +23,8 @@
       "shadow": "none",
       "verticalSpacing": "both",
       "spacing": 0,
-      "label": "Search Results"
+      "label": "Search Results",
+      "withContainer": true
     }
   ]
 }

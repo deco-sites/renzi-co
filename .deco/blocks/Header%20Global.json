@@ -37,18 +37,18 @@
         "navItems": [
           {
             "children": [],
-            "label": "Lançamentos",
-            "href": "/"
+            "label": "Os mais vendidos",
+            "href": "/os-mais-vendidos"
           },
           {
             "children": [],
-            "label": "Tênis",
-            "href": "/"
+            "label": "Berloque",
+            "href": "/berloque"
           },
           {
             "children": [],
-            "label": "T-shirts",
-            "href": "/"
+            "label": "Anel",
+            "href": "/anel"
           },
           {
             "children": [],
@@ -57,8 +57,8 @@
           },
           {
             "children": [],
-            "label": "Off",
-            "href": "/",
+            "label": "Colares",
+            "href": "/colares",
             "highlighted": true
           }
         ],
