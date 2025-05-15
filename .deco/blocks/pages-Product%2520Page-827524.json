@@ -1,6 +1,6 @@
 {
   "name": "Product Page",
-  "path": "products/:slug",
+  "path": "/products/:slug",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
