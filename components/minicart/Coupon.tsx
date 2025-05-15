@@ -1,13 +1,17 @@
 import Button from "$store/components/ui/Button.tsx";
 import { useSignal } from "@preact/signals";
-import { useCart } from "apps/vtex/hooks/useCart.ts";
+// import { useCart } from "apps/vtex/hooks/useCart.ts";
+import { useCart } from "apps/shopify/hooks/useCart.ts";
 import { useRef } from "preact/hooks";
 
 function Coupon() {
   const { cart, loading, addCouponsToCart } = useCart();
   const ref = useRef<HTMLInputElement>(null);
   const displayInput = useSignal(false);
-  const coupon = cart.value?.marketingData?.coupon;
+  const coupons = cart.value?.discountCodes;
+  const coupon = coupons && coupons[0]?.applicable
+    ? coupons[0].code
+    : undefined;
 
   const toggleInput = () => {
     displayInput.value = !displayInput.value;
@@ -17,9 +21,8 @@ function Coupon() {
     e.preventDefault();
 
     const text = ref.current?.value;
-
     if (typeof text === "string") {
-      addCouponsToCart({ text });
+      addCouponsToCart({ discountCodes: [text] })
       toggleInput();
     }
   };

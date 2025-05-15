@@ -10,7 +10,7 @@ interface Options {
 
 export const useAddToCart = ({ skuId, sellerId }: Options) => {
   const isAddingToCart = useSignal(false);
-  const { displayCart } = useUI();
+  const { displayCart, productQuantity } = useUI();
   const { addItems, loading } = useCart();
 
   const onClick = useCallback(async (e: MouseEvent) => {
@@ -27,6 +27,7 @@ export const useAddToCart = ({ skuId, sellerId }: Options) => {
       await addItems({
         lines: {
           merchandiseId: skuId,
+          quantity: productQuantity.value,
         },
       });
 

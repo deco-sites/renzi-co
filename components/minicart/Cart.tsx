@@ -47,10 +47,10 @@ interface TotalizerProps {
 }
 
 export const BUTTON_VARIANTS: Record<string, string> = {
-  "primary": "btn primary hover:text-base-100",
-  "secondary": "btn secondary hover:text-base-100",
-  "accent": "btn accent text-base-content hover:text-base-100",
-  "outline": "btn outline border border-base-content hover:bg-base-content",
+  "primary": "primary hover:text-base-100",
+  "secondary": "secondary hover:text-base-100",
+  "accent": "accent text-base-content hover:text-base-100",
+  "outline": "outline border border-base-content hover:bg-base-content",
 };
 
 function Totalizer(
@@ -195,7 +195,7 @@ function Cart(props: ICartProps) {
           <a class="w-full flex justify-center" href="/checkout">
             <Button
               data-deco="buy-button"
-              class={`h-9 btn-${
+              class={`h-9 btn btn-${
                 BUTTON_VARIANTS[buttonMode as string]
               } font-medium text-xs w-[40%] text-base-100 lg:w-full lg:text-sm lg:h-10`}
               disabled={loading.value || items?.length === 0}

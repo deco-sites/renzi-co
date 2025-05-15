@@ -5,14 +5,16 @@ import Icon from "$store/components/ui/Icon.tsx";
 interface Props {
   skuId: string;
   sellerId: string;
+  quantity?: number;
   classes?: string;
   label?: string;
 }
 
-function AddToCartButton({ skuId, sellerId, classes, label }: Props) {
+function AddToCartButton({ skuId, sellerId, classes, label, quantity }: Props) {
   const props = useAddToCart({
     skuId,
     sellerId,
+    quantity
   });
 
   return (

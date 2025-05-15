@@ -27,7 +27,7 @@ function CartItem({ index, currency }: Props) {
   const listPrice = cost.compareAtAmountPerQuantity?.amount;
   const name = merchandise.product.title;
 
-  console.log(merchandise)
+  console.log(item)
 
   const isGift = sellingPrice < 0.01;
 
@@ -87,7 +87,13 @@ function CartItem({ index, currency }: Props) {
             disabled={loading.value || isGift}
             quantity={quantity}
             onChange={async (quantity) => {
-              await updateItems({ orderItems: [{ index, quantity }] });
+              // await updateItems({ orderItems: [{ index, quantity }] });
+              updateItems({
+                lines: [{
+                  id: item.id,
+                  quantity: quantity,
+                }],
+              })
               const quantityDiff = quantity - item.quantity;
 
               if (!cart.value) {
@@ -112,7 +118,13 @@ function CartItem({ index, currency }: Props) {
           />
           <Button
             onClick={() => {
-              updateItems({ orderItems: [{ index, quantity: 0 }] });
+              // updateItems({ orderItems: [{ index, quantity: 0 }] });
+              updateItems({
+                lines: [{
+                  id: item.id,
+                  quantity: 0,
+                }],
+              })
               if (!cart.value) {
                 return;
               }
