@@ -11,7 +11,24 @@
         "layout": {
           "headerAlignment": "center",
           "headerfontSize": "Normal",
-          "itemsPerPage": []
+          "itemsPerPage": [
+            {
+              "itemsQuantity": 1,
+              "screenWidth": 425
+            },
+            {
+              "screenWidth": 786,
+              "itemsQuantity": 3
+            },
+            {
+              "screenWidth": 1170,
+              "itemsQuantity": 4
+            },
+            {
+              "screenWidth": 1440,
+              "itemsQuantity": 4
+            }
+          ]
         },
         "showPaginationArrows": "Always",
         "cardLayout": {

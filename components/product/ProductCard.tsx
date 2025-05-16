@@ -204,7 +204,7 @@ function ProductCard({
           }
         `}
         >
-          <WishlistIcon productGroupID={productGroupID} productID={productID} />
+          {/* <WishlistIcon productGroupID={productGroupID} productID={productID} /> */}
         </div>
         <a
           href={url && relative(url)}
