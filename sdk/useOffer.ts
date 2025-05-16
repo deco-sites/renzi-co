@@ -1,7 +1,5 @@
-import type {
-  AggregateOffer,
-  UnitPriceSpecification,
-} from "$store/commerce/types.ts";
+import { AggregateOffer, UnitPriceSpecification } from "apps/commerce/types.ts";
+
 
 const bestInstallment = (
   acc: UnitPriceSpecification | null,
@@ -52,14 +50,13 @@ const installmentToString = (
 
 export const useOffer = (aggregateOffer?: AggregateOffer) => {
   const offer = aggregateOffer?.offers[0];
+  // deno-lint-ignore no-explicit-any 
   const listPrice = offer?.priceSpecification.find((spec:any) =>
     spec.priceType === "https://schema.org/ListPrice"
   );
   const installment = offer?.priceSpecification.reduce(bestInstallment, null);
   const seller = offer?.seller ?? "default-seller"; // TODO: Find out the seller equivalent in shopify
   const price = offer?.price;
-
-  console.log(offer?.priceSpecification)
 
   return {
     price,

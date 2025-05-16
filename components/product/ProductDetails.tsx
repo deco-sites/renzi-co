@@ -63,9 +63,9 @@ function ProductInfo({ page, shipmentPolitics, shareableNetworks }: {
     const { description, productID, offers, name, gtin, isVariantOf, url, } = product;
     const { price, listPrice, seller, installments } = useOffer(offers);
 
-    let stock;
+    let stock = 0;
     if (offers) {
-        stock = offers.offers[0].inventoryLevel.value;
+        stock = offers.offers[0].inventoryLevel.value ?? 0;
     }
     return (<>
       <div class="floating bg-[#2F1893] w-full h-[80px] fixed left-0 bottom-0 z-20 container-floating is-hidden">
