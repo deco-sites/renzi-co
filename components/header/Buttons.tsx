@@ -72,7 +72,7 @@ function CartButton() {
       onClick={onClick}
     >
       <div class="indicator">
-        {totalItems && (
+        {totalItems > 0 && (
           <span class="indicator-item text-base-100 btn btn-primary w-4 h-4 min-h-0 p-0 rounded-full text-xs left-4 top-3 font-bold">
             {totalItems > 9 ? "9+" : totalItems}
           </span>
