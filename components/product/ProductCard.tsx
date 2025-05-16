@@ -4,7 +4,7 @@ import {
 } from "$store/components/minicart/Cart.tsx";
 import Avatar from "$store/components/ui/Avatar.tsx";
 import AddToCartButton from "$store/islands/AddToCartButton.tsx";
-import WishlistIcon from "$store/islands/WishlistButton.tsx";
+// import WishlistIcon from "$store/islands/WishlistButton.tsx";
 import { sendEventOnClick } from "$store/sdk/analytics.tsx";
 import { formatPrice } from "$store/sdk/format.ts";
 import { useOffer } from "$store/sdk/useOffer.ts";
@@ -88,7 +88,8 @@ function ProductCard({
   highlights,
 }: Props) {
   const { url, productID, name, image: images, offers, isVariantOf } = product;
-  const productGroupID = isVariantOf?.productGroupID;
+  
+  // const productGroupID = isVariantOf?.productGroupID;
   const [front, back] = images ?? [];
   const { listPrice, price, installments, seller } = useOffer(offers);
   const possibilities = useVariantPossibilities(product);
@@ -251,8 +252,8 @@ function ProductCard({
           {(!l?.onMouseOver?.image ||
             l?.onMouseOver?.image == "Change image") && (
             <Image
-              src={back?.url ?? front.url!}
-              alt={back?.alternateName ?? front.alternateName}
+              src={back?.url ?? front?.url!}
+              alt={back?.alternateName ?? front?.alternateName}
               width={WIDTH}
               height={HEIGHT}
               class="absolute transition-opacity rounded-lg w-full opacity-0 lg:group-hover:opacity-100"

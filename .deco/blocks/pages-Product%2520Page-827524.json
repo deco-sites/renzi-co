@@ -16,7 +16,7 @@
           {
             "section": {
               "__resolveType": "site/sections/Product/ProductDetails.tsx",
-              "variant": "front-back",
+              "variant": "slider",
               "shipmentPolitics": {
                 "label": " ",
                 "link": " "
@@ -35,7 +35,8 @@
             "shadow": "none",
             "verticalSpacing": "both",
             "spacing": 0,
-            "label": "ProductDetails"
+            "label": "ProductDetails",
+            "withContainer": true
           }
         ]
       }

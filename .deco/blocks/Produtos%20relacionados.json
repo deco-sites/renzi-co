@@ -4,12 +4,37 @@
     {
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "products": null,
-        "seeMore": {},
+        "products": {
+          "__resolveType": "shopify/loaders/RelatedProducts.ts",
+          "metafields": [],
+          "count": 5,
+          "slug": "slug"
+        },
+        "seeMore": {
+          "url": " ",
+          "label": " "
+        },
         "layout": {
           "headerAlignment": "center",
           "headerfontSize": "Normal",
-          "itemsPerPage": []
+          "itemsPerPage": [
+            {
+              "screenWidth": 425,
+              "itemsQuantity": 1
+            },
+            {
+              "screenWidth": 786,
+              "itemsQuantity": 3
+            },
+            {
+              "screenWidth": 1170,
+              "itemsQuantity": 4
+            },
+            {
+              "screenWidth": 1440,
+              "itemsQuantity": 4
+            }
+          ]
         },
         "showPaginationArrows": "Always",
         "cardLayout": {
@@ -20,7 +45,8 @@
             "ctaMode": "Go to Product Page"
           },
           "discount": {
-            "variant": "primary"
+            "variant": "primary",
+            "label": " "
           },
           "elementsPositions": {
             "skuSelector": "Top",
