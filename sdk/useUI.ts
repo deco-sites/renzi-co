@@ -9,12 +9,19 @@ const displayCart = signal(false);
 const displayMenu = signal(false);
 const displaySearchbar = signal(false);
 const productQuantity = signal(1);
+const gridColsSignal = signal({
+  desktop: 3,
+  mobile: 2,
+});
+const gridCols = signal(2);
 
 const state = {
   displayCart,
   displayMenu,
   displaySearchbar,
-  productQuantity
+  productQuantity,
+  gridColsSignal,
+  gridCols
 };
 
 export const useUI = () => state;

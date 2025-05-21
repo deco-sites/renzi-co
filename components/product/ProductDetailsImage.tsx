@@ -47,7 +47,7 @@ function ProductDetailsImage({ images, product }: Props) {
                   }}
                   class="overflow-hidden cursor-zoom-in relative"
                 >
-                  <OpenModalImage />
+                  {/* <OpenModalImage /> */}
                   <Image
                     class="rounded-[10px] transition duration-150 opacity-100  lg:hover:opacity-0 hover:duration-300"
                     sizes="(max-width: 640px) 100vw, 40vw"

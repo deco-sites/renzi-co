@@ -11,11 +11,11 @@ interface Props {
 }
 
 const insideSquareStyle =
-  "border-1 border-[#2F1893] bg-[#2F1893] rounded-[2px] w-[4px] h-[4px] float-left block m-0 transition-all duration-500";
+  "border-1 border-[#56373c] bg-[#56373c] rounded-[2px] w-[4px] h-[4px] float-left block m-0 transition-all duration-500";
 const activeSquare = `${insideSquareStyle} bg-white border-white`;
 const buttonStyle =
-  "relative flex items-center justify-center gap-[3px] float-right border border-[#2F1893] rounded-[4px] w-[25px] h-[25px] max-lg:last:mx-3 lg:mr-[0.625rem] lg:last:flex-col";
-const activeButton = `${buttonStyle} bg-[#2F1893]`;
+  "relative flex items-center justify-center gap-[3px] float-right border border-[#56373c] rounded-[4px] w-[25px] h-[25px] max-lg:last:mx-3 lg:mr-[0.625rem] lg:last:flex-col";
+const activeButton = `${buttonStyle} bg-[#56373c]`;
 
 const SearchResultsGridChoice = ({ variant }: Props) => {
   return (
@@ -63,7 +63,7 @@ const SearchResultsGridChoice = ({ variant }: Props) => {
         )
         : (
           <div class="column-selector__desktop flex items-center max-lg:hidden">
-            <p class="text-[#2F1893] w-max text-base leading-7 font-bold mr-3 font-quicksand">
+            <p class="text-base-300 w-max text-base leading-7 font-bold mr-3 font-quicksand">
               Visualização
             </p>
 
