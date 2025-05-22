@@ -87,9 +87,9 @@ function ProductCard({
   layout,
   highlights,
 }: Props) {
-  const { url, productID, name, image: images, offers, isVariantOf } = product;
+  const { url, productID, name:partialName, image: images, offers, isVariantOf } = product;
   
-  // const productGroupID = isVariantOf?.productGroupID;
+  const name = product?.isVariantOf?.name || partialName;
   const [front, back] = images ?? [];
   const { listPrice, price, installments, seller } = useOffer(offers);
   const possibilities = useVariantPossibilities(product);
@@ -226,7 +226,7 @@ function ProductCard({
           )}
 
           <Image
-            src={front.url!}
+            src={front?.url ?? ""}
             alt={front.alternateName}
             width={WIDTH}
             height={HEIGHT}
@@ -252,7 +252,7 @@ function ProductCard({
           {(!l?.onMouseOver?.image ||
             l?.onMouseOver?.image == "Change image") && (
             <Image
-              src={back?.url ?? front?.url!}
+              src={back?.url ?? front?.url ?? ""}
               alt={back?.alternateName ?? front?.alternateName}
               width={WIDTH}
               height={HEIGHT}

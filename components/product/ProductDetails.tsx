@@ -66,9 +66,10 @@ function ProductInfo({
   shareableNetworks?: Props["shareableNetworks"];
 }) {
   const { breadcrumbList, product } = page;
-  const { description, productID, offers, name, gtin, isVariantOf, url } =
+  const { productID, offers, name, gtin, isVariantOf, url } =
     product;
   const { price, listPrice, seller, installments } = useOffer(offers);
+  const description = product.description || isVariantOf?.description;
 
   let stock = 0;
   if (offers) {
