@@ -11,15 +11,29 @@
     },
     {
       "section": {
-        "__resolveType": "site/sections/HeroVideoCarroussel.tsx",
+        "__resolveType": "site/sections/HeroVideoBannerCarroussel.tsx",
         "slider": {
           "interval": 10000
         },
         "banner": [
           {
             "media": {
-              "videoDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/3447/0775a6d7-d537-471f-b1c5-b7c513492320",
-              "videoMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/3447/984e76e6-7896-4e39-9a9a-03dbc7fa8e28"
+              "imageDesktop": "https://assets.decocache.com/renzi-co/b5d135fb-c1f7-4309-85f4-9f0f4e78ce45/image.webp",
+              "imageMobile": "https://assets.decocache.com/renzi-co/7539885b-9e83-4e65-a31a-4561feacfbd0/image-(2).webp"
+            },
+            "cta": {
+              "title": {},
+              "buttons": [],
+              "position": {
+                "vertical": "inferior",
+                "horizontal": "esquerda"
+              }
+            }
+          },
+          {
+            "media": {
+              "videoDesktop": "https://assets.decocache.com/renzi-co/29a86a70-4637-4697-81ea-79ead7077d80/0775a6d7-d537-471f-b1c5-b7c513492320.mp4",
+              "videoMobile": "https://assets.decocache.com/renzi-co/25afd16f-36e6-4a28-9b30-2756953f7e1d/100627-video-720.mp4"
             },
             "cta": {
               "title": {},
@@ -33,9 +47,6 @@
         ],
         "isHeaderTransparent": true
       },
-      "shadow": "none",
-      "verticalSpacing": "both",
-      "spacing": 0,
       "__resolveType": "website/sections/Rendering/Lazy.tsx"
     },
     {
