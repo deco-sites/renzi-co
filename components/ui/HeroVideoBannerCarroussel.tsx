@@ -14,7 +14,7 @@ export interface VideoProps {
   videoDesktop: LiveVideo;
 
   /** @title Vídeo para Mobile (*) */
-  /** @description (Inserir Vídeo ou imagem com a mesma largura. Ex: 500px) */
+  /** @description (Inserir Vídeo ou imagem com a mesma largura. Ex: 600px) */
   videoMobile: LiveVideo;
 }
 
@@ -24,7 +24,7 @@ export interface ImageProps {
   imageDesktop: ImageWidget;
 
   /** @title Imagem para Mobile (*) */
-  /** @description (Inserir Vídeo ou imagem com a mesma largura. Ex: 500px) */
+  /** @description (Inserir Vídeo ou imagem com a mesma largura. Ex: 600px) */
   imageMobile: ImageWidget;
 }
 
