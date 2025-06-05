@@ -19,7 +19,7 @@ interface Props {
               {props.title &&
                 (
                   <h1
-                    class={`text-xl lg:text-2xl leading-8 lg:leading-10 font-medium
+                    class={`uppercase font-bold text-xl lg:text-2xl leading-8 lg:leading-10
                     ${props.colorReverse ? "text-primary" : "text-secondary"}
                   `}
                   >
