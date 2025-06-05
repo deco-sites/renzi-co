@@ -2,7 +2,7 @@
 import { signal } from "@preact/signals";
 
 export const gridColsSignal = signal({
-  desktop: 3,
+  desktop: 4,
   mobile: 2,
 });
 
