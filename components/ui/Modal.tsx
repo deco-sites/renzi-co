@@ -91,7 +91,7 @@ const Modal = ({
           {showHeader && (
             <header class="mx-5 mt-4 mb-[10.5px] flex items-center justify-between border-solid border-b-[1px] border-[#F7F7F7] lg:mx-10">
               <h1 className="flex items-center justify-between gap-1">
-                <span class="font-medium text-base-content lg:text-xl text-xl">
+                <span class="uppercase font-bold text-base-content lg:text-xl text-xl">
                   {title}
                 </span>
               </h1>

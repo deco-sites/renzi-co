@@ -37,29 +37,49 @@
         "navItems": [
           {
             "children": [],
-            "label": "Os mais vendidos",
-            "href": "/os-mais-vendidos"
-          },
-          {
-            "children": [],
-            "label": "Berloque",
-            "href": "/berloque"
-          },
-          {
-            "children": [],
-            "label": "Anel",
-            "href": "/anel"
-          },
-          {
-            "children": [],
-            "label": "Inverno",
+            "label": "Presentes",
             "href": "/"
           },
           {
             "children": [],
+            "label": "Coleção",
+            "href": "/collections/colares"
+          },
+          {
+            "children": [],
+            "label": "Brincos",
+            "href": "/brincos"
+          },
+          {
+            "children": [],
             "label": "Colares",
-            "href": "/colares",
+            "href": "/colares"
+          },
+          {
+            "children": [],
+            "label": "Chokers",
+            "href": "/choker",
             "highlighted": true
+          },
+          {
+            "children": [],
+            "label": "Pulseiras",
+            "href": "/pulseiras"
+          },
+          {
+            "children": [],
+            "label": "Anéis",
+            "href": "/anel"
+          },
+          {
+            "children": [],
+            "label": "Braceletes",
+            "href": "/bracelete"
+          },
+          {
+            "children": [],
+            "label": "Acessórios",
+            "href": "/"
           }
         ],
         "minicart": {
