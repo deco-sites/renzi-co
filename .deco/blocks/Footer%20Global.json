@@ -88,17 +88,32 @@
         ],
         "socialNetWorks": [
           {
-            "icon": "Facebook",
-            "label": "Facebook",
-            "href": "https://www.facebook.com/Scarcom"
+            "icon": "Tiktok",
+            "label": "TikTok",
+            "href": "/"
           },
           {
-            "icon": "Instagram",
-            "label": "Instagram",
-            "href": "https://www.instagram.com/scarcom_informatica/"
+            "icon": "Pinterest",
+            "label": "Pinterest",
+            "href": "/"
+          },
+          {
+            "icon": "Facebook",
+            "label": "Facebook",
+            "href": "/"
+          },
+          {
+            "icon": "YouTube",
+            "label": "YouTube",
+            "href": "/"
+          },
+          {
+            "icon": "Linkedin",
+            "label": "LinkedIn",
+            "href": "/"
           }
         ],
-        "openingHours": "<p>Seg. à Sex. das 08:00h às 18:00h<br></p>",
+        "openingHours": "<p>Segunda a sexta, das 08h às 18h</p>",
         "payments": [
           {
             "alt": "Mastercard",
@@ -151,11 +166,11 @@
             "href": "https://vtex.com/br-pt"
           }
         ],
-        "email": " ",
+        "email": " contato@renzieco.com.br",
         "logo": {
           "image": "https://assets.decocache.com/scarcom/a188a542-2ca2-478e-bacc-f6a28c0a2c3d/1742476359184-1f6dc342-05a2-4692-87d3-22a19abac5ca"
         },
-        "phone": " "
+        "phone": " (21) 98828-4969 (com direcionamento automático para WhatsApp)"
       },
       "shadow": "none",
       "verticalSpacing": "none",
