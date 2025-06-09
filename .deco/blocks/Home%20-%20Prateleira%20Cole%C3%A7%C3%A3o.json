@@ -67,7 +67,8 @@
             "priceMax": 100000
           },
           "metafields": []
-        }
+        },
+        "title": "Lançamentos"
       },
       "shadow": "none",
       "verticalSpacing": "both",
