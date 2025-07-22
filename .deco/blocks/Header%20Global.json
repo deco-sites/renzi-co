@@ -36,50 +36,172 @@
         "__resolveType": "site/sections/Header/HeaderLayout.tsx",
         "navItems": [
           {
-            "children": [],
-            "label": "Presentes",
+            "children": [
+              {
+                "children": [],
+                "label": "Anéis de Coração",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Anéis Regulaveis",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Anéis Cravejados",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Anéis Delicados ",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Anéis de Zirconia ",
+                "href": "/"
+              }
+            ],
+            "label": "ANÉIS ",
+            "href": "/aneis"
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "label": "Chokers com zircônia",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Gargantilha",
+                "href": "/"
+              }
+            ],
+            "label": "CHOKERS",
             "href": "/"
           },
           {
-            "children": [],
-            "label": "Coleção",
-            "href": "/"
-          },
-          {
-            "children": [],
-            "label": "Brincos",
-            "href": "/brincos"
-          },
-          {
-            "children": [],
-            "label": "Colares",
+            "children": [
+              {
+                "children": [],
+                "label": "Colares Ponto de Luz",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Colares de Bijuterias Finas",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Colares de Elos",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Mix de Colares ",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Colares de Zircônia",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Escapularios",
+                "href": "/"
+              }
+            ],
+            "label": "COLARES",
             "href": "/colares"
           },
           {
-            "children": [],
-            "label": "Chokers",
-            "href": "/choker",
-            "highlighted": true
-          },
-          {
-            "children": [],
-            "label": "Pulseiras",
+            "children": [
+              {
+                "children": [],
+                "label": "Pulseiras Delicadas",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Braceletes",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Pulseiras de Bijuterias Finas",
+                "href": "/"
+              }
+            ],
+            "label": "PULSEIRAS",
             "href": "/pulseiras"
           },
           {
-            "children": [],
-            "label": "Anéis",
-            "href": "/anel"
+            "children": [
+              {
+                "children": [],
+                "label": "Brincos de argola",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Brincos earhook",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Brincos Grandes",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Brincos Pequenos ",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Brincos com Zircônia",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Brincos de Bijuterias Finas",
+                "href": "/"
+              }
+            ],
+            "label": "BRINCOS ",
+            "href": "/brincos",
+            "highlighted": true
           },
           {
-            "children": [],
-            "label": "Braceletes",
-            "href": "/bracelete"
+            "children": [
+              {
+                "children": [],
+                "label": "Piercing Fake",
+                "href": "/"
+              }
+            ],
+            "label": "ACESSÓRIOS",
+            "href": "/acessorios"
           },
           {
-            "children": [],
-            "label": "Acessórios",
-            "href": "/"
+            "children": [
+              {
+                "children": [],
+                "label": "Aço inox masculino",
+                "href": "/"
+              },
+              {
+                "children": [],
+                "label": "Aço inox feminino",
+                "href": "/"
+              }
+            ],
+            "label": "AÇO",
+            "href": "/aco"
           }
         ],
         "minicart": {
