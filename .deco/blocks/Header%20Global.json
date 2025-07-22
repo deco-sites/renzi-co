@@ -7,13 +7,13 @@
         "alerts": [
           {
             "idIcon": "",
-            "textAlert": "PRIMEIRA TROCA GRÁTIS",
+            "textAlert": "PRIMEIRA COMPRA 10% OFF | Cupom: PRIMEIRA10PARCELEEM ",
             "image": "https://assets.decocache.com/renzi-co/ef79bb22-ddb9-4aa0-924d-af548c6db5b9/bba57518-47fc-4f56-9380-86b0152df373.svg",
             "textColor": "#ffffff"
           },
           {
             "idIcon": "",
-            "textAlert": "FRETE GRÁTIS NAS COMPRAS ACIMA DE R$500",
+            "textAlert": "FRETE GRÁTIS acima de R$ 189,90 RJ e SP | R$ 389,90 demais estados",
             "image": "https://assets.decocache.com/renzi-co/eef8f98c-5510-4d95-8b72-f4b775eda596/10c40a1d-1c13-4bbd-990a-1d7a81ba9f1e.svg",
             "textColor": "#ffffff"
           },

@@ -34,15 +34,15 @@
         "__resolveType": "site/sections/Images/ImageGallery.tsx",
         "images": [
           {
-            "image": "https://assets.decocache.com/renzi-co/17a2b4fd-9603-4f37-97b6-9a5b2dc8ef25/a625a3ef-27f5-4549-844e-24ee939271c8.png",
-            "alt": " ",
+            "image": "https://assets.decocache.com/renzi-co/4b1ff840-897d-47af-be9a-39a98a0afd3f/ESCOLHA-RENZI.jpg",
+            "alt": " Escolha a Renzi",
             "href": "/",
             "title": " "
           },
           {
-            "image": "https://assets.decocache.com/renzi-co/17a2b4fd-9603-4f37-97b6-9a5b2dc8ef25/a625a3ef-27f5-4549-844e-24ee939271c8.png",
-            "alt": "imagem social",
-            "href": "/",
+            "image": "https://assets.decocache.com/renzi-co/9df3a758-764c-4f56-948d-6cc69e76eb51/NOSSA-SELECAO-ESPECIAL-DE-BRINCOS.jpg",
+            "alt": "Nossa seleção especial de brincos",
+            "href": "/brincos",
             "title": " "
           },
           {

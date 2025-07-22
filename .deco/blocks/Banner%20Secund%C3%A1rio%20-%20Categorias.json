@@ -15,11 +15,10 @@
               "mobile": "none",
               "desktop": "none"
             },
-            "image": "https://assets.decocache.com/renzi-co/3d410794-ab67-4c6b-80e5-4510717c3227/cca2c82d-fc1d-4329-876c-49ac52f4b031.png",
-            "alt": "Telefone Videoconferencia IP 6 Linhas",
+            "image": "https://assets.decocache.com/renzi-co/26d619a3-55d6-47cb-a192-eb26495edb5c/4.jpg",
+            "alt": "Brincos",
             "imageMobile": "https://assets.decocache.com/scarcom/120d915e-7d73-4652-95c8-f23db832982b/1742476402335-1ccf20cd-b697-47eb-9de2-4b6b75a18621",
-            "href": "/grandstream-gxv3275/p",
-            "title": "Tenis"
+            "href": "/brincos"
           },
           {
             "backgroundColorHover": "primary",
@@ -31,11 +30,10 @@
               "mobile": "none",
               "desktop": "none"
             },
-            "image": "https://assets.decocache.com/renzi-co/35da1e0c-7933-4413-9ac3-95b1df920d2e/d27b769f-3367-4f96-80bf-7a9fae47b69e.png",
-            "alt": "KVM Trendnet TK-803R com 8 portas ",
+            "image": "https://assets.decocache.com/renzi-co/3118132b-0824-4fd5-a2e6-fe3fd0310cf2/5.jpg",
+            "alt": "Colares",
             "imageMobile": "https://assets.decocache.com/scarcom/4e4e16bc-1eb7-4313-b8a2-c0b7c1ba9b32/1742476405287-14d22cff-d43a-40ab-99dd-377f65b6e204",
-            "href": "/trendnet-tk-803r/p",
-            "title": "T-shirts"
+            "href": "/colares"
           },
           {
             "backgroundColorHover": "primary",
@@ -47,11 +45,10 @@
               "mobile": "none",
               "desktop": "none"
             },
-            "image": "https://assets.decocache.com/renzi-co/247cdbed-2963-4510-a8d4-d74d434ee951/25c3c0db-a98d-49c7-b4a4-88d0edf70d90.png",
-            "alt": "NAS 2 Bais Sem HD Gigabit e USB 3.0",
+            "image": "https://assets.decocache.com/renzi-co/9ee1f527-3455-4021-b461-394147e449ce/6.jpg",
+            "alt": "Pulseiras",
             "imageMobile": "https://assets.decocache.com/scarcom/a3a11131-cd33-438e-bc5d-9502847a26ed/1742476408058-3b1783f5-2fc8-4bf3-85e5-482fcd3a4673",
-            "href": "/asustor-as1102tl/p",
-            "title": "Jeans"
+            "href": "/pulseiras"
           }
         ],
         "itemPerPageDesktop": 3,

@@ -18,7 +18,7 @@
         "banner": [
           {
             "media": {
-              "imageDesktop": "https://assets.decocache.com/renzi-co/b5d135fb-c1f7-4309-85f4-9f0f4e78ce45/image.webp",
+              "imageDesktop": "https://assets.decocache.com/renzi-co/c2d005a5-440f-4fbf-984a-367ee34b643f/banner-principal.jpg",
               "imageMobile": "https://assets.decocache.com/renzi-co/7539885b-9e83-4e65-a31a-4561feacfbd0/image-(2).webp"
             },
             "cta": {
@@ -27,7 +27,8 @@
               "position": {
                 "vertical": "inferior",
                 "horizontal": "esquerda"
-              }
+              },
+              "subTitle": {}
             }
           },
           {
@@ -41,7 +42,8 @@
               "position": {
                 "vertical": "inferior",
                 "horizontal": "esquerda"
-              }
+              },
+              "subTitle": {}
             }
           }
         ],

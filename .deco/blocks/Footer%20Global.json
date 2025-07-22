@@ -113,7 +113,7 @@
             "href": "/"
           }
         ],
-        "openingHours": "<p>Segunda a sexta, das 08h às 18h</p>",
+        "openingHours": "<p><span style=\"color: black; font-size: 10pt\">🕘&nbsp;</span><strong><span style=\"color: black; font-size: 10pt\">Horário de atendimento:</span></strong><span style=\"color: black; font-size: 10pt\">&nbsp;Segunda a Sexta, das 09h às 18h.</span></p>",
         "payments": [
           {
             "alt": "Mastercard",
@@ -166,11 +166,11 @@
             "href": "https://vtex.com/br-pt"
           }
         ],
-        "email": " contato@renzieco.com.br",
+        "email": "relacionamento@renzi.com.br",
         "logo": {
           "image": "https://assets.decocache.com/scarcom/a188a542-2ca2-478e-bacc-f6a28c0a2c3d/1742476359184-1f6dc342-05a2-4692-87d3-22a19abac5ca"
         },
-        "phone": " (21) 98828-4969 "
+        "phone": " (21) 99720-2301"
       },
       "shadow": "none",
       "verticalSpacing": "none",
