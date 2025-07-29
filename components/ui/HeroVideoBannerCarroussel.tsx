@@ -1,6 +1,7 @@
 import Button from "$store/components/ui/Button.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import { useSignal } from "@preact/signals";
+import { useState } from "preact/hooks";
 import HeroVideoBannerSection from "$store/components/ui/HeroVideoBannerSection.tsx";
 import type { VideoWidget as LiveVideo } from "apps/admin/widgets.ts";
 import type { HTMLWidget as HTML } from "apps/admin/widgets.ts";
@@ -108,16 +109,16 @@ export interface BannerProps {
 type CallbackFunction = () => void;
 
 export default function HeroVideoCarroussel({banner,slider,isHeaderTransparent,}: BannerProps) {
-  const buttonDisabled = useSignal(false);
-
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+  
   const handleButtonAction = (callback: CallbackFunction) => {
-    if (buttonDisabled.value) return;
+    if (buttonDisabled) return;
     setButtonDisabled(true);
 
     callback();
 
     clearInterval(timeout);
-    setTimeout(() => buttonDisabled.value = false, 500);
+    setTimeout(() => setButtonDisabled(false), 500);
   };
 
   const nextBanner = () => {
@@ -174,7 +175,7 @@ export default function HeroVideoCarroussel({banner,slider,isHeaderTransparent,}
           <div class="is--loading"></div>
         </div>
         {banner.map((ban, index) => (                    
-          <div key={index} class={`custom-banner-slide w-full  children:w-screen -ml-[calc(100vw*${index})] ${index === inFocus.value 
+          <div key={index} class={`custom-banner-slide children:w-screen -ml-[calc(100vw*${index})] ${index === inFocus.value 
                 ? `opacity-100 ${banner.length > 1 && 'absolute'} is-active` 
                 : "opacity-0 pointer-events-none is-init"
               } transition-all duration-500`}
