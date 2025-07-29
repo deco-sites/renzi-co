@@ -1,6 +1,6 @@
 import QuantitySelector from "$store/components/ui/QuantitySelector.tsx";
 import { useState } from "preact/hooks";
-import AddToCartButton from "$store/components/product/AddToCartButton.tsx";
+import AddToCartButton from "$store/islands/AddToCartButton.tsx";
 import { useUI } from "$store/sdk/useUI.ts";
 
 type Props = {

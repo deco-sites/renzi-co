@@ -23,7 +23,7 @@ export interface Props {
   /**
    * @description Banner image that stays on top of the contact form
    */
-  image: LiveImage;
+  image?: LiveImage;
   /**
    * @description Alternative text description for the image
    */
@@ -123,28 +123,31 @@ function ContactForm({
 
           {/* Contact image */}
           <div>
-            <Picture>
-              <Source
-                media="(max-width: 1023px)"
-                fetchPriority="auto"
-                src={image}
-                width={280}
-                height={187}
-              />
-              <Source
-                media="(min-width: 1024px)"
-                fetchPriority="auto"
-                src={image}
-                width={430}
-                height={328}
-              />
-              <img
-                class="object-cover rounded-[20px] w-full max-w-sm lg:w-auto lg:max-w-md"
-                loading="lazy"
-                src={image}
-                alt={alt}
-              />
-            </Picture>
+            {image && (
+              <Picture>
+                <Source
+                  media="(max-width: 1023px)"
+                  fetchPriority="auto"
+                  src={image}
+                  width={280}
+                  height={187}
+                />
+                <Source
+                  media="(min-width: 1024px)"
+                  fetchPriority="auto"
+                  src={image}
+                  width={430}
+                  height={328}
+                />
+                <img
+                  class="object-cover rounded-[20px] w-full max-w-sm lg:w-auto lg:max-w-md"
+                  loading="lazy"
+                  src={image}
+                  alt={alt}
+                />
+              </Picture>
+            )}
+           
           </div>
         </div>
 

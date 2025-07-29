@@ -102,7 +102,7 @@ function ShippingSimulation({ items, shipmentPolitics }: Props) {
       </p>
       <div class="flex flex-col gap-[10px]">
         <form
-          class="flex gap-2"
+          class="flex gap-2 justify-center items-center"
           onSubmit={(e) => {
             e.preventDefault();
             handleSimulation();
@@ -122,7 +122,7 @@ function ShippingSimulation({ items, shipmentPolitics }: Props) {
           <Button
             type="submit"
             loading={loading.value}
-            class="btn-secondary h-[2.25rem] px-5"
+            class="btn btn-secondary h-[2.25rem] px-5"
           >
             Calcular
           </Button>
