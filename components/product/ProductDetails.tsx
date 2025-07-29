@@ -16,7 +16,7 @@ import Icon from "$store/components/ui/Icon.tsx";
 import { getShareLink } from "$store/sdk/shareLinks.tsx";
 // import DiscountBadge from "./DiscountBadge.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
-import AddToCartButton from "$store/components/product/AddToCartButton.tsx";
+import AddToCartButton from "$store/islands/AddToCartButton.tsx";
 import ProductButtonFloatingText from "$store/components/ui/ProductButtonFloatingText.tsx";
 import ProductDetailsImages from "$store/components/product/ProductDetailsImage.tsx";
 import { HighLight } from "$store/components/product/ProductHighlights.tsx";

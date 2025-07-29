@@ -10,8 +10,6 @@ import * as $HeaderButton from "./islands/HeaderButton.tsx";
 import * as $HeaderModals from "./islands/HeaderModals.tsx";
 import * as $HeaderSearchbar from "./islands/HeaderSearchbar.tsx";
 import * as $HeroSection from "./islands/HeroSection.tsx";
-import * as $HeroVideoBannerCarroussel from "./islands/HeroVideoBannerCarroussel.tsx";
-import * as $HeroVideoCarroussel from "./islands/HeroVideoCarroussel.tsx";
 import * as $ModalImage from "./islands/ModalImage.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
 import * as $NewsletterModal from "./islands/NewsletterModal.tsx";
@@ -21,6 +19,7 @@ import * as $ProductDetailsImages from "./islands/ProductDetailsImages.tsx";
 import * as $ProductGallery from "./islands/ProductGallery.tsx";
 import * as $SearchControls from "./islands/SearchControls.tsx";
 import * as $SearchResultsGridChoice from "./islands/SearchResultsGridChoice.tsx";
+import * as $Searchbar from "./islands/Searchbar.tsx";
 import * as $ShippingSimulation from "./islands/ShippingSimulation.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
 import * as $Sort from "./islands/Sort.tsx";
@@ -39,8 +38,6 @@ const manifest = {
     "./islands/HeaderModals.tsx": $HeaderModals,
     "./islands/HeaderSearchbar.tsx": $HeaderSearchbar,
     "./islands/HeroSection.tsx": $HeroSection,
-    "./islands/HeroVideoBannerCarroussel.tsx": $HeroVideoBannerCarroussel,
-    "./islands/HeroVideoCarroussel.tsx": $HeroVideoCarroussel,
     "./islands/ModalImage.tsx": $ModalImage,
     "./islands/Newsletter.tsx": $Newsletter,
     "./islands/NewsletterModal.tsx": $NewsletterModal,
@@ -50,6 +47,7 @@ const manifest = {
     "./islands/ProductGallery.tsx": $ProductGallery,
     "./islands/SearchControls.tsx": $SearchControls,
     "./islands/SearchResultsGridChoice.tsx": $SearchResultsGridChoice,
+    "./islands/Searchbar.tsx": $Searchbar,
     "./islands/ShippingSimulation.tsx": $ShippingSimulation,
     "./islands/SliderJS.tsx": $SliderJS,
     "./islands/Sort.tsx": $Sort,

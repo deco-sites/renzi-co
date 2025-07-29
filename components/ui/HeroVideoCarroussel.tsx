@@ -2,7 +2,6 @@ import type { Props } from "$store/components/ui/HeroSection.tsx";
 import Button from "$store/components/ui/Button.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import { useSignal } from "@preact/signals";
-import { useState } from "preact/hooks";
 import HeroSectionComponent from "$store/components/ui/HeroSection.tsx";
 
 export interface SliderProps {
@@ -22,16 +21,16 @@ export interface BannerProps {
 type CallbackFunction = () => void;
 
 export default function HeroVideoCarroussel({banner,slider,isHeaderTransparent,}: BannerProps) {
-  const [buttonDisabled, setButtonDisabled] = useState(false);
+  const buttonDisabled = useSignal(false);
   
   const handleButtonAction = (callback: CallbackFunction) => {
-    if (buttonDisabled) return;
+    if (buttonDisabled.value) return;
     setButtonDisabled(true);
 
     callback();
 
     clearInterval(timeout);
-    setTimeout(() => setButtonDisabled(false), 500);
+    setTimeout(() => buttonDisabled.value = false, 500);
   };
 
   const nextBanner = () => {
