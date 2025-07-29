@@ -161,6 +161,19 @@ function ProductInfo({
           <OutOfStock productID={productID} />
         )}
       </div>
+      <div>
+        <div className="px-0 mt-5">Calcular frete e entrega</div>  
+        <ShippingSimulation
+          items={[
+            {
+              id: Number(product.sku),
+              quantity: 1,
+              seller: seller ?? "1",
+            },
+          ]}
+          shipmentPolitics={shipmentPolitics}
+        />
+      </div>   
       {/* Description card */}
       <details className="collapse collapse-plus border-b border-neutral rounded-none">
         <summary className="collapse-title px-0">Detalhes do produto</summary>
@@ -173,7 +186,7 @@ function ProductInfo({
         </div>
       </details>
       {/* Shipping Simulation */}
-      <div className="collapse collapse-plus">
+      {/* <div className="collapse collapse-plus">
         <input type="checkbox" />
         <div className="collapse-title px-0">Calcular frete e entrega</div>
         <div className="collapse-content px-0">
@@ -188,7 +201,7 @@ function ProductInfo({
             shipmentPolitics={shipmentPolitics}
           />
         </div>
-      </div>
+      </div> */}
       {/* Share Product on Social Networks */}
       {shareableNetworks && (
         <div class="flex items-center gap-5 my-5">

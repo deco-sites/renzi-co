@@ -20,19 +20,19 @@
           {
             "section": {
               "__resolveType": "site/sections/Institutional/InstitutionalPage.tsx",
-              "title": "Termos e condições",
+              "title": "Prazo e Formas de Envio – Renzi",
               "asideMenu": {
                 "__resolveType": "AsideMenu"
               },
               "content": {
                 "__resolveType": "site/sections/Institutional/TextContent.tsx",
-                "content": "<p>Incluir Texto</p>"
+                "content": "<p><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">Enviamos para todo o Brasil! Ao finalizar sua compra, escolha entre as opções abaixo:</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">.&nbsp;</span><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">Correios</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\"><br>. </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">Retirada em loja com frete grátis</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">&nbsp;– escolha a loja Renzi mais próxima de você!<br>.&nbsp;</span><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">Entrega Expressa via Motoboy (R$ 15,00)</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">&nbsp;– disponível apenas para a cidade do Rio de Janeiro, em bairros selecionados.</span></p><p><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">Benefícios exclusivos:</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\"><br></span><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">FRETE GRÁTIS</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">: acima de&nbsp;</span><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">R$ 189,90</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">&nbsp;para RJ e SP |&nbsp;</span><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">R$ 389,90</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">&nbsp;para demais estados.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">O prazo de entrega é calculado automaticamente no momento em que você informa o CEP, de acordo com a modalidade escolhida.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">📞&nbsp;</span><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">Ainda tem dúvidas? Fale com a Renzi!</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\"><br></span><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">WhatsApp:</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">&nbsp;(21) 99720-2301<br></span><strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">E-mail:</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">&nbsp;</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:relacionamento@renzi.com.br\"><span style=\"color: rgb(0, 0, 0); font-size: 12pt\">relacionamento@renzi.com.br</span></a></p><p><br></p>"
               }
             },
             "shadow": "none",
             "verticalSpacing": "both",
             "spacing": 0,
-            "label": "Institutional Page",
+            "label": "Prazo e Formas de Envio – Renzi",
             "withContainer": true
           }
         ]
