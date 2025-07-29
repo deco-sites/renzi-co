@@ -36,7 +36,9 @@
             "contentAlignment": "Left",
             "oldPriceSize": "Small",
             "ctaVariation": "primary",
-            "ctaMode": "Go to Product Page"
+            "ctaMode": "Add to Cart",
+            "mobileCtaText": "Comprar",
+            "ctaText": "Comprar"
           },
           "discount": {
             "variant": "primary",
@@ -46,7 +48,9 @@
             "skuSelector": "Top",
             "favoriteIcon": "Top right"
           },
-          "hide": {},
+          "hide": {
+            "productDescription": true
+          },
           "onMouseOver": {
             "image": "Change image"
           }
@@ -56,7 +60,7 @@
           "props": {
             "sort": "price-descending",
             "count": 5,
-            "collection": "Colares"
+            "collection": "Brincos"
           },
           "filters": {
             "tags": [],
