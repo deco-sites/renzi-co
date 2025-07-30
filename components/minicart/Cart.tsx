@@ -2,7 +2,7 @@ import Button from "$store/components/ui/Button.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import { sendEvent } from "$store/sdk/analytics.tsx";
 import { formatPrice } from "$store/sdk/format.ts";
-// import { useCart } from "apps/vtex/hooks/useCart.ts";
+import { useUI } from "$store/sdk/useUI.ts";
 import { useCart, itemToAnalyticsItem } from "apps/shopify/hooks/useCart.ts";
 import CartItem from "./CartItem.tsx";
 import Coupon from "./Coupon.tsx";
@@ -33,7 +33,7 @@ export interface ICartProps {
   };
   /**
    * @title finish button label
-   * @default Finalzar Compra
+   * @default Finalizar Compra
    */
   goToCartLabel?: string;
 }
@@ -79,12 +79,30 @@ function Cart(props: ICartProps) {
     showClearButton = true,
     goToCartLabel = "Finalizar compra",
   } = props;
-  const { loading, cart, removeAllItems} = useCart();
+  const { loading, cart, updateItems} = useCart();
+  const { displayCart } = useUI();
   const isCartEmpty = cart.value?.lines?.nodes?.length === 0;
   const locale = "pt-BR";
   const currencyCode = cart.value?.cost?.totalAmount.currencyCode ?? "BRL";
   const discounts = cart.value?.cost?.subtotalAmount.amount ?? 0
   const items = cart.value?.lines?.nodes ?? [];
+
+
+  const removeAllItems = async () => {
+    const items = cart.value?.lines?.nodes?.map((url, index) => {
+      return {
+        index,
+        quantity: 0,
+      }
+    } );
+
+    await updateItems({
+      orderItems: items
+    });
+    console.log(cart.value)
+    console.log(items)
+
+  }
 
   if (cart.value === null) {
     return null;
@@ -101,9 +119,9 @@ function Cart(props: ICartProps) {
       </div>
     );
   }
-
-  const subTotal =  cart.value?.cost?.subtotalAmount.amount ?? 0;
-  const totalTaxAmount =  cart.value?.cost?.totalTaxAmount.amount ?? 0;
+  console.log(cart.value);
+  const subTotal =  cart.value?.cost?.subtotalAmount?.amount ?? 0;
+  const totalTaxAmount =  cart.value?.cost?.totalTaxAmount ? cart.value?.cost?.totalTaxAmount?.amount : 0;
   const discountsTotal  =  0;
   const total = cart.value?.cost?.totalAmount.amount ?? 0;
   
@@ -183,13 +201,14 @@ function Cart(props: ICartProps) {
           {!showClearButton && (
             <Button
               data-deco="buy-button"
-              class="h-9  btn btn-outline lg:h-10 whitespace-nowrap px-6"
+              class="h-9 text-[11px] btn btn-outline lg:h-10 whitespace-nowrap px-6"
               disabled={loading?.value || items?.length === 0}
               onClick={() => {
-                removeAllItems(undefined);
+                // removeAllItems(undefined);
+                displayCart.value = false;
               }}
             >
-              Limpar Carrinho
+              Continuar Comprando
             </Button>
           )}
           <a class="w-full flex justify-center" href="/checkout">

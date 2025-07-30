@@ -6,7 +6,7 @@ import { useOffer } from "$store/sdk/useOffer.ts";
 import ProductGallery from "../product/ProductGallery.tsx";
 import type { ProductListingPage } from "apps/commerce/types.ts";
 import Sort from "$store/islands/Sort.tsx";
-// import Breadcrumb from "$store/components/ui/Breadcrumb.tsx";
+import type { Layout  } from "$store/components/product/ProductCard.tsx";
 import SearchPagination from "$store/components/search/SearchPagination.tsx";
 import SearchResultsGridChoice from "$store/islands/SearchResultsGridChoice.tsx";
 import type { HighLight } from "$store/components/product/ProductHighlights.tsx";
@@ -26,11 +26,15 @@ export interface Props {
    * @description Not found section, displayed when no products are found
    */
   notFoundSection: Section;
+
+  layout?: Layout;
+
 }
 function Result({
   page,
   variant,
   highlights,
+  layout
 }: Omit<Omit<Props, "page">, "notFoundSection"> & {
   page: ProductListingPage;
 }) {
@@ -73,7 +77,7 @@ function Result({
               <SearchResultsGridChoice variant="mobile" />
             </div>
             <div class="flex-grow">
-              <ProductGallery products={products} highlights={highlights} />
+              <ProductGallery products={products} highlights={highlights} Layout={layout} />
               <SearchPagination pageInfo={pageInfo} />
             </div>
           </div>

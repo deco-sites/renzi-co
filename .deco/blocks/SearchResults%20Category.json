@@ -18,6 +18,36 @@
             "hints": [],
             "title": " "
           }
+        },
+        "layout": {
+          "discount": {
+            "variant": "emphasis",
+            "label": "Desconto"
+          },
+          "onMouseOver": {
+            "image": "Change image",
+            "showFavoriteIcon": false,
+            "showCta": true
+          },
+          "basics": {
+            "ctaText": "Comprar",
+            "mobileCtaText": "Comprar",
+            "contentAlignment": "Left",
+            "oldPriceSize": "Normal",
+            "ctaMode": "Add to Cart",
+            "ctaVariation": "primary"
+          },
+          "elementsPositions": {
+            "skuSelector": "Bottom",
+            "favoriteIcon": "Top right"
+          },
+          "hide": {
+            "cta": false,
+            "installments": false,
+            "productName": false,
+            "productDescription": false,
+            "allPrices": false
+          }
         }
       },
       "shadow": "none",
