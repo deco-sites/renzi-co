@@ -144,11 +144,6 @@ function ProductCard({
     ) : l?.basics?.mobileCtaText ? (
       <>
         <AddToCartButton
-          // quantity={1}
-          // name={product.name as string}
-          // discount={price && listPrice ? listPrice - price : 0}
-          // productGroupId={product.isVariantOf?.productGroupID ?? ""}
-          // price={price as number}
           sellerId={seller as string}
           skuId={product.sku}
           label={l?.basics?.ctaText}
@@ -160,11 +155,6 @@ function ProductCard({
     ) : (
       <>
         <AddToCartButton
-          // quantity={1}
-          // name={product.name as string}
-          // discount={price && listPrice ? listPrice - price : 0}
-          // productGroupId={product.isVariantOf?.productGroupID ?? ""}
-          // price={price as number}
           sellerId={seller as string}
           skuId={product.sku}
           label={l?.basics?.ctaText}
