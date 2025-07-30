@@ -31,32 +31,12 @@
           ]
         },
         "showPaginationArrows": "Always",
-        "cardLayout": {
-          "basics": {
-            "contentAlignment": "Left",
-            "oldPriceSize": "Small",
-            "ctaVariation": "primary",
-            "ctaMode": "Go to Product Page"
-          },
-          "discount": {
-            "variant": "primary",
-            "label": " "
-          },
-          "elementsPositions": {
-            "skuSelector": "Top",
-            "favoriteIcon": "Top right"
-          },
-          "hide": {},
-          "onMouseOver": {
-            "image": "Change image"
-          }
-        },
         "products": {
           "__resolveType": "shopify/loaders/ProductList.ts",
           "props": {
             "sort": "price-descending",
             "count": 5,
-            "collection": "Colares"
+            "collection": "Brincos"
           },
           "filters": {
             "tags": [],
@@ -68,7 +48,37 @@
           },
           "metafields": []
         },
-        "title": "Lançamentos"
+        "title": "Lançamentos",
+        "cardLayout": {
+          "discount": {
+            "variant": "emphasis",
+            "label": "Desconto"
+          },
+          "onMouseOver": {
+            "image": "Change image",
+            "showFavoriteIcon": false,
+            "showCta": true
+          },
+          "basics": {
+            "ctaText": "Comprar",
+            "mobileCtaText": "Comprar",
+            "contentAlignment": "Left",
+            "oldPriceSize": "Normal",
+            "ctaMode": "Add to Cart",
+            "ctaVariation": "primary"
+          },
+          "elementsPositions": {
+            "skuSelector": "Bottom",
+            "favoriteIcon": "Top right"
+          },
+          "hide": {
+            "cta": false,
+            "installments": false,
+            "productName": false,
+            "productDescription": true,
+            "allPrices": false
+          }
+        }
       },
       "shadow": "none",
       "verticalSpacing": "both",

@@ -16,14 +16,14 @@
           },
           "privacyContact": {}
         },
-        "text": "<div class=\"uppercase text-base lg:text-base text-left text-base-100 lg:max-w-xl max-w-xs lg:pr-0 pr-14\"><p>CADASTRE-SE E SEJA UM DOS PRIMEIROS A SABER DE TODAS AS NOVIDADES E OFERTAS.</p></div>"
+        "text": "<p>CADASTRE-SE E SEJA UM DOS PRIMEIROS A SABER DE TODAS AS NOVIDADES E OFERTAS.</p>"
       },
       "shadow": "none",
       "verticalSpacing": "top",
       "spacing": 0,
       "label": "Newslettter",
       "withContainer": true,
-      "backgroundColor": "#CDC6C3",
+      "backgroundColor": "#f7f7f7",
       "overFlow": "overflow-none"
     },
     {

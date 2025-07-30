@@ -212,7 +212,7 @@
           "mobile": {
             "buttonMode": "primary"
           },
-          "goToCartLabel": "Finalzar Compra"
+          "goToCartLabel": "Finalizar Compra"
         },
         "searchbar": {
           "placeholder": "What are you looking for?",

@@ -3,6 +3,7 @@ import { computed } from "@preact/signals";
 import { gridColsSignal } from "$store/components/search/SearchResultsGridChoice.tsx";
 import ProductCard from "./ProductCard.tsx";
 import { HighLight } from "$store/components/product/ProductHighlights.tsx";
+import type { Layout  } from "$store/components/product/ProductCard.tsx";
 
 export interface Props {
   products: Product[] | null;
@@ -10,9 +11,12 @@ export interface Props {
    * @description Flags, exibidos quando os produtos são encontrados
    */
   highlights?: HighLight[];
+
+  Layout?: Layout;
+
 }
 
-function ProductGallery({ products, highlights }: Props) {
+function ProductGallery({ products, highlights, Layout }: Props) {
   const gridCols = computed(() => gridColsSignal.value);
   return (
     <div class={`column-selector__container grid grid-cols-${gridCols.value.mobile} gap-2 items-center lg:grid-cols-${gridCols.value.desktop} lg:gap-[30px]`}>
@@ -20,11 +24,7 @@ function ProductGallery({ products, highlights }: Props) {
         <ProductCard
           product={product}
           preload={index === 0}
-          layout={{
-            discount: { label: "OFF", variant: "emphasis" },
-            hide: { skuSelector: true, productDescription: true },
-            basics: { contentAlignment: "Center" },
-          }}
+          layout={Layout}
           highlights={highlights}
         />
       ))}

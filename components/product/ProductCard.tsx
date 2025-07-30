@@ -42,7 +42,7 @@ export interface Layout {
     skuSelector?: "Top" | "Bottom";
     favoriteIcon?: "Top right" | "Top left";
   };
-  hide: {
+  hide?: {
     productName?: boolean;
     productDescription?: boolean;
     allPrices?: boolean;
@@ -118,7 +118,7 @@ function ProductCard({
         <Avatar variant={"default"} content={value} active={urls[0] === url} />
       </a>
     </li>
-  ));
+  ));  
 
   const addToCartButtonClassNames = (variant: string | undefined) =>
     `lg:text-sm font-medium text-xs whitespace-nowrap m-auto btn max-md:min-h-[2.25rem] max-md:h-[2.25rem] btn-${
@@ -144,31 +144,23 @@ function ProductCard({
     ) : l?.basics?.mobileCtaText ? (
       <>
         <AddToCartButton
-          quantity={1}
-          // name={product.name as string}
-          // discount={price && listPrice ? listPrice - price : 0}
-          // productGroupId={product.isVariantOf?.productGroupID ?? ""}
-          // price={price as number}
           sellerId={seller as string}
           skuId={product.sku}
           label={l?.basics?.ctaText}
-          classes={`max-lg:hidden ${addToCartButtonClassNames(
+          classes={`max-lg:hidden w-full ${addToCartButtonClassNames(
             layout?.basics?.ctaVariation
           )}`}
         />
       </>
     ) : (
-      <AddToCartButton
-        quantity={1}
-        // name={product.name as string}
-        // discount={price && listPrice ? listPrice - price : 0}
-        // productGroupId={product.isVariantOf?.productGroupID ?? ""}
-        // price={price as number}
-        sellerId={seller as string}
-        skuId={product.sku}
-        label={l?.basics?.ctaText}
-        classes={`${addToCartButtonClassNames(layout?.basics?.ctaVariation)}`}
-      />
+      <>
+        <AddToCartButton
+          sellerId={seller as string}
+          skuId={product.sku}
+          label={l?.basics?.ctaText}
+          classes={`w-full ${addToCartButtonClassNames(layout?.basics?.ctaVariation)}`}
+        />
+      </>
     );
 
   const price2: number = price as number;
@@ -270,7 +262,7 @@ function ProductCard({
         {(!l?.elementsPositions?.skuSelector ||
           l?.elementsPositions?.skuSelector === "Top") && (
           <>
-            {l?.hide.skuSelector ? (
+            {l?.hide?.skuSelector ? (
               ""
             ) : (
               <ul
@@ -284,18 +276,18 @@ function ProductCard({
           </>
         )}
 
-        {l?.hide.productName && l?.hide.productDescription ? (
+        {l?.hide?.productName && l?.hide.productDescription ? (
           ""
         ) : (
           <div class="flex flex-col gap-0 mt-[15px]">
-            {l?.hide.productName ? (
+            {l?.hide?.productName ? (
               ""
             ) : (
               <h2 class="truncate text-xs font-bold text-base-content">
                 {isVariantOf?.name || name}
               </h2>
             )}
-            {l?.hide.productDescription ? (
+            {l?.hide?.productDescription ? (
               ""
             ) : (
               <p class="truncate text-sm lg:text-sm text-neutral">
@@ -304,7 +296,7 @@ function ProductCard({
             )}
           </div>
         )}
-        {l?.hide.allPrices ? (
+        {l?.hide?.allPrices ? (
           ""
         ) : (
           <div class="flex flex-col mt-2">
@@ -331,7 +323,7 @@ function ProductCard({
                 {formatPrice(price, offers!.priceCurrency!)}
               </p>
             </div>
-            {l?.hide.installments
+            {l?.hide?.installments
               ? ""
               : installments && (
                   <div class="text-xs font-normal text-base-content mt-[5px]">
@@ -348,7 +340,7 @@ function ProductCard({
         {/* SKU Selector */}
         {l?.elementsPositions?.skuSelector === "Bottom" && (
           <>
-            {l?.hide.skuSelector ? (
+            {l?.hide?.skuSelector ? (
               ""
             ) : (
               <ul

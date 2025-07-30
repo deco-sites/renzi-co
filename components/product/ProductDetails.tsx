@@ -122,7 +122,8 @@ function ProductInfo({
           stock && stock <= 10 ? "text-orange-400" : "text-current"
         }`}
       >
-        {stock && `Quantidade em estoque: ${stock}`}
+        {/* {stock && `Quantidade em estoque: ${stock}`} */}
+        Quantidade em estoque: {stock}
       </div>
       {/* Prices */}
       <div class="mt-3">
@@ -161,7 +162,7 @@ function ProductInfo({
           <OutOfStock productID={productID} />
         )}
       </div>
-      <div>
+      {stock > 0 && (<div>
         <div className="px-0 mt-5">Calcular frete e entrega</div>  
         <ShippingSimulation
           items={[
@@ -173,7 +174,7 @@ function ProductInfo({
           ]}
           shipmentPolitics={shipmentPolitics}
         />
-      </div>   
+      </div> )}  
       {/* Description card */}
       <details className="collapse collapse-plus border-b border-neutral rounded-none">
         <summary className="collapse-title px-0">Detalhes do produto</summary>

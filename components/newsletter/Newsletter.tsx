@@ -130,11 +130,11 @@ import {
       <div class="flex flex-col lg:flex-row items-baseline lg:items-center gap-5 lg:gap-16 py-10 w-full justify-between">
         <div
           dangerouslySetInnerHTML={{ __html: text }}
-          class="text-base lg:text-xl text-left text-base-100 lg:max-w-sm max-w-xs lg:pr-0 pr-14"
+          class="text-base lg:text-xl text-left text-base-100 lg:max-w-sm max-w-xs lg:pr-0 pr-14 text-base-content"
         />
         {success.value
           ? (
-            <div class="text-base lg:text-xl text-left text-base-100">
+            <div class="text-base lg:text-xl text-left text-base-content ">
               E-mail cadastrado com sucesso!
             </div>
           )
