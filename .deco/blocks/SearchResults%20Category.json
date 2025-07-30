@@ -45,7 +45,7 @@
             "cta": false,
             "installments": false,
             "productName": false,
-            "productDescription": false,
+            "productDescription": true,
             "allPrices": false
           }
         }
