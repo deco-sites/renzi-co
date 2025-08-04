@@ -44,13 +44,8 @@
               },
               {
                 "target": "_blank",
-                "label": "Formas de Pagamento",
-                "href": "/institucional/formas-pagamento"
-              },
-              {
-                "target": "_blank",
-                "href": "/institucional/politica-privacidade",
-                "label": "Política de Privacidade"
+                "label": "Política de Privacidade",
+                "href": "/institucional/politica-privacidade"
               }
             ],
             "label": "SOBRE"
@@ -59,18 +54,12 @@
             "children": [
               {
                 "target": "_blank",
-                "label": "Garantia",
-                "href": "/institucional/garantia"
+                "label": "Trocas e devoluções",
+                "href": "/institucional/trocas-devolucoes"
               },
               {
-                "target": "_blank",
-                "label": "Segurança",
-                "href": "/institucional/seguranca"
-              },
-              {
-                "target": "_blank",
-                "href": "/institucional/trocas-devolucoes",
-                "label": "Trocas e devoluções"
+                "label": "Fale Conosco",
+                "href": "/contato"
               }
             ],
             "label": "TIRE SUAS DÚVIDAS"
@@ -88,29 +77,24 @@
         ],
         "socialNetWorks": [
           {
-            "icon": "Tiktok",
-            "label": "TikTok",
-            "href": "/"
-          },
-          {
-            "icon": "Pinterest",
-            "label": "Pinterest",
-            "href": "/"
+            "icon": "Instagram",
+            "label": "Instagram",
+            "href": "https://www.instagram.com/renzieco/"
           },
           {
             "icon": "Facebook",
             "label": "Facebook",
-            "href": "/"
+            "href": "https://www.facebook.com/people/Renzi-e-Co/61577795338966"
           },
           {
             "icon": "YouTube",
             "label": "YouTube",
-            "href": "/"
+            "href": "https://www.youtube.com/channel/UC5FyXvm5iGFUbaT8-c4w-pA"
           },
           {
-            "icon": "Linkedin",
-            "label": "LinkedIn",
-            "href": "/"
+            "icon": "Pinterest",
+            "label": "Pinterest",
+            "href": "https://br.pinterest.com/renzieco/"
           }
         ],
         "openingHours": "<p><span style=\"color: black; font-size: 10pt\">🕘&nbsp;</span><strong><span style=\"color: black; font-size: 10pt\">Horário de atendimento:</span></strong><span style=\"color: black; font-size: 10pt\">&nbsp;Segunda a Sexta, das 09h às 18h.</span></p>",
