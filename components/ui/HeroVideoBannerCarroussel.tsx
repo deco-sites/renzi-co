@@ -175,7 +175,7 @@ export default function HeroVideoCarroussel({banner,slider,isHeaderTransparent,}
           <div class="is--loading"></div>
         </div>
         {banner.map((ban, index) => (                    
-          <div key={index} class={`custom-banner-slide children:w-screen -ml-[calc(100vw*${index})] ${index === inFocus.value 
+          <div key={index} class={`custom-banner-slide w-full children:w-screen -ml-[calc(100vw*${index})] ${index === inFocus.value 
                 ? `opacity-100 ${banner.length > 1 && 'absolute'} is-active` 
                 : "opacity-0 pointer-events-none is-init"
               } transition-all duration-500`}
