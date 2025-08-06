@@ -2,7 +2,9 @@ import Icon from "$store/components/ui/Icon.tsx";
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import { SocialItem } from "$store/components/footer/SocialNetWorks.tsx";
 import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
-import Button from "$store/components/ui/Button.tsx";
+import { Head } from "$fresh/runtime.ts";
+
+// import Button from "$store/components/ui/Button.tsx";
 
 export interface Props {
   serviceInfo?: {
@@ -85,98 +87,109 @@ function ContactForm({
   src,
 }: Props) {
   return (
-    <div class="pb-12 lg:pb-20">
-      <div class="flex flex-col">
-        <div class="lg:flex lg:gap-[10px]">
-          <div class="lg:py-10 lg:px-[30px] lg:w-full">
-            {/* Contact info */}
-            <div class="flex flex-col gap-5 py-5 border-b border-neutral-100">
-              <h6 class="font-medium">{serviceInfo.title}</h6>
-              <div class="flex flex-col gap-[10px] text-sm font-bold text-emphasis">
-                <div class="flex">
-                  <Icon id="Phone" class="w-5 h-5 mr-[10px]" />
-                  <span>{serviceInfo.phone}</span>
+    <>
+     <Head>
+       <style
+          dangerouslySetInnerHTML={{
+            __html: `
+          .header-small-mobile {
+            display:none;
+          }`,
+          }}
+        />
+     </Head>
+      <div class="pb-12 lg:pb-20">
+        <div class="flex flex-col">
+          <div class="lg:flex lg:gap-[10px]">
+            <div class="lg:py-10 lg:px-[30px] lg:w-full">
+              {/* Contact info */}
+              <div class="flex flex-col gap-5 py-5 border-b border-neutral-100">
+                <h6 class="font-medium">{serviceInfo.title}</h6>
+                <div class="flex flex-col gap-[10px] text-sm font-bold text-emphasis">
+                  <div class="flex">
+                    <Icon id="Phone" class="w-5 h-5 mr-[10px]" />
+                    <span>{serviceInfo.phone}</span>
+                  </div>
+                  <div class="flex">
+                    <Icon id="Email" class="w-5 h-5 mr-[10px]" />
+                    <span>{serviceInfo.email}</span>
+                  </div>
+                  <div class="text-base-300 font-normal">
+                    {serviceInfo.schedule.map((schedule) => (
+                      <p>{schedule}</p>
+                    ))}
+                  </div>
                 </div>
-                <div class="flex">
-                  <Icon id="Email" class="w-5 h-5 mr-[10px]" />
-                  <span>{serviceInfo.email}</span>
-                </div>
-                <div class="text-base-300 font-normal">
-                  {serviceInfo.schedule.map((schedule) => (
-                    <p>{schedule}</p>
+              </div>
+
+              {src && (
+                <>
+                  <script
+                    dangerouslySetInnerHTML={{ __html: `(${runOnMount})();` }}
+                  ></script>
+                  <iframe
+                    id="proxy-loader"
+                    style="width:100%;border:none;overflow:hidden; min-height:950px; height:1464px"
+                    src={src}
+                    // onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
+                  ></iframe>
+                </>
+              )}
+
+              {/* Social networks */}
+              <div class="flex flex-col py-5 gap-5">
+                <h6 class="font-medium">Redes sociais</h6>
+                <ul class="flex gap-3">
+                  {socialNetworks.map((social) => (
+                    <li
+                      key={social.icon}
+                      class="bg-base-300 w-8 h-8 rounded-full hover:bg-emphasis transition-all duration-500"
+                    >
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-full h-full text-white"
+                        target="_blank"
+                        aria-label={social.label}
+                      >
+                        <Icon id={social.icon} size={20} strokeWidth={1} />
+                      </a>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
 
-            {src && (
-              <>
-                <script
-                  dangerouslySetInnerHTML={{ __html: `(${runOnMount})();` }}
-                ></script>
-                <iframe
-                  id="proxy-loader"
-                  style="width:100%;border:none;overflow:hidden; min-height:950px; height:1100px"
-                  src={src}
-                  // onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
-                ></iframe>
-              </>
-            )}
-
-            {/* Social networks */}
-            <div class="flex flex-col py-5 gap-5">
-              <h6 class="font-medium">Redes sociais</h6>
-              <ul class="flex gap-3">
-                {socialNetworks.map((social) => (
-                  <li
-                    key={social.icon}
-                    class="bg-base-300 w-8 h-8 rounded-full hover:bg-emphasis transition-all duration-500"
-                  >
-                    <a
-                      href="#"
-                      class="flex items-center justify-center w-full h-full text-white"
-                      target="_blank"
-                      aria-label={social.label}
-                    >
-                      <Icon id={social.icon} size={20} strokeWidth={1} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            {/* Contact image */}
+            <div>
+              {image && (
+                <Picture>
+                  <Source
+                    media="(max-width: 1023px)"
+                    fetchPriority="auto"
+                    src={image}
+                    width={280}
+                    height={187}
+                  />
+                  <Source
+                    media="(min-width: 1024px)"
+                    fetchPriority="auto"
+                    src={image}
+                    width={430}
+                    height={328}
+                  />
+                  <img
+                    class="object-cover rounded-[20px] w-full max-w-sm lg:w-auto lg:max-w-md"
+                    loading="lazy"
+                    src={image}
+                    alt={alt}
+                  />
+                </Picture>
+              )}
             </div>
           </div>
 
-          {/* Contact image */}
-          <div>
-            {image && (
-              <Picture>
-                <Source
-                  media="(max-width: 1023px)"
-                  fetchPriority="auto"
-                  src={image}
-                  width={280}
-                  height={187}
-                />
-                <Source
-                  media="(min-width: 1024px)"
-                  fetchPriority="auto"
-                  src={image}
-                  width={430}
-                  height={328}
-                />
-                <img
-                  class="object-cover rounded-[20px] w-full max-w-sm lg:w-auto lg:max-w-md"
-                  loading="lazy"
-                  src={image}
-                  alt={alt}
-                />
-              </Picture>
-            )}
-          </div>
-        </div>
-
-        {/* Contact form */}
-        <div class="mt-[30px] flex flex-col gap-5">
+          {/* Contact form */}
+          {/* <div class="mt-[30px] flex flex-col gap-5">
           <h6 class="font-medium">Formulário de atendimento</h6>
           <form class="text-sm flex flex-col gap-5">
             <div class="flex flex-col gap-5 lg:flex-row">
@@ -263,9 +276,10 @@ function ContactForm({
               Enviar
             </Button>
           </div>
+        </div> */}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -25,7 +25,9 @@
     {
       "__resolveType": "shopify/loaders/proxy.ts",
       "extraPathsToProxy": [
-        "/pages/*"
+        "/pages/*",
+        "/contact/*",
+        "/contact"
       ],
       "includeSiteMap": [],
       "excludePathsFromDecoSiteMap": [],
