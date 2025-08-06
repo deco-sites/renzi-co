@@ -29,6 +29,7 @@ export interface Props {
    */
   alt: string;
   socialNetworks?: SocialItem[];
+  src?: string;
 }
 
 const defaultSocialNetworks: SocialItem[] = [
@@ -63,10 +64,17 @@ const defaultServiceInfo = {
   title: "Atendimento",
   email: "contato@agencian1.com.br",
   phone: "11 99999-9999",
-  schedule: [
-    "Seg. à Sex. das 09:00h às 18:00h",
-    "Sábado das 10:00h às 14:00h",
-  ],
+  schedule: ["Seg. à Sex. das 09:00h às 18:00h", "Sábado das 10:00h às 14:00h"],
+};
+
+const runOnMount = () => {
+  globalThis.onload = () => {
+    const iFrame = document.getElementById("proxy-loader") as HTMLIFrameElement;
+    if (!iFrame) {
+      return console.error("Couldn't find iframe");
+    }
+    iFrame.height = `${iFrame.contentWindow?.document.body.scrollHeight}`;
+  };
 };
 
 function ContactForm({
@@ -74,6 +82,7 @@ function ContactForm({
   alt,
   serviceInfo = defaultServiceInfo,
   socialNetworks = defaultSocialNetworks,
+  src,
 }: Props) {
   return (
     <div class="pb-12 lg:pb-20">
@@ -93,10 +102,26 @@ function ContactForm({
                   <span>{serviceInfo.email}</span>
                 </div>
                 <div class="text-base-300 font-normal">
-                  {serviceInfo.schedule.map((schedule) => <p>{schedule}</p>)}
+                  {serviceInfo.schedule.map((schedule) => (
+                    <p>{schedule}</p>
+                  ))}
                 </div>
               </div>
             </div>
+
+            {src && (
+              <>
+                <script
+                  dangerouslySetInnerHTML={{ __html: `(${runOnMount})();` }}
+                ></script>
+                <iframe
+                  id="proxy-loader"
+                  style="width:100%;border:none;overflow:hidden; min-height:950px; height:1100px"
+                  src={src}
+                  // onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
+                ></iframe>
+              </>
+            )}
 
             {/* Social networks */}
             <div class="flex flex-col py-5 gap-5">
@@ -147,7 +172,6 @@ function ContactForm({
                 />
               </Picture>
             )}
-           
           </div>
         </div>
 
@@ -208,7 +232,9 @@ function ContactForm({
                     name="subject"
                     class="select select-bordered select-xs h-[34px] w-1/2 border-2 border-base-200 text-base-300 font-normal"
                   >
-                    <option disabled selected>Selecione</option>
+                    <option disabled selected>
+                      Selecione
+                    </option>
                     <option value="1">Contato</option>
                   </select>
                   <input
