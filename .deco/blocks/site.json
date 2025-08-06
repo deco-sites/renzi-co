@@ -27,7 +27,9 @@
       "extraPathsToProxy": [
         "/pages/*",
         "/contact/*",
-        "/contact"
+        "/contact",
+        "/cdn/*",
+        "/cdn"
       ],
       "includeSiteMap": [],
       "excludePathsFromDecoSiteMap": [],
