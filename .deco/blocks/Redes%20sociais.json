@@ -19,7 +19,27 @@
           {
             "icon": "YouTubeOutline",
             "label": "Youtube",
-            "href": "https://www.youtube.com/channel/UC5FyXvm5iGFUbaT8-c4w-pA"
+            "href": "https://www.youtube.com/@RenzieCo"
+          },
+          {
+            "icon": "Pinterest",
+            "label": "Pinterest",
+            "href": "https://br.pinterest.com/Renzieco/"
+          },
+          {
+            "icon": "Tiktok",
+            "label": "Tiktok",
+            "href": "https://www.tiktok.com/@renzieco?lang=en"
+          },
+          {
+            "icon": "Twitter",
+            "label": "X",
+            "href": "https://x.com/renzieco"
+          },
+          {
+            "icon": "Linkedin",
+            "label": "Linkedin",
+            "href": "https://www.linkedin.com/company/renzi-co/"
           }
         ],
         "title": "Nossas redes sociais"

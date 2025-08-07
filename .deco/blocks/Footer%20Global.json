@@ -82,19 +82,34 @@
             "href": "https://www.instagram.com/renzieco/"
           },
           {
+            "icon": "Tiktok",
+            "label": "Tiktok",
+            "href": "https://www.tiktok.com/@renzieco?lang=en"
+          },
+          {
             "icon": "Facebook",
             "label": "Facebook",
             "href": "https://www.facebook.com/people/Renzi-e-Co/61577795338966"
           },
           {
-            "icon": "YouTube",
-            "label": "YouTube",
-            "href": "https://www.youtube.com/channel/UC5FyXvm5iGFUbaT8-c4w-pA"
-          },
-          {
             "icon": "Pinterest",
             "label": "Pinterest",
             "href": "https://br.pinterest.com/renzieco/"
+          },
+          {
+            "icon": "YouTube",
+            "label": "YouTube",
+            "href": "https://www.youtube.com/@RenzieCo"
+          },
+          {
+            "icon": "Twitter",
+            "label": "X",
+            "href": "https://x.com/renzieco"
+          },
+          {
+            "icon": "Linkedin",
+            "label": "Linkedin",
+            "href": "https://www.linkedin.com/company/renzi-co/"
           }
         ],
         "openingHours": "<p><span style=\"color: black; font-size: 10pt\">🕘&nbsp;</span><strong><span style=\"color: black; font-size: 10pt\">Horário de atendimento:</span></strong><span style=\"color: black; font-size: 10pt\">&nbsp;Segunda a Sexta, das 09h às 18h.</span></p>",
