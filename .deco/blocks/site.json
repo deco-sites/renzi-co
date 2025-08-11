@@ -24,7 +24,13 @@
     },
     {
       "__resolveType": "shopify/loaders/proxy.ts",
-      "extraPathsToProxy": [],
+      "extraPathsToProxy": [
+        "/pages/*",
+        "/contact/*",
+        "/contact",
+        "/cdn/*",
+        "/cdn"
+      ],
       "includeSiteMap": [],
       "excludePathsFromDecoSiteMap": [],
       "replaces": []
@@ -56,5 +62,7 @@
     "publicUrl": "www.mystore.com.br",
     "authToken": {},
     "platform": "vnda"
-  }
+  },
+  "whilelistURLs": [],
+  "whitelistPatterns": []
 }

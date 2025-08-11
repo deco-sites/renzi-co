@@ -2,7 +2,9 @@ import Icon from "$store/components/ui/Icon.tsx";
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import { SocialItem } from "$store/components/footer/SocialNetWorks.tsx";
 import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
-import Button from "$store/components/ui/Button.tsx";
+import { Head } from "$fresh/runtime.ts";
+
+// import Button from "$store/components/ui/Button.tsx";
 
 export interface Props {
   serviceInfo?: {
@@ -29,6 +31,7 @@ export interface Props {
    */
   alt: string;
   socialNetworks?: SocialItem[];
+  src?: string;
 }
 
 const defaultSocialNetworks: SocialItem[] = [
@@ -63,10 +66,17 @@ const defaultServiceInfo = {
   title: "Atendimento",
   email: "contato@agencian1.com.br",
   phone: "11 99999-9999",
-  schedule: [
-    "Seg. à Sex. das 09:00h às 18:00h",
-    "Sábado das 10:00h às 14:00h",
-  ],
+  schedule: ["Seg. à Sex. das 09:00h às 18:00h", "Sábado das 10:00h às 14:00h"],
+};
+
+const runOnMount = () => {
+  globalThis.onload = () => {
+    const iFrame = document.getElementById("proxy-loader") as HTMLIFrameElement;
+    if (!iFrame) {
+      return console.error("Couldn't find iframe");
+    }
+    iFrame.height = `${iFrame.contentWindow?.document.body.scrollHeight}`;
+  };
 };
 
 function ContactForm({
@@ -74,85 +84,115 @@ function ContactForm({
   alt,
   serviceInfo = defaultServiceInfo,
   socialNetworks = defaultSocialNetworks,
+  src,
 }: Props) {
+
+  // const allowedAncestor = "https://u10pfz-mz.myshopify.com"
   return (
-    <div class="pb-12 lg:pb-20">
-      <div class="flex flex-col">
-        <div class="lg:flex lg:gap-[10px]">
-          <div class="lg:py-10 lg:px-[30px] lg:w-full">
-            {/* Contact info */}
-            <div class="flex flex-col gap-5 py-5 border-b border-neutral-100">
-              <h6 class="font-medium">{serviceInfo.title}</h6>
-              <div class="flex flex-col gap-[10px] text-sm font-bold text-emphasis">
-                <div class="flex">
-                  <Icon id="Phone" class="w-5 h-5 mr-[10px]" />
-                  <span>{serviceInfo.phone}</span>
+    <>
+     <Head>
+        {/* <meta http-equiv="Content-Security-Policy" content={`frame-ancestors ${allowedAncestor}; `} /> */}
+       <style
+          dangerouslySetInnerHTML={{
+            __html: `
+          .header-small-mobile {
+            display:none;
+          }`,
+          }}
+        />
+     </Head>
+      <div class="pb-12 lg:pb-20">
+        <div class="flex flex-col">
+          <div class="lg:flex lg:gap-[10px]">
+            <div class="lg:py-10 lg:px-[30px] lg:w-full">
+              {/* Contact info */}
+              <div class="flex flex-col gap-5 py-5 border-b border-neutral-100">
+                <h6 class="font-medium">{serviceInfo.title}</h6>
+                <div class="flex flex-col gap-[10px] text-sm font-bold text-emphasis">
+                  <div class="flex">
+                    <Icon id="Phone" class="w-5 h-5 mr-[10px]" />
+                    <span>{serviceInfo.phone}</span>
+                  </div>
+                  <div class="flex">
+                    <Icon id="Email" class="w-5 h-5 mr-[10px]" />
+                    <span>{serviceInfo.email}</span>
+                  </div>
+                  <div class="text-base-300 font-normal">
+                    {serviceInfo.schedule.map((schedule) => (
+                      <p>{schedule}</p>
+                    ))}
+                  </div>
                 </div>
-                <div class="flex">
-                  <Icon id="Email" class="w-5 h-5 mr-[10px]" />
-                  <span>{serviceInfo.email}</span>
-                </div>
-                <div class="text-base-300 font-normal">
-                  {serviceInfo.schedule.map((schedule) => <p>{schedule}</p>)}
-                </div>
+              </div>
+
+              {src && (
+                <>
+                  <script
+                    dangerouslySetInnerHTML={{ __html: `(${runOnMount})();` }}
+                  ></script>
+                  <iframe
+                    id="proxy-loader"
+                    style="width:100%;border:none;overflow:hidden; min-height:950px; height:1464px"
+                    src={src}
+                    // onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
+                  ></iframe>
+                </>
+              )}
+
+              {/* Social networks */}
+              <div class="flex flex-col py-5 gap-5">
+                <h6 class="font-medium">Redes sociais</h6>
+                <ul class="flex gap-3">
+                  {socialNetworks.map((social) => (
+                    <li
+                      key={social.icon}
+                      class="bg-base-300 w-8 h-8 rounded-full hover:bg-emphasis transition-all duration-500"
+                    >
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-full h-full text-white"
+                        target="_blank"
+                        aria-label={social.label}
+                      >
+                        <Icon id={social.icon} size={20} strokeWidth={1} />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
-            {/* Social networks */}
-            <div class="flex flex-col py-5 gap-5">
-              <h6 class="font-medium">Redes sociais</h6>
-              <ul class="flex gap-3">
-                {socialNetworks.map((social) => (
-                  <li
-                    key={social.icon}
-                    class="bg-base-300 w-8 h-8 rounded-full hover:bg-emphasis transition-all duration-500"
-                  >
-                    <a
-                      href="#"
-                      class="flex items-center justify-center w-full h-full text-white"
-                      target="_blank"
-                      aria-label={social.label}
-                    >
-                      <Icon id={social.icon} size={20} strokeWidth={1} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            {/* Contact image */}
+            <div>
+              {image && (
+                <Picture>
+                  <Source
+                    media="(max-width: 1023px)"
+                    fetchPriority="auto"
+                    src={image}
+                    width={280}
+                    height={187}
+                  />
+                  <Source
+                    media="(min-width: 1024px)"
+                    fetchPriority="auto"
+                    src={image}
+                    width={430}
+                    height={328}
+                  />
+                  <img
+                    class="object-cover rounded-[20px] w-full max-w-sm lg:w-auto lg:max-w-md"
+                    loading="lazy"
+                    src={image}
+                    alt={alt}
+                  />
+                </Picture>
+              )}
             </div>
           </div>
 
-          {/* Contact image */}
-          <div>
-            {image && (
-              <Picture>
-                <Source
-                  media="(max-width: 1023px)"
-                  fetchPriority="auto"
-                  src={image}
-                  width={280}
-                  height={187}
-                />
-                <Source
-                  media="(min-width: 1024px)"
-                  fetchPriority="auto"
-                  src={image}
-                  width={430}
-                  height={328}
-                />
-                <img
-                  class="object-cover rounded-[20px] w-full max-w-sm lg:w-auto lg:max-w-md"
-                  loading="lazy"
-                  src={image}
-                  alt={alt}
-                />
-              </Picture>
-            )}
-           
-          </div>
-        </div>
-
-        {/* Contact form */}
-        <div class="mt-[30px] flex flex-col gap-5">
+          {/* Contact form */}
+          {/* <div class="mt-[30px] flex flex-col gap-5">
           <h6 class="font-medium">Formulário de atendimento</h6>
           <form class="text-sm flex flex-col gap-5">
             <div class="flex flex-col gap-5 lg:flex-row">
@@ -208,7 +248,9 @@ function ContactForm({
                     name="subject"
                     class="select select-bordered select-xs h-[34px] w-1/2 border-2 border-base-200 text-base-300 font-normal"
                   >
-                    <option disabled selected>Selecione</option>
+                    <option disabled selected>
+                      Selecione
+                    </option>
                     <option value="1">Contato</option>
                   </select>
                   <input
@@ -237,9 +279,10 @@ function ContactForm({
               Enviar
             </Button>
           </div>
+        </div> */}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
