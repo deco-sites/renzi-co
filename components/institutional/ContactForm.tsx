@@ -86,9 +86,12 @@ function ContactForm({
   socialNetworks = defaultSocialNetworks,
   src,
 }: Props) {
+
+  // const allowedAncestor = "https://u10pfz-mz.myshopify.com"
   return (
     <>
      <Head>
+        {/* <meta http-equiv="Content-Security-Policy" content={`frame-ancestors ${allowedAncestor}; `} /> */}
        <style
           dangerouslySetInnerHTML={{
             __html: `
