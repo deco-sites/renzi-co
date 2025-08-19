@@ -1,5 +1,6 @@
 {
-  "name": "Category",
+  "name": "Anéis regulaveis",
+  "path": "/aneis/aneis-regulaveis",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -32,7 +33,8 @@
                 "__resolveType": "shopify/loaders/ProductListingPage.ts",
                 "metafields": [],
                 "count": 15,
-                "pageOffset": 1
+                "pageOffset": 1,
+                "collectionName": "Anéis regulaveis"
               },
               "highlights": [],
               "variant": "aside",
@@ -93,6 +95,5 @@
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
-  "__resolveType": "website/pages/Page.tsx",
-  "path": "/*"
+  "__resolveType": "website/pages/Page.tsx"
 }
