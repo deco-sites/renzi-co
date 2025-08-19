@@ -3,12 +3,12 @@
     "type": "website",
     "jsonLDs": [],
     "noIndexing": false,
-    "description": "Improve your page performance with deco.cx",
+    "description": "Conheça o novo universo dos acessório de alto padrão. Design exclusivo, sofisticação e presença.",
     "titleTemplate": "%s | Renzi&CO",
     "descriptionTemplate": "%s | Renzi&CO",
     "title": "Renzi&CO",
-    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/40cc7da0-93d3-4215-9c2a-04b2f86b0a47",
-    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/22c99167-0018-484f-8b0d-4295a7d771f2"
+    "favicon": "https://assets.decocache.com/renzi-co/16e88beb-1e85-4b72-b922-71f099f10ab7/renzi_R_cropped.png",
+    "image": "https://assets.decocache.com/renzi-co/b7bb6863-e9a7-4c93-aa51-035cc845fcac/Renzi_LOGO-SVG.svg"
   },
   "global": [
     {
