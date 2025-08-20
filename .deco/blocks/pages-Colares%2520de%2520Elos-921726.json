@@ -1,0 +1,99 @@
+{
+  "name": "Colares de Elos",
+  "path": "/colares/colares-de-elos",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header Global"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Categoria - Breadcrumb"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Category/CategoryBanner.tsx",
+        "banners": []
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Container.tsx",
+        "sections": [
+          {
+            "section": {
+              "__resolveType": "site/sections/Product/SearchResult.tsx",
+              "page": {
+                "__resolveType": "shopify/loaders/ProductListingPage.ts",
+                "metafields": [],
+                "count": 15,
+                "pageOffset": 1,
+                "collectionName": "colares-de-elos"
+              },
+              "highlights": [],
+              "variant": "aside",
+              "notFoundSection": {
+                "__resolveType": "site/sections/Miscellaneous/NotFound.tsx",
+                "hints": {
+                  "hints": [],
+                  "title": " "
+                }
+              },
+              "layout": {
+                "discount": {
+                  "variant": "emphasis",
+                  "label": "Desconto"
+                },
+                "onMouseOver": {
+                  "image": "Change image",
+                  "showFavoriteIcon": false,
+                  "showCta": true
+                },
+                "basics": {
+                  "ctaText": "Comprar",
+                  "mobileCtaText": "Comprar",
+                  "contentAlignment": "Left",
+                  "oldPriceSize": "Normal",
+                  "ctaMode": "Add to Cart",
+                  "ctaVariation": "primary"
+                },
+                "elementsPositions": {
+                  "skuSelector": "Bottom",
+                  "favoriteIcon": "Top right"
+                },
+                "hide": {
+                  "cta": false,
+                  "installments": false,
+                  "productName": false,
+                  "productDescription": true,
+                  "allPrices": false
+                }
+              }
+            },
+            "shadow": "none",
+            "verticalSpacing": "both",
+            "spacing": 0,
+            "label": "Search Results",
+            "withContainer": true
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer Global"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

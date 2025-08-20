@@ -40,27 +40,27 @@
               {
                 "children": [],
                 "label": "Anéis de Coração",
-                "href": "/aneis-de-coracao"
+                "href": "/aneis/aneis-de-coracao"
               },
               {
                 "children": [],
                 "label": "Anéis Regulaveis",
-                "href": "/aneis-regulaveis"
+                "href": "/aneis/aneis-regulaveis"
               },
               {
                 "children": [],
                 "label": "Anéis Cravejados",
-                "href": "/aneis-cravejados"
+                "href": "/aneis/aneis-cravejados"
               },
               {
                 "children": [],
                 "label": "Anéis Delicados ",
-                "href": "/aneis-delicados"
+                "href": "/aneis/aneis-delicados"
               },
               {
                 "children": [],
                 "label": "Anéis de Zirconia ",
-                "href": "/aneis-de-zirconia"
+                "href": "/aneis/aneis-de-zirconia"
               }
             ],
             "label": "ANÉIS ",
@@ -71,12 +71,12 @@
               {
                 "children": [],
                 "label": "Chokers com zircônia",
-                "href": "/chokers-com-zirconia"
+                "href": "/chokers/chokers-com-zirconia"
               },
               {
                 "children": [],
                 "label": "Gargantilha",
-                "href": "/gargantilha"
+                "href": "/chokers/gargantilha"
               }
             ],
             "label": "CHOKERS",
@@ -87,32 +87,32 @@
               {
                 "children": [],
                 "label": "Colares Ponto de Luz",
-                "href": "/colares-ponto-de-luz"
+                "href": "/colares/colares-ponto-de-luz"
               },
               {
                 "children": [],
                 "label": "Colares de Bijuterias Finas",
-                "href": "/colares-de-bijuterias-finas"
+                "href": "/colares/colares-de-bijuterias-finas"
               },
               {
                 "children": [],
                 "label": "Colares de Elos",
-                "href": "/colares-de-elos-1"
+                "href": "/colares/colares-de-elos"
               },
               {
                 "children": [],
                 "label": "Mix de Colares ",
-                "href": "/mix-de-colares"
+                "href": "/colares/mix-de-colares"
               },
               {
                 "children": [],
                 "label": "Colares de Zircônia",
-                "href": "/colares-de-zirconia"
+                "href": "/colares/colares-de-zirconia"
               },
               {
                 "children": [],
                 "label": "Escapularios",
-                "href": "/escapularios"
+                "href": "/colares/escapularios"
               }
             ],
             "label": "COLARES",
@@ -123,17 +123,17 @@
               {
                 "children": [],
                 "label": "Pulseiras Delicadas",
-                "href": "/pulseiras-delicadas"
+                "href": "/pulseiras/pulseiras-delicadas"
               },
               {
                 "children": [],
                 "label": "Braceletes",
-                "href": "/braceletes"
+                "href": "/pulseiras/braceletes"
               },
               {
                 "children": [],
                 "label": "Pulseiras de Bijuterias Finas",
-                "href": "/pulseiras-de-bijuterias-finas"
+                "href": "/pulseiras/pulseiras-de-bijuterias-finas"
               }
             ],
             "label": "PULSEIRAS",
@@ -144,32 +144,32 @@
               {
                 "children": [],
                 "label": "Brincos de argola",
-                "href": "/brincos-de-argola"
+                "href": "/brincos/brincos-de-argola"
               },
               {
                 "children": [],
                 "label": "Brincos earhook",
-                "href": "/brincos-earhook"
+                "href": "/brincos/brincos-earhook"
               },
               {
                 "children": [],
                 "label": "Brincos Grandes",
-                "href": "/brincos-grandes"
+                "href": "/brincos/brincos-grandes"
               },
               {
                 "children": [],
                 "label": "Brincos Pequenos ",
-                "href": "/brincos-pequenos"
+                "href": "/brincos/brincos-pequenos"
               },
               {
                 "children": [],
                 "label": "Brincos com Zircônia",
-                "href": "/brincos-com-zirconia"
+                "href": "/brincos/brincos-com-zirconia"
               },
               {
                 "children": [],
                 "label": "Brincos de Bijuterias Finas",
-                "href": "/brincos-de-bijuterias-finas"
+                "href": "/brincos/brincos-de-bijuterias-finas"
               }
             ],
             "label": "BRINCOS ",
@@ -181,7 +181,7 @@
               {
                 "children": [],
                 "label": "Piercing Fake",
-                "href": "/piercing-fake"
+                "href": "/acessorios/piercing-fake"
               }
             ],
             "label": "ACESSÓRIOS",
@@ -192,12 +192,12 @@
               {
                 "children": [],
                 "label": "Aço inox masculino",
-                "href": "/aco-inox-masculino"
+                "href": "/aco/aco-inox-masculino"
               },
               {
                 "children": [],
                 "label": "Aço inox feminino",
-                "href": "/aco-inox-feminino"
+                "href": "/aco/aco-inox-feminino"
               }
             ],
             "label": "AÇO",
