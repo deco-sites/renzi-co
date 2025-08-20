@@ -8,7 +8,10 @@ export async function handler(_req: Request, ctx: FreshContext) {
   // Adicione todas as URLs permitidas, separadas por espaço.
   const allowedAncestors = [
     "https://u10pfz-mz.myshopify.com",
-    "https://admin.deco.cx",
+    "*.deco.cx",
+    "*.deco.site",
+    "*.deno.dev",
+    "*.decocdn.com",
   ].join(" "); // O método join() vai criar a string separada por espaço
 
   // Define o cabeçalho de segurança para permitir que o domínio acima incorpore esta página
