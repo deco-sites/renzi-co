@@ -45,7 +45,7 @@
               },
               "layout": {
                 "discount": {
-                  "variant": "emphasis",
+                  "variant": "primary",
                   "label": "Desconto"
                 },
                 "onMouseOver": {
