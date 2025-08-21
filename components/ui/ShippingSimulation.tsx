@@ -6,8 +6,49 @@ import { formatPrice } from "$store/sdk/format.ts";
 import { useCart } from "apps/vtex/hooks/useCart.ts";
 import { useCart as useCartShopify } from "apps/shopify/hooks/useCart.ts";
 import type { SimulationOrderForm, SKU, Sla } from "apps/vtex/utils/types.ts";
+// import { invoke } from "../../runtime.ts";
 
-import { invoke } from "../../runtime.ts";
+export type MoneyV2 = {
+  /** Decimal money amount. */
+  amount: Scalars["Decimal"]["output"];
+  /** Currency of the money. */
+  currencyCode: CurrencyCode;
+};
+
+export enum CurrencyCode {
+  CAD = "CAD",
+  Usd = "USD",
+}
+
+export type Scalars = {
+  ID: { input: string; output: string };
+  String: { input: string; output: string };
+  Boolean: { input: boolean; output: boolean };
+  Int: { input: number; output: number };
+  Float: { input: number; output: number };
+  ARN: { input: any; output: any };
+  Date: { input: any; output: any };
+  DateTime: { input: any; output: any };
+  Decimal: { input: any; output: any };
+  FormattedString: { input: any; output: any };
+  HTML: { input: any; output: any };
+  JSON: { input: any; output: any };
+  Money: { input: any; output: any };
+  StorefrontID: { input: any; output: any };
+  URL: { input: any; output: any };
+  UnsignedInt64: { input: any; output: any };
+  UtcOffset: { input: any; output: any };
+};
+
+export type ShippingRate = {
+  handle: Scalars["String"]["output"];
+  price: MoneyV2;
+  title: Scalars["String"]["output"];
+};
+
+export interface CalculatedDraftOrder {
+  availableShippingRates: Array<ShippingRate>;
+}
 
 export interface Props {
   items: Array<SKU>;
@@ -28,25 +69,28 @@ const formatShippingEstimate = (estimate: string) => {
 function ShippingContent({
   simulation,
 }: {
-  simulation: Signal<SimulationOrderForm | null>;
+  simulation: Signal<CalculatedDraftOrder | null>;
 }) {
-  const { cart } = useCart();
-  console.log(useCart());
 
-  const methods =
-    simulation.value?.logisticsInfo?.reduce(
-      (initial, { slas }) => [...initial, ...slas],
-      [] as Sla[]
-    ) ?? [];
+  // const { cart } = useCart();
 
-  const locale = cart.value?.clientPreferencesData.locale || "pt-BR";
-  const currencyCode = cart.value?.storePreferencesData.currencyCode || "BRL";
+  // const methods =
+  //   simulation.value?.logisticsInfo?.reduce(
+  //     (initial, { slas }) => [...initial, ...slas],
+  //     [] as Sla[]
+  //   ) ?? [];
+
+  // const locale = cart.value?.clientPreferencesData.locale || "pt-BR";
+  // const currencyCode = cart.value?.storePreferencesData.currencyCode || "BRL";
+
+  console.log(simulation);
 
   if (simulation.value == null) {
     return null;
   }
 
-  if (methods.length === 0) {
+
+  if (simulation.value?.userErrors?.length > 0) {
     return (
       <div class="p-2">
         <span>CEP inválido</span>
@@ -54,20 +98,28 @@ function ShippingContent({
     );
   }
 
+  const availableShippingRates = simulation.value?.calculatedDraftOrder?.availableShippingRates ?? []
+
+  console.log(availableShippingRates);
+
+
   return (
     <ul class="flex flex-col text-xs rounded-[10px]">
-      {methods.map((method) => (
+      {availableShippingRates.map(({
+        title,
+        price
+      }) => (
         <li class="flex text-secondary-focus px-[20px] py-[10px] odd:bg-secondary-focus odd:bg-opacity-5 justify-between items-center first:rounded-t-[10px] last:rounded-b-[10px]">
           <span class="text-center text-secondary font-bold">
-            {method.name}
+            {title}
           </span>
           <span class="text-button">
-            Em até {formatShippingEstimate(method.shippingEstimate)}
+            {/* Em até {formatShippingEstimate(method.shippingEstimate)} */}
           </span>
           <span class="text-base font-bold text-right">
-            {method.price === 0
+            {(Number(price.amount)) === 0
               ? "Grátis"
-              : formatPrice(method.price / 100, currencyCode, locale)}
+              : formatPrice(Number(price.amount) / 100, currencyCode, locale)}
           </span>
         </li>
       ))}
@@ -78,7 +130,7 @@ function ShippingContent({
 function ShippingSimulation({ items, shipmentPolitics }: Props) {
   const postalCode = useSignal("");
   const loading = useSignal(false);
-  const simulateResult = useSignal<SimulationOrderForm | null>(null);
+  const simulateResult = useSignal<CalculatedDraftOrder | null>(null);
   // const { simulate, cart }  =useCart()
   const { simulate, cart } = useCartShopify();
 
@@ -95,24 +147,7 @@ function ShippingSimulation({ items, shipmentPolitics }: Props) {
       //   country: cart.value?.storePreferencesData?.countryCode || "BRA",
       // });
 
-      console.log(items);
-
-      const res = await invoke.shopify.actions.order.draftOrderCalculate({
-        input: {
-          lineItems: items.map(({ id, quantity }) => {
-            return {
-              variantId: id,
-              quantity: quantity,
-            };
-          }),
-          shippingAddress: {
-            zip: postalCode.value,
-            countryCode: "BRA",
-          },
-        },
-      });
-
-      // const res = await simulate({
+      // simulateResult.value  = await invoke.shopify.actions.order.draftOrderCalculate({
       //   input: {
       //     lineItems: items.map(({ id, quantity }) => {
       //       return {
@@ -122,12 +157,26 @@ function ShippingSimulation({ items, shipmentPolitics }: Props) {
       //     }),
       //     shippingAddress: {
       //       zip: postalCode.value,
-      //       countryCode: "BRA",
+      //       countryCode: "BR",
       //     },
-      //   }
+      //   },
       // });
 
-      console.log(res);
+      simulateResult.value = await simulate({
+        input: {
+          lineItems: items.map(({ id, quantity }) => {
+            return {
+              variantId: id,
+              quantity: quantity,
+            };
+          }),
+          shippingAddress: {
+            zip: postalCode.value,
+            countryCode: "BR",
+          },
+        }
+      });
+
     } finally {
       loading.value = false;
     }
