@@ -51,7 +51,7 @@ import {
         >
           <div
             class={`text-xs uppercase font-bold border-none px-[10px] py-[7px] rounded-lg flex box-content bg-opacity-100 opacity-100 text-base-100 bg-${
-              variant ?? "emphasis"
+              variant ?? "primary"
             }`}
           >
             {discount?.toFixed(2).slice(0, 2)}% {label ?? "OFF"}
