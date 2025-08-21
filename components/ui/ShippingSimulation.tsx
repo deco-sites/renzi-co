@@ -83,8 +83,6 @@ function ShippingContent({
   // const locale = cart.value?.clientPreferencesData.locale || "pt-BR";
   // const currencyCode = cart.value?.storePreferencesData.currencyCode || "BRL";
 
-  console.log(simulation);
-
   if (simulation.value == null) {
     return null;
   }
@@ -99,9 +97,6 @@ function ShippingContent({
   }
 
   const availableShippingRates = simulation.value?.calculatedDraftOrder?.availableShippingRates ?? []
-
-  console.log(availableShippingRates);
-
 
   return (
     <ul class="flex flex-col text-xs rounded-[10px]">
