@@ -2,12 +2,12 @@ import { Signal, useSignal } from "@preact/signals";
 import { useCallback } from "preact/hooks";
 import Button from "$store/components/ui/Button.tsx";
 import { formatPrice } from "$store/sdk/format.ts";
+// import { useCart } from "apps/shopify/hooks/useCart.ts";
 import { useCart } from "apps/vtex/hooks/useCart.ts";
-import type {
-  SimulationOrderForm,
-  SKU,
-  Sla,
-} from "apps/vtex/utils/types.ts";
+import { useCart as useCartShopify } from "apps/shopify/hooks/useCart.ts";
+import type { SimulationOrderForm, SKU, Sla } from "apps/vtex/utils/types.ts";
+
+import { invoke } from "../../runtime.ts";
 
 export interface Props {
   items: Array<SKU>;
@@ -25,15 +25,19 @@ const formatShippingEstimate = (estimate: string) => {
   if (type === "h") return `${time} horas`;
 };
 
-function ShippingContent({ simulation }: {
+function ShippingContent({
+  simulation,
+}: {
   simulation: Signal<SimulationOrderForm | null>;
 }) {
   const { cart } = useCart();
+  console.log(useCart());
 
-  const methods = simulation.value?.logisticsInfo?.reduce(
-    (initial, { slas }) => [...initial, ...slas],
-    [] as Sla[],
-  ) ?? [];
+  const methods =
+    simulation.value?.logisticsInfo?.reduce(
+      (initial, { slas }) => [...initial, ...slas],
+      [] as Sla[]
+    ) ?? [];
 
   const locale = cart.value?.clientPreferencesData.locale || "pt-BR";
   const currencyCode = cart.value?.storePreferencesData.currencyCode || "BRL";
@@ -61,9 +65,9 @@ function ShippingContent({ simulation }: {
             Em até {formatShippingEstimate(method.shippingEstimate)}
           </span>
           <span class="text-base font-bold text-right">
-            {method.price === 0 ? "Grátis" : (
-              formatPrice(method.price / 100, currencyCode, locale)
-            )}
+            {method.price === 0
+              ? "Grátis"
+              : formatPrice(method.price / 100, currencyCode, locale)}
           </span>
         </li>
       ))}
@@ -75,7 +79,8 @@ function ShippingSimulation({ items, shipmentPolitics }: Props) {
   const postalCode = useSignal("");
   const loading = useSignal(false);
   const simulateResult = useSignal<SimulationOrderForm | null>(null);
-  const { simulate, cart } = useCart();
+  // const { simulate, cart }  =useCart()
+  const { simulate, cart } = useCartShopify();
 
   const handleSimulation = useCallback(async () => {
     if (postalCode.value.length !== 8) {
@@ -84,11 +89,45 @@ function ShippingSimulation({ items, shipmentPolitics }: Props) {
 
     try {
       loading.value = true;
-      simulateResult.value = await simulate({
-        items: items,
-        postalCode: postalCode.value,
-        country: cart.value?.storePreferencesData.countryCode || "BRA",
+      // simulateResult.value = await simulate({
+      //   items: items,
+      //   postalCode: postalCode.value,
+      //   country: cart.value?.storePreferencesData?.countryCode || "BRA",
+      // });
+
+      console.log(items);
+
+      const res = await invoke.shopify.actions.order.draftOrderCalculate({
+        input: {
+          lineItems: items.map(({ id, quantity }) => {
+            return {
+              variantId: id,
+              quantity: quantity,
+            };
+          }),
+          shippingAddress: {
+            zip: postalCode.value,
+            countryCode: "BRA",
+          },
+        },
       });
+
+      // const res = await simulate({
+      //   input: {
+      //     lineItems: items.map(({ id, quantity }) => {
+      //       return {
+      //         variantId: id,
+      //         quantity: quantity,
+      //       };
+      //     }),
+      //     shippingAddress: {
+      //       zip: postalCode.value,
+      //       countryCode: "BRA",
+      //     },
+      //   }
+      // });
+
+      console.log(res);
     } finally {
       loading.value = false;
     }
@@ -134,9 +173,9 @@ function ShippingSimulation({ items, shipmentPolitics }: Props) {
       >
         Não sei meu CEP
       </a>
-      {simulateResult.value
-        ? <ShippingContent simulation={simulateResult} />
-        : null}
+      {simulateResult.value ? (
+        <ShippingContent simulation={simulateResult} />
+      ) : null}
       {shipmentPolitics && (
         <a href={shipmentPolitics.link} class="uppercase text-emphasis text-xs">
           {shipmentPolitics.label}

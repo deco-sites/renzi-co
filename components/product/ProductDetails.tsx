@@ -71,6 +71,8 @@ function ProductInfo({
   const { price, listPrice, seller, installments } = useOffer(offers);
   const description = product.description || isVariantOf?.description;
 
+  console.log(product);
+
   let stock = 0;
   if (offers) {
     stock = offers.offers[0].inventoryLevel.value ?? 0;
@@ -167,7 +169,7 @@ function ProductInfo({
         <ShippingSimulation
           items={[
             {
-              id: Number(product.sku),
+              id: productID,
               quantity: 1,
               seller: seller ?? "1",
             },
