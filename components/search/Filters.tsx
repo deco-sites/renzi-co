@@ -32,9 +32,8 @@ function ValueItem({ url, selected, label, quantity }: FilterToggleValue) {
 }
 
 function FilterValues({ key, values }: FilterToggle) {
-  const flexDirection = key === "tamanho" || key === "cor"
-    ? "flex-row"
-    : "flex-col";
+  const flexDirection =
+    key === "tamanho" || key === "cor" ? "flex-row" : "flex-col";    
 
   return (
     <ul class={`flex flex-wrap gap-2 ${flexDirection}`}>
@@ -62,6 +61,10 @@ function FilterValues({ key, values }: FilterToggle) {
           );
         }
 
+        if (key === "filter.v.price") {
+          <>dddd</>
+        }
+
         return <ValueItem {...item} />;
       })}
     </ul>
@@ -69,6 +72,7 @@ function FilterValues({ key, values }: FilterToggle) {
 }
 
 function Filters({ filters }: Props) {
+
   const _filters = filters.filter(isToggle);
   const selectedFilters = _filters.reduce<FilterToggleValue[]>(
     (initial, filter) => {
@@ -77,20 +81,19 @@ function Filters({ filters }: Props) {
 
       return [...initial, selected];
     },
-    [],
+    []
   );
-
+  
   return (
     <ul class="flex flex-col gap-2">
       <li>
         <p class="font-medium mb-4">Filtrar por:</p>
-        {selectedFilters.length > 0 && (
+        {selectedFilters.length > 0 &&
           selectedFilters.map((filter) => (
             <div class="mb-2">
               <ValueItem {...filter} />
             </div>
-          ))
-        )}
+          ))}
       </li>
       {_filters.map((filter) => (
         <li class="flex flex-col gap-4">

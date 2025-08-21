@@ -32,9 +32,6 @@ import {
     alignHorizontal,
   }: Props) {
     const discount = ((listPrice - price) / listPrice) * 100;
-
-    console.log(price, listPrice, "ddddd");
-    console.log(discount);
   
     return (
       <div

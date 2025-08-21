@@ -6,6 +6,7 @@ import Icon from "$store/components/ui/Icon.tsx";
 import Modal from "$store/components/ui/Modal.tsx";
 import { useSignal } from "@preact/signals";
 import type { ProductListingPage } from "apps/commerce/types.ts";
+import FilterPrice from "$store/islands/FilterPrice.tsx";
 type Props =
   & Pick<
     ProductListingPage,
@@ -52,6 +53,7 @@ function SearchControls(
       >
         <div class="p-8 py-2">
           <Filters filters={filters} />
+          <FilterPrice filters={filters} />
         </div>
       </Modal>
     </>

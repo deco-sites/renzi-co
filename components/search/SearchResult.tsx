@@ -12,6 +12,7 @@ import SearchResultsGridChoice from "$store/islands/SearchResultsGridChoice.tsx"
 import type { HighLight } from "$store/components/product/ProductHighlights.tsx";
 import { type LoaderReturnType } from "@deco/deco";
 import { type Section } from "@deco/deco/blocks";
+import FilterPrice from "$store/islands/FilterPrice.tsx";
 export interface Props {
   page: LoaderReturnType<ProductListingPage | null>;
   /**
@@ -44,6 +45,7 @@ function Result({
       {pageInfo.records} Produtos encontrados
     </h6>
   );
+  
   return (
     <>
       <div>
@@ -51,6 +53,7 @@ function Result({
           {variant === "aside" && filters.length > 0 && (
             <aside class="hidden lg:block w-min mt-1 min-w-[270px]">
               <Filters filters={filters} />
+              <FilterPrice filters={filters} />
             </aside>
           )}
           <div class="flex flex-col gap-5 w-full">
