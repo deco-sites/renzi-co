@@ -92,6 +92,7 @@ function ProductCard({
   const name = product?.isVariantOf?.name || partialName;
   const [front, back] = images ?? [];
   const { listPrice, price, installments, seller } = useOffer(offers);
+
   const possibilities = useVariantPossibilities(product);
   const variants = Object.entries(Object.values(possibilities)[0] ?? {});
   const clickEvent = {
@@ -163,12 +164,7 @@ function ProductCard({
       </>
     );
 
-  const price2: number = price as number;
-  const listPrice2: number = listPrice as number;
-
-  const discount =
-    listPrice && price && listPrice > price ? listPrice - price : undefined;
-
+  const discount = listPrice && price && listPrice > price ? listPrice - price : undefined;
   return (
     <div
       class={`card card-compact opacity-100 bg-opacity-100 group w-full ${
@@ -204,10 +200,10 @@ function ProductCard({
           aria-label="view product"
           class="contents relative"
         >
-          {listPrice2 !== price2 && listPrice && (
+          {listPrice !== price && listPrice && (
             <DiscountBadge
-              price={price2}
-              listPrice={listPrice2}
+              price={price}
+              listPrice={listPrice}
               label={l?.discount?.label}
               variant={l?.discount?.variant}
             />
@@ -301,8 +297,8 @@ function ProductCard({
         ) : (
           <div class="flex flex-col mt-2">
             {discount && (
-              <span class="text-[#b51313] font-bold my-1">
-                Econimize: {discount && formatPrice(discount)}
+              <span class="text-[#ad3b4d] font-bold my-1">
+                Economize: {discount && formatPrice(discount)}
               </span>
             )}
             <div

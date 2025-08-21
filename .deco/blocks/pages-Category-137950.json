@@ -45,7 +45,7 @@
               },
               "layout": {
                 "discount": {
-                  "variant": "emphasis",
+                  "variant": "primary",
                   "label": "Desconto"
                 },
                 "onMouseOver": {
@@ -91,7 +91,13 @@
     }
   ],
   "seo": {
-    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+    "__resolveType": "site/sections/Seo/SeoPlpCustomV2.tsx",
+    "seo_by_url_list": [],
+    "jsonLD": {
+      "__resolveType": "shopify/loaders/ProductListingPage.ts",
+      "metafields": [],
+      "count": 15
+    }
   },
   "__resolveType": "website/pages/Page.tsx",
   "path": "/*"

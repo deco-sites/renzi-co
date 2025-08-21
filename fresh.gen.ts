@@ -3,10 +3,10 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-import * as $_middleware from "./routes/_middleware.ts";
 import * as $AddToCartActions from "./islands/AddToCartActions.tsx";
 import * as $AddToCartButton from "./islands/AddToCartButton.tsx";
 import * as $Debug from "./islands/Debug.tsx";
+import * as $FilterPrice from "./islands/FilterPrice.tsx";
 import * as $HeaderButton from "./islands/HeaderButton.tsx";
 import * as $HeaderModals from "./islands/HeaderModals.tsx";
 import * as $HeaderSearchbar from "./islands/HeaderSearchbar.tsx";
@@ -31,12 +31,12 @@ import type { Manifest } from "$fresh/server.ts";
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
-    "./routes/_middleware.ts": $_middleware,
   },
   islands: {
     "./islands/AddToCartActions.tsx": $AddToCartActions,
     "./islands/AddToCartButton.tsx": $AddToCartButton,
     "./islands/Debug.tsx": $Debug,
+    "./islands/FilterPrice.tsx": $FilterPrice,
     "./islands/HeaderButton.tsx": $HeaderButton,
     "./islands/HeaderModals.tsx": $HeaderModals,
     "./islands/HeaderSearchbar.tsx": $HeaderSearchbar,
