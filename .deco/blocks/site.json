@@ -30,8 +30,7 @@
         "/contact",
         "/cdn/*",
         "/cdn",
-        "/account/*",
-        null
+        "/account/*"
       ],
       "includeSiteMap": [],
       "excludePathsFromDecoSiteMap": [],

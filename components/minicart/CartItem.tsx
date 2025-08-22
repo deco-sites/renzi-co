@@ -27,8 +27,6 @@ function CartItem({ index, currency }: Props) {
   const listPrice = cost.compareAtAmountPerQuantity?.amount;
   const name = merchandise.product.title;
 
-  console.log(item)
-
   const isGift = sellingPrice < 0.01;
 
   const installmentOptions = cart.value?.paymentData?.installmentOptions
