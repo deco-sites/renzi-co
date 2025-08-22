@@ -59,7 +59,7 @@ function Sort({ sortOptions }: Props) {
       </label>
       <ul
         tabIndex={0}
-        class="dropdown-content mt-[10px] z-[1] px-0 py-[10px] menu shadow bg-base-100 rounded-[10px] w-48"
+        class="dropdown-content mt-[10px] z-50 px-0 py-[10px] menu shadow bg-base-100 rounded-[10px] w-48"
       >
         {sortOptions.map(({ value, label }) => (
           <li

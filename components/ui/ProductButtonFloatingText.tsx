@@ -15,8 +15,8 @@ function ProductButtonFloatingText({ product }: Props) {
 
   return (
     <>
-      <div class="floating__text col-[1/5]">
-        <span class="text-white">
+      <div class="floating__text max-w-[140px]">
+        <span class="text-white text-xs">
           {isVariantOf?.name}
         </span>
       </div>
