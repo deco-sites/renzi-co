@@ -3,7 +3,7 @@
   "adminAccessToken": {
     "__resolveType": "website/loaders/secret.ts",
     "name": "SHOPIFY_ACCESS_TOKEN",
-    "encrypted": "40c83aa6164da75f3f6900623fa6b2a27d1ad88c571477399da548196f9f963ee55e2dfe8d61d337f3fd0c7f308e1938"
+    "encrypted": "9b890c0647c51f78d6acd34da3986d7fbd9eac90fcecfae510707b075c4247b70b3d09af2a391489a6b508ea1a6f9b45"
   },
   "platform": "shopify",
   "storeName": "u10pfz-mz",
