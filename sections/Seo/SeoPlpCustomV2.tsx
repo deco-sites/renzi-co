@@ -43,8 +43,6 @@ export function loader(props: Props, req: Request, ctx: AppContext) {
     : [];
   delete plp_seo_deco.canonical;
 
-  console.log(new_title);
-
   return {
     ...plp_seo_deco,
     title: new_title || "",

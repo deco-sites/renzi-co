@@ -6,7 +6,6 @@ export interface Props {
 }
 
 function MenuItem({ item }: { item: INavItem }) {
-  console.log(item)
   const component = item?.children?.length
     ? (
       <div class="collapse collapse-plus relative items-start">
