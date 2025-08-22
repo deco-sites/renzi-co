@@ -39,7 +39,7 @@ export default function InfoCard(
       <h3 class="text-secondary font-normal text-2xl mb-5">{title}</h3>
       {links?.length
         ? (
-          <ul class="flex gap-4 items-center justify-center">
+          <ul class="flex gap-4 items-center justify-center flex-wrap">
             {links.map((link) => (
               <li key={link.label}>
                 <a href={link.href} class="btn btn-primary gap-3">
