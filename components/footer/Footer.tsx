@@ -169,7 +169,7 @@ function Footer(
                   <div class="collapse-title border-b border-base-content py-2.5 text-base-content font-medium pl-0 flex items-center justify-between pr-0">
                     {section.label}
                   </div>
-                  <div class="collapse-content pl-0">
+                  <div class="collapse-content relative z-10 pl-0">
                     <ul class="pt-5 pb-2">
                       {section.children.map((item) => (
                         <li class="leading-normal py-1">

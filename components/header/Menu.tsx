@@ -6,6 +6,7 @@ export interface Props {
 }
 
 function MenuItem({ item }: { item: INavItem }) {
+  console.log(item)
   const component = item?.children?.length
     ? (
       <div class="collapse collapse-plus relative items-start">
@@ -16,7 +17,7 @@ function MenuItem({ item }: { item: INavItem }) {
         <div class="collapse-title min-h-0 p-0 py-2.5 font-dm-sans font-normal text-sm px-0 flex items-center justify-between">
           {item.label}
         </div>
-        <div class="collapse-content px-0">
+        <div class="collapse-content relative z-10 px-0">
           <ul class="border-t border-base-content border-solid pt-0 px-0 pl-5">
             {item.children?.map((node) => (
               <li class="">
@@ -52,11 +53,11 @@ function MenuItem({ item }: { item: INavItem }) {
 
 const actionButtons = [
   {
-    href: "#",
+    href: "/account",
     label: "Meus dados",
   },
   {
-    href: "#",
+    href: "/account/orders",
     label: "Meus pedidos",
   },
 ];
