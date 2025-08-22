@@ -53,11 +53,11 @@ function MenuItem({ item }: { item: INavItem }) {
 
 const actionButtons = [
   {
-    href: "#",
+    href: "/account",
     label: "Meus dados",
   },
   {
-    href: "#",
+    href: "/account/orders",
     label: "Meus pedidos",
   },
 ];
