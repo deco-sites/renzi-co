@@ -61,6 +61,11 @@
                 "children": [],
                 "label": "Anéis de Zirconia ",
                 "href": "/aneis/aneis-de-zirconia"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/aneis"
               }
             ],
             "label": "ANÉIS ",
@@ -77,6 +82,11 @@
                 "children": [],
                 "label": "Gargantilha",
                 "href": "/chokers/gargantilha"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/chokers"
               }
             ],
             "label": "CHOKERS",
@@ -113,6 +123,11 @@
                 "children": [],
                 "label": "Escapularios",
                 "href": "/colares/escapularios"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/colares"
               }
             ],
             "label": "COLARES",
@@ -134,6 +149,11 @@
                 "children": [],
                 "label": "Pulseiras de Bijuterias Finas",
                 "href": "/pulseiras/pulseiras-de-bijuterias-finas"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/pulseiras"
               }
             ],
             "label": "PULSEIRAS",
@@ -170,6 +190,11 @@
                 "children": [],
                 "label": "Brincos de Bijuterias Finas",
                 "href": "/brincos/brincos-de-bijuterias-finas"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/brincos"
               }
             ],
             "label": "BRINCOS ",
@@ -182,6 +207,11 @@
                 "children": [],
                 "label": "Piercing Fake",
                 "href": "/acessorios/piercing-fake"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/acessorios"
               }
             ],
             "label": "ACESSÓRIOS",
@@ -198,6 +228,11 @@
                 "children": [],
                 "label": "Aço inox feminino",
                 "href": "/aco/aco-inox-feminino"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/aco"
               }
             ],
             "label": "AÇO",
