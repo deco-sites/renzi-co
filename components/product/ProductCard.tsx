@@ -148,7 +148,7 @@ function ProductCard({
           sellerId={seller as string}
           skuId={product.sku}
           label={l?.basics?.ctaText}
-          classes={`max-lg:hidden w-full ${addToCartButtonClassNames(
+          classes={`max-lg:hidden ${addToCartButtonClassNames(
             layout?.basics?.ctaVariation
           )}`}
         />

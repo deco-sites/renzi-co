@@ -71,8 +71,6 @@ function ProductInfo({
   const { price, listPrice, seller, installments } = useOffer(offers);
   const description = product.description || isVariantOf?.description;
 
-  console.log(product);
-
   let stock = 0;
   if (offers) {
     stock = offers.offers[0].inventoryLevel.value ?? 0;
@@ -80,9 +78,9 @@ function ProductInfo({
   return (
     <>
       <div class="floating bg-[#56373c] w-full h-[80px] fixed left-0 bottom-0 z-20 container-floating is-hidden">
-        <div class="floating__container grid grid-cols-9 grid-rows-none h-full items-center max-w-[80%] item-floating my-0 mx-auto">
+        <div class="floating__container flex justify-between gap-1 mx-3 h-full items-center max-full item-floating my-0">
           <ProductButtonFloatingText product={product} />
-          <div class="floating__price col-[5/7] flex flex-col text-right">
+          <div class="floating__price  flex flex-col text-left">
             <span class="text-white">
               Por: {formatPrice(price, offers!.priceCurrency!)}
             </span>
@@ -90,14 +88,14 @@ function ProductInfo({
               <span class="text-white text-xs">ou {installments}</span>
             )}
           </div>
-          <div class="floating__button mt-0 flex flex-col gap-4 col-[8/10]">
+          <div class="floating__button mt-0 flex flex-col gap-4 ">
             {stock > 0 ? (
               <>
                 {seller && (
                   <AddToCartButton
                     sellerId={seller}
                     skuId={productID}
-                    classes="btn-primary btn-block transition-all max-w-sm hover:text-neutral-100 font-medium text-secondary-focus h-10"
+                    classes="p-[6px] btn-primary btn-block transition-all max-w-sm hover:text-neutral-100 font-medium text-secondary-focus h-10"
                   />
                 )}
               </>

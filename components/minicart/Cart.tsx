@@ -174,7 +174,7 @@ function Cart(props: ICartProps) {
           <a class="justify-center w-full block" href="/checkout">
             <Button
               data-deco="buy-button"
-              class={`h-9 font-medium text-xs border-none w-full btn-${
+              class={`h-9 font-medium text-xs border-none w-full btn btn-${
                 BUTTON_VARIANTS[buttonModeMobile ?? "primary"]
               }`}
               disabled={loading.value || items?.length === 0}
