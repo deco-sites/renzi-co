@@ -1,6 +1,8 @@
 import { useState, useEffect } from "preact/hooks";
-
 import type { Filter, FilterRange } from "apps/commerce/types.ts";
+import { Product } from "apps/commerce/types.ts";
+
+import { invoke } from "$store/runtime.ts";
 
 export interface Props {
   filters: Filter[];
@@ -31,10 +33,21 @@ function FilterPrice({ filters = [] }: Props) {
   );
 
   const minPossiblePrice = Math.floor(priceFilter?.values?.min ?? 0);
-  const maxPossiblePrice = Math.ceil(priceFilter?.values?.max ?? 0);
+  // const maxPossiblePrice = Math.ceil(priceFilter?.values?.max ?? 0);
 
   const [minPrice, setMinPrice] = useState<number | "">("");
   const [maxPrice, setMaxPrice] = useState<number | "">("");
+  const [products, setProducts] = useState<Product[]>([]);
+
+  // const maxPossiblePrice = Math.ceil(products?.find(() => ) ?? 0);
+
+  const allPrices = products.map(product => product?.offers?.lowPrice ?? 0);
+  const maxPossiblePrice = Math.ceil(Math.max(...allPrices));
+
+  console.log(allPrices);
+  
+
+
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -42,6 +55,21 @@ function FilterPrice({ filters = [] }: Props) {
     const lte = params.get("filter.v.price.lte");
     setMinPrice(gte ? Number(gte) : "");
     setMaxPrice(lte ? Number(lte) : "");
+
+    // const query = "aneis/aneis-de-coracao";
+
+    const getProducts = async (query:string) => {
+      const results = await invoke.shopify.loaders.ProductList({
+        props: { query, count: 25 },
+      });
+
+      setProducts(results || []);
+
+      console.log(results);
+      
+    };
+
+    if(globalThis.location) getProducts(globalThis.location.pathname);
   }, []);
 
   const applyFilter = () => {
@@ -99,10 +127,13 @@ function FilterPrice({ filters = [] }: Props) {
             <input
               type="number"
               name="minPrice"
+              min="0"
               value={minPrice}
               placeholder={String(minPossiblePrice)}
               onChange={(e) => {
-                setMinPrice(e?.currentTarget?.value ? Number(e?.currentTarget?.value) : "");
+                setMinPrice(
+                  e?.currentTarget?.value ? Number(e?.currentTarget?.value) : ""
+                );
               }}
               className="input input-ghost w-full !px-0 !h-10 focus:!outline-none"
             />
@@ -120,9 +151,12 @@ function FilterPrice({ filters = [] }: Props) {
               type="number"
               name="maxPrice"
               value={maxPrice}
+              max={maxPossiblePrice}
               placeholder={String(maxPossiblePrice)}
               onChange={(e) => {
-                setMaxPrice(e?.currentTarget?.value ? Number(e?.currentTarget?.value) : "");
+                setMaxPrice(
+                  e?.currentTarget?.value ? Number(e?.currentTarget?.value) : ""
+                );
               }}
               className="input input-ghost w-full !px-0 !h-10 focus:!outline-none"
             />
