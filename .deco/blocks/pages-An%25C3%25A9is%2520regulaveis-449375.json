@@ -93,7 +93,12 @@
     }
   ],
   "seo": {
-    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+    "__resolveType": "site/sections/Seo/SeoPlpCustomV2.tsx",
+    "seo_by_url_list": [],
+    "jsonLD": {
+      "__resolveType": "shopify/loaders/ProductListingPage.ts",
+      "metafields": []
+    }
   },
   "__resolveType": "website/pages/Page.tsx"
 }
