@@ -47,8 +47,8 @@
               },
               "layout": {
                 "discount": {
-                  "variant": "emphasis",
-                  "label": "Desconto"
+                  "variant": "primary",
+                  "label": "OFF"
                 },
                 "onMouseOver": {
                   "image": "Change image",
