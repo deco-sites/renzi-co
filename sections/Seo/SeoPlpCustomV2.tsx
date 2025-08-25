@@ -34,6 +34,7 @@ export function loader(props: Props, req: Request, ctx: AppContext) {
   const seo_by_url = props.seo_by_url_list?.find(({ url }) =>
     new URLPattern({ pathname: url }).test(req.url)
   );
+  
   const url_formatted = new URL(req.url);
   const has_url_query_string = url_formatted.search !== "";
   const new_title = seo_by_url?.title || plp_seo_deco.title;

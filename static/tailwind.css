@@ -5740,6 +5740,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-yellow-700 {
+  --tw-text-opacity: 1;
+  color: rgb(161 98 7 / var(--tw-text-opacity));
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -6425,6 +6429,13 @@ details.collapse summary::-webkit-details-marker {
 }
 .disabled\:hidden:disabled {
   display: none;
+}
+.disabled\:cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+.disabled\:bg-gray-400:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 .group[open] .group-open\:border-b-\[4px\] {
   border-bottom-width: 4px;
