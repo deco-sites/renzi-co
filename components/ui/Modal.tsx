@@ -48,7 +48,7 @@ const Modal = ({
   onClose,
   children,
   loading,
-//   menuIcon,
+  //   menuIcon,
   showHeader,
   ...props
 }: Props) => {
@@ -76,8 +76,7 @@ const Modal = ({
       class={`backdrop:bg-black backdrop:opacity-80 bg-transparent p-0 m-0 max-w-[87.5%] w-full max-h-full h-full backdrop-opacity-50 lg:max-w-[33%] ${
         dialogStyles[mode]
       } ${props.class ?? ""}`}
-      onClick={(e) =>
-        (e.target as HTMLDialogElement).tagName === "SECTION" && onClose?.()}
+      onClick={(e) => e.currentTarget === e.target && onClose?.()} // ✨ ALTERAÇÃO AQUI
       onClose={onClose}
     >
       <section
