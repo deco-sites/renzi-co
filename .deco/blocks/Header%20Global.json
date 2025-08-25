@@ -7,7 +7,7 @@
         "alerts": [
           {
             "idIcon": "",
-            "textAlert": "PRIMEIRA COMPRA 10% OFF | Cupom: PRIMEIRA10PARCELEEM ",
+            "textAlert": "PRIMEIRA COMPRA 10% OFF | Cupom: PRIMEIRA10",
             "image": "https://assets.decocache.com/renzi-co/ef79bb22-ddb9-4aa0-924d-af548c6db5b9/bba57518-47fc-4f56-9380-86b0152df373.svg",
             "textColor": "#ffffff"
           },
@@ -36,128 +36,19 @@
         "__resolveType": "site/sections/Header/HeaderLayout.tsx",
         "navItems": [
           {
-            "children": [
-              {
-                "children": [],
-                "label": "Anéis de Coração",
-                "href": "/aneis/aneis-de-coracao"
-              },
-              {
-                "children": [],
-                "label": "Anéis Regulaveis",
-                "href": "/aneis/aneis-regulaveis"
-              },
-              {
-                "children": [],
-                "label": "Anéis Cravejados",
-                "href": "/aneis/aneis-cravejados"
-              },
-              {
-                "children": [],
-                "label": "Anéis Delicados ",
-                "href": "/aneis/aneis-delicados"
-              },
-              {
-                "children": [],
-                "label": "Anéis de Zirconia ",
-                "href": "/aneis/aneis-de-zirconia"
-              },
-              {
-                "children": [],
-                "label": "Ver Todos",
-                "href": "/aneis"
-              }
-            ],
-            "label": "ANÉIS ",
-            "href": "/aneis"
+            "children": [],
+            "label": "PRESENTES",
+            "href": "/presentes"
           },
           {
-            "children": [
-              {
-                "children": [],
-                "label": "Chokers com zircônia",
-                "href": "/chokers/chokers-com-zirconia"
-              },
-              {
-                "children": [],
-                "label": "Gargantilha",
-                "href": "/chokers/gargantilha"
-              },
-              {
-                "children": [],
-                "label": "Ver Todos",
-                "href": "/chokers"
-              }
-            ],
-            "label": "CHOKERS",
-            "href": "/chokers"
+            "children": [],
+            "label": "LANÇAMENTOS",
+            "href": "/lancamentos"
           },
           {
-            "children": [
-              {
-                "children": [],
-                "label": "Colares Ponto de Luz",
-                "href": "/colares/colares-ponto-de-luz"
-              },
-              {
-                "children": [],
-                "label": "Colares de Bijuterias Finas",
-                "href": "/colares/colares-de-bijuterias-finas"
-              },
-              {
-                "children": [],
-                "label": "Colares de Elos",
-                "href": "/colares/colares-de-elos"
-              },
-              {
-                "children": [],
-                "label": "Mix de Colares ",
-                "href": "/colares/mix-de-colares"
-              },
-              {
-                "children": [],
-                "label": "Colares de Zircônia",
-                "href": "/colares/colares-de-zirconia"
-              },
-              {
-                "children": [],
-                "label": "Escapularios",
-                "href": "/colares/escapularios"
-              },
-              {
-                "children": [],
-                "label": "Ver Todos",
-                "href": "/colares"
-              }
-            ],
-            "label": "COLARES",
-            "href": "/colares"
-          },
-          {
-            "children": [
-              {
-                "children": [],
-                "label": "Pulseiras Delicadas",
-                "href": "/pulseiras/pulseiras-delicadas"
-              },
-              {
-                "children": [],
-                "label": "Braceletes",
-                "href": "/pulseiras/braceletes"
-              },
-              {
-                "children": [],
-                "label": "Pulseiras de Bijuterias Finas",
-                "href": "/pulseiras/pulseiras-de-bijuterias-finas"
-              },
-              {
-                "children": [],
-                "label": "Ver Todos",
-                "href": "/pulseiras"
-              }
-            ],
-            "label": "PULSEIRAS",
-            "href": "/pulseiras"
+            "children": [],
+            "label": "COLEÇÕES",
+            "href": "/colecoes"
           },
           {
             "children": [
@@ -205,17 +96,125 @@
             "children": [
               {
                 "children": [],
-                "label": "Piercing Fake",
-                "href": "/acessorios/piercing-fake"
+                "label": "Colares Ponto de Luz",
+                "href": "/colares/colares-ponto-de-luz"
+              },
+              {
+                "children": [],
+                "label": "Colares de Bijuterias Finas",
+                "href": "/colares/colares-de-bijuterias-finas"
+              },
+              {
+                "children": [],
+                "label": "Colares de Elos",
+                "href": "/colares/colares-de-elos"
+              },
+              {
+                "children": [],
+                "label": "Mix de Colares ",
+                "href": "/colares/mix-de-colares"
+              },
+              {
+                "children": [],
+                "label": "Colares de Zircônia",
+                "href": "/colares/colares-de-zirconia"
+              },
+              {
+                "children": [],
+                "label": "Escapularios",
+                "href": "/colares/escapularios"
               },
               {
                 "children": [],
                 "label": "Ver Todos",
-                "href": "/acessorios"
+                "href": "/colares"
               }
             ],
-            "label": "ACESSÓRIOS",
-            "href": "/acessorios"
+            "label": "COLARES",
+            "href": "/colares"
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "label": "Chokers com zircônia",
+                "href": "/chokers/chokers-com-zirconia"
+              },
+              {
+                "children": [],
+                "label": "Gargantilha",
+                "href": "/chokers/gargantilha"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/chokers"
+              }
+            ],
+            "label": "CHOKERS",
+            "href": "/chokers"
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "label": "Pulseiras Delicadas",
+                "href": "/pulseiras/pulseiras-delicadas"
+              },
+              {
+                "children": [],
+                "label": "Braceletes",
+                "href": "/pulseiras/braceletes"
+              },
+              {
+                "children": [],
+                "label": "Pulseiras de Bijuterias Finas",
+                "href": "/pulseiras/pulseiras-de-bijuterias-finas"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/pulseiras"
+              }
+            ],
+            "label": "PULSEIRAS",
+            "href": "/pulseiras"
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "label": "Anéis de Coração",
+                "href": "/aneis/aneis-de-coracao"
+              },
+              {
+                "children": [],
+                "label": "Anéis Regulaveis",
+                "href": "/aneis/aneis-regulaveis"
+              },
+              {
+                "children": [],
+                "label": "Anéis Cravejados",
+                "href": "/aneis/aneis-cravejados"
+              },
+              {
+                "children": [],
+                "label": "Anéis Delicados ",
+                "href": "/aneis/aneis-delicados"
+              },
+              {
+                "children": [],
+                "label": "Anéis de Zirconia ",
+                "href": "/aneis/aneis-de-zirconia"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/aneis"
+              }
+            ],
+            "label": "ANÉIS ",
+            "href": "/aneis"
           },
           {
             "children": [
@@ -237,6 +236,22 @@
             ],
             "label": "AÇO",
             "href": "/aco"
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "label": "Piercing Fake",
+                "href": "/acessorios/piercing-fake"
+              },
+              {
+                "children": [],
+                "label": "Ver Todos",
+                "href": "/acessorios"
+              }
+            ],
+            "label": "ACESSÓRIOS",
+            "href": "/acessorios"
           }
         ],
         "minicart": {
