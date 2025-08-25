@@ -69,7 +69,7 @@ function Menu({ items }: Props) {
       <div class="w-full flex items-center justify-between py-4 border-b border-slate-100 border-solid pb-2">
         <a
           class="flex items-center justify-start gap-1 uppercase text-base-content font-medium text-xs"
-          href="/login"
+          href="/account"
         >
           <span class="p-1">
             <Icon
