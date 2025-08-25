@@ -52,7 +52,7 @@
         "cardLayout": {
           "discount": {
             "variant": "primary",
-            "label": "Desconto"
+            "label": "OFF"
           },
           "onMouseOver": {
             "image": "Change image",
