@@ -39,7 +39,7 @@ function HeaderLayout(
             <Icon id="Logo" width={120} height={27} />
           </a>
         </div>
-        <div class="max-lg:hidden flex justify-between">
+        <div class="max-lg:hidden flex justify-between gap-5">
           {navItems && navItems?.length
             ? navItems?.map((item) => <NavItem key={item.label} item={item} />)
             : null}
