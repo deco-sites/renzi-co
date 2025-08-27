@@ -51,7 +51,7 @@
         "title": "Lançamentos",
         "cardLayout": {
           "discount": {
-            "variant": "primary",
+            "variant": "error",
             "label": "OFF"
           },
           "onMouseOver": {
@@ -63,7 +63,7 @@
             "ctaText": "Comprar",
             "mobileCtaText": "Comprar",
             "contentAlignment": "Left",
-            "oldPriceSize": "Normal",
+            "oldPriceSize": "Small",
             "ctaMode": "Add to Cart",
             "ctaVariation": "primary"
           },

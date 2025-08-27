@@ -165,7 +165,7 @@
             "href": "https://vtex.com/br-pt"
           }
         ],
-        "email": "relacionamento@renzi.com.br",
+        "email": "relacionamento@renzieco.com.br",
         "logo": {
           "image": "https://assets.decocache.com/scarcom/a188a542-2ca2-478e-bacc-f6a28c0a2c3d/1742476359184-1f6dc342-05a2-4692-87d3-22a19abac5ca"
         },
@@ -181,7 +181,7 @@
     {
       "section": {
         "__resolveType": "site/sections/Content/CopyRight.tsx",
-        "copyRight": "Av. Fagundes Filho, 145 - sala 55 - São Judas - São Paulo - SP - CEP 04304-010 - CNPJ: 10.896.683/0001-60"
+        "copyRight": "Rua Visconde de Pirajá 531 - Ipanema - Rio de Janeiro - RJ - CEP 22410-002 - CNPJ: 57.443.380/0001-56"
       },
       "shadow": "none",
       "verticalSpacing": "top",
