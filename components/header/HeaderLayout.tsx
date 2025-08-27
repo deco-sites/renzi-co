@@ -39,13 +39,13 @@ function HeaderLayout(
             <Icon id="Logo" width={120} height={27} />
           </a>
         </div>
-        <div class="max-lg:hidden flex justify-between">
+        <div class="max-lg:hidden flex justify-between gap-5">
           {navItems && navItems?.length
             ? navItems?.map((item) => <NavItem key={item.label} item={item} />)
             : null}
         </div>
         <div class="flex items-center w-auto lg:justify-between xl:gap-8 lg:gap-2">
-          <div class="flex items-center xl:gap-4 lg:gap-0">
+          <div class="flex items-center xl:gap-4 lg:gap-2">
             <Buttons variant="search" />
             <SearchBar searchbar={{ ...searchbar, variant: "mobile" }} />
             <a
