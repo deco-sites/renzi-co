@@ -7279,6 +7279,10 @@ details.collapse summary::-webkit-details-marker {
     justify-content: space-around;
   }
 
+  .lg\:gap-0 {
+    gap: 0px;
+  }
+
   .lg\:gap-10 {
     gap: 2.5rem;
   }
