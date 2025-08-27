@@ -9,7 +9,7 @@ import { SendEventOnLoad } from "$store/sdk/analytics.tsx";
 import { useOffer } from "$store/sdk/useOffer.ts";
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import { useId } from "preact/hooks";
+import { useId } from "../../sdk/useId.ts";
 import { type LoaderReturnType } from "@deco/deco";
 export interface Props {
     products: LoaderReturnType<Product[] | null>;

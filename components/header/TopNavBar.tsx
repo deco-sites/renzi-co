@@ -3,8 +3,7 @@ import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/islands/SliderJS.tsx";
 import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
-
-import { useId } from "preact/hooks";
+import { useId } from "../../sdk/useId.ts";
 
 export interface Props {
   /**

@@ -8,8 +8,8 @@ import {
   import SliderJS from "$store/islands/SliderJS.tsx";
   import { Picture, Source } from "apps/website/components/Picture.tsx";
   import type { ImageWidget as LiveImage } from "apps/admin/widgets.ts";
-  import { useId } from "preact/hooks";
-  
+  import { useId } from "../../sdk/useId.ts";
+
   export type BannerFontSizes = "Small" | "Medium" | "Large";
   export type ResponsiveConditionals =
     | "Always"
