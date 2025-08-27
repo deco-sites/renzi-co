@@ -1,4 +1,3 @@
-import { useId } from "preact/hooks";
 import ShippingSimulation from "$store/islands/ShippingSimulation.tsx";
 import Breadcrumb from "$store/components/ui/Breadcrumb.tsx";
 import Button from "$store/components/ui/Button.tsx";
@@ -22,6 +21,9 @@ import ProductDetailsImages from "$store/components/product/ProductDetailsImage.
 import { HighLight } from "$store/components/product/ProductHighlights.tsx";
 import ModalImage from "$store/islands/ModalImage.tsx";
 import { type LoaderReturnType } from "@deco/deco";
+import { useId } from "../../sdk/useId.ts";
+
+
 export type Variant = "front-back" | "slider" | "auto";
 export type ShareableNetwork = "Facebook" | "Twitter" | "Email" | "WhatsApp";
 export interface Props {

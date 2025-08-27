@@ -58,6 +58,9 @@ export const useOffer = (aggregateOffer?: AggregateOffer) => {
   const seller = offer?.seller ?? "default-seller"; // TODO: Find out the seller equivalent in shopify
   const price = offer?.price;
 
+  // console.log(offer?.priceSpecification);
+  
+
   // console.log(offer);
 
   return {

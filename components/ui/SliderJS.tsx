@@ -60,6 +60,8 @@ const setup = (
   const prev = root?.querySelector(`[${ATTRIBUTES['data-slide="prev"']}]`);
   const next = root?.querySelector(`[${ATTRIBUTES['data-slide="next"']}]`);
   const dots = root?.querySelectorAll(`[${ATTRIBUTES["data-dot"]}]`);
+  
+  
   const [, perPage] =
     Object.entries(itemsPerPage).sort(([widthA], [widthB]) =>
       Number(widthB) - Number(widthA)

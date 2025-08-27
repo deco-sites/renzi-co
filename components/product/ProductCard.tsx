@@ -87,8 +87,7 @@ function ProductCard({
   layout,
   highlights,
 }: Props) {
-  const { url, productID, name:partialName, image: images, offers, isVariantOf } = product;
-  
+  const { url, productID, name:partialName, image: images, offers, isVariantOf } = product;  
   const name = product?.isVariantOf?.name || partialName;
   const [front, back] = images ?? [];
   const { listPrice, price, installments, seller } = useOffer(offers);
