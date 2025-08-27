@@ -57,7 +57,8 @@
           "onMouseOver": {
             "image": "Change image",
             "showFavoriteIcon": false,
-            "showCta": true
+            "showCta": true,
+            "showCardShadow": true
           },
           "basics": {
             "ctaText": "Comprar",
@@ -80,7 +81,7 @@
           }
         }
       },
-      "shadow": "none",
+      "shadow": "inner",
       "verticalSpacing": "both",
       "spacing": 0,
       "withContainer": true,
