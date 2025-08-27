@@ -15,7 +15,7 @@
               "mobile": "none",
               "desktop": "none"
             },
-            "image": "https://assets.decocache.com/renzi-co/26d619a3-55d6-47cb-a192-eb26495edb5c/4.jpg",
+            "image": "https://assets.decocache.com/renzi-co/2031ee99-c885-4484-843c-d13329f4c29f/banner-secundario-1-370x420.png",
             "alt": "Brincos",
             "imageMobile": "https://assets.decocache.com/scarcom/120d915e-7d73-4652-95c8-f23db832982b/1742476402335-1ccf20cd-b697-47eb-9de2-4b6b75a18621",
             "href": "/brincos"
@@ -30,10 +30,10 @@
               "mobile": "none",
               "desktop": "none"
             },
-            "image": "https://assets.decocache.com/renzi-co/3118132b-0824-4fd5-a2e6-fe3fd0310cf2/5.jpg",
-            "alt": "Colares",
+            "image": "https://assets.decocache.com/renzi-co/369f4767-8e08-4d7d-9fe1-cfb2f43da12b/banner-secundario-2-370x420.png",
+            "alt": "Anéis",
             "imageMobile": "https://assets.decocache.com/scarcom/4e4e16bc-1eb7-4313-b8a2-c0b7c1ba9b32/1742476405287-14d22cff-d43a-40ab-99dd-377f65b6e204",
-            "href": "/colares"
+            "href": "/aneis"
           },
           {
             "backgroundColorHover": "primary",
@@ -45,10 +45,10 @@
               "mobile": "none",
               "desktop": "none"
             },
-            "image": "https://assets.decocache.com/renzi-co/9ee1f527-3455-4021-b461-394147e449ce/6.jpg",
-            "alt": "Pulseiras",
+            "image": "https://assets.decocache.com/renzi-co/fe93ab3f-73fb-457f-9ee5-9c979361f85d/banner-secundario-3-370x420.png",
             "imageMobile": "https://assets.decocache.com/scarcom/a3a11131-cd33-438e-bc5d-9502847a26ed/1742476408058-3b1783f5-2fc8-4bf3-85e5-482fcd3a4673",
-            "href": "/pulseiras"
+            "href": "/colares",
+            "alt": "Colares"
           }
         ],
         "itemPerPageDesktop": 3,

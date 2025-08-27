@@ -40,7 +40,8 @@
     "secondary": "#56373C",
     "tertiary": "#CEBAB4",
     "neutral": "#000000",
-    "primary": "#56373C"
+    "primary": "#56373C",
+    "error": "#be0909"
   },
   "complementaryColors": {
     "base-200": "#56373C",
