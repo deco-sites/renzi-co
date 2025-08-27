@@ -51,7 +51,7 @@
         "title": "Lançamentos",
         "cardLayout": {
           "discount": {
-            "variant": "error",
+            "variant": "primary",
             "label": "OFF"
           },
           "onMouseOver": {
