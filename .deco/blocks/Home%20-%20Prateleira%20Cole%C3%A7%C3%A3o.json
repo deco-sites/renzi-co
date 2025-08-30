@@ -51,22 +51,22 @@
         "title": "Lançamentos",
         "cardLayout": {
           "discount": {
-            "variant": "primary",
+            "variant": "error",
             "label": "OFF"
           },
           "onMouseOver": {
             "image": "Change image",
             "showFavoriteIcon": false,
             "showCta": true,
-            "showCardShadow": false
+            "showCardShadow": true
           },
           "basics": {
             "ctaText": "Comprar",
             "mobileCtaText": "Comprar",
-            "contentAlignment": "Left",
             "oldPriceSize": "Small",
             "ctaMode": "Add to Cart",
-            "ctaVariation": "primary"
+            "ctaVariation": "primary",
+            "contentAlignment": "Center"
           },
           "elementsPositions": {
             "skuSelector": "Bottom",
