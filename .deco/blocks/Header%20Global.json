@@ -285,12 +285,14 @@
             },
             "hide": {},
             "onMouseOver": {
-              "image": "Change image"
+              "image": "Change image",
+              "showCta": true,
+              "showCardShadow": true
             }
           }
         }
       },
-      "shadow": "none",
+      "shadow": "inner",
       "verticalSpacing": "both",
       "spacing": 0,
       "label": "Header",

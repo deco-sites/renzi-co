@@ -53,7 +53,8 @@
                 "onMouseOver": {
                   "image": "Change image",
                   "showFavoriteIcon": false,
-                  "showCta": true
+                  "showCta": true,
+                  "showCardShadow": false
                 },
                 "basics": {
                   "ctaText": "Comprar",
