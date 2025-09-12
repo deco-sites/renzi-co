@@ -46,7 +46,7 @@
               },
               "layout": {
                 "discount": {
-                  "variant": "primary",
+                  "variant": "error",
                   "label": "OFF"
                 },
                 "onMouseOver": {

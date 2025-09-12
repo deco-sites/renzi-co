@@ -19,14 +19,14 @@
           {
             "media": {
               "imageDesktop": "https://assets.decocache.com/renzi-co/862b787c-1fce-4d37-8fb7-fb6534731a80/banner-principal-desktop-1920x600.png",
-              "imageMobile": "https://assets.decocache.com/renzi-co/6a48d091-ee63-4097-9c48-c038e472c316/banner_redimensionado_360x600.png"
+              "imageMobile": "https://assets.decocache.com/renzi-co/23857da3-d7c5-48c5-8ec1-05fbd49024c2/banner-principal-mobile-430x358-(1).png"
             },
             "cta": {
               "title": {},
               "buttons": [],
               "position": {
-                "vertical": "inferior",
-                "horizontal": "esquerda"
+                "horizontal": "esquerda",
+                "vertical": "inferior"
               },
               "subTitle": {}
             }
