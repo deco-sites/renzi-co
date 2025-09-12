@@ -58,7 +58,7 @@
             "image": "Change image",
             "showFavoriteIcon": false,
             "showCta": true,
-            "showCardShadow": true
+            "showCardShadow": false
           },
           "basics": {
             "ctaText": "Comprar",
