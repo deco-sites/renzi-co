@@ -97,7 +97,7 @@ function ShippingContent({
   }
 
   const availableShippingRates = simulation.value?.calculatedDraftOrder?.availableShippingRates ?? []
-
+  console.log('simulation:', simulation);
   return (
     <ul class="flex flex-col text-xs rounded-[10px]">
       {availableShippingRates.map(({
@@ -114,7 +114,7 @@ function ShippingContent({
           <span class="text-base font-bold text-right">
             {(Number(price.amount)) === 0
               ? "Grátis"
-              : formatPrice(Number(price.amount) / 100, currencyCode, locale)}
+              : formatPrice(Number(price.amount), "BRL", "pt-BR")}
           </span>
         </li>
       ))}
